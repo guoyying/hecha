@@ -9,14 +9,27 @@
     "退网评估",
     "0407备注_承载室"
   ],
-  "deviceMarks": {},
+  "deviceMarks": {
+    "device-0": {
+      "type": "net",
+      "timestamp": "2026-04-30T03:25:12.849Z",
+      "excluded": false,
+      "deviceInfo": "device-0"
+    },
+    "device-1": {
+      "type": "net",
+      "timestamp": "2026-04-30T03:25:16.085Z",
+      "excluded": false,
+      "deviceInfo": "device-1"
+    }
+  },
   "statistics": {
     "today": {
-      "netCount": 0,
+      "netCount": 2,
       "monitorCount": 0
     },
     "week": {
-      "netCount": 0,
+      "netCount": 2,
       "monitorCount": 0
     }
   },
