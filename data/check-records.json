@@ -46,12 +46,6 @@
         "0407备注_承载室": ""
       }
     },
-    "device-1": {
-      "type": "net",
-      "timestamp": "2026-04-30T06:57:07.039Z",
-      "excluded": false,
-      "deviceInfo": "黄埔2-RCMSAP01"
-    },
     "device-4": {
       "type": "net",
       "timestamp": "2026-04-30T07:50:29.410Z",
