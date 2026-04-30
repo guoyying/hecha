@@ -732,79 +732,86 @@
             netBtn.className = 'text-xs px-2 py-1 rounded border border-blue-300 text-blue-600 hover:bg-blue-50 transition';
         }
         
-        // 确认网络部门审批
-        function confirmNetApproval(deviceId) {
-            // 获取勾选框状态
-            const checkboxes = document.querySelectorAll(`.net-check[data-device="${deviceId}"]`);
-            const checkedStates = Array.from(checkboxes).map(cb => cb.checked);
-            
-            // 检查是否全部勾选
-            const allChecked = checkedStates.every(state => state === true);
-            
-            if (!allChecked) {
-                showToast('请完成所有检查项后再确认!');
-                return;
-            }
-            
-            // 记录勾选框状态
-            deviceCheckboxes[deviceId] = {
-                net: checkedStates,
-                monitor: [false, false, false]
-            };
-            
-            // 标记设备
-            markDevice(deviceId, 'net');
-            
-            // 隐藏勾选框
-            document.getElementById(`net-checks-${deviceId}`).classList.add('hidden');
-            
-            showToast('网络部门审批已完成!');
-        }
-        
-        // 确认网监评估
-        function confirmMonitorApproval(deviceId) {
-            // 获取勾选框状态
-            const checkboxes = document.querySelectorAll(`.monitor-check[data-device="${deviceId}"]`);
-            const checkedStates = Array.from(checkboxes).map(cb => cb.checked);
-            
-            // 检查是否全部勾选
-            const allChecked = checkedStates.every(state => state === true);
-            
-            if (!allChecked) {
-                showToast('请完成所有检查项后再确认!');
-                return;
-            }
-            
-            // 记录勾选框状态
-            deviceCheckboxes[deviceId] = {
-                net: [false, false, false],
-                monitor: checkedStates
-            };
-            
-            // 标记设备
-            markDevice(deviceId, 'monitor');
-            
-            // 隐藏勾选框
-            document.getElementById(`monitor-checks-${deviceId}`).classList.add('hidden');
-            
-            showToast('网监评估已完成!');
-        }
+         // 确认网络部门审批
+         function confirmNetApproval(deviceId) {
+             // 获取勾选框状态
+             const checkboxes = document.querySelectorAll(`.net-check[data-device="${deviceId}"]`);
+             const checkedStates = Array.from(checkboxes).map(cb => cb.checked);
+             
+             // 检查是否全部勾选
+             const allChecked = checkedStates.every(state => state === true);
+             
+             if (!allChecked) {
+                 showToast('请完成所有检查项后再确认!');
+                 return;
+             }
+             
+             // 记录勾选框状态
+             deviceCheckboxes[deviceId] = {
+                 net: checkedStates,
+                 monitor: [false, false, false]
+             };
+             
+             // 标记设备
+             markDevice(deviceId, 'net');
+             
+             // 隐藏勾选框
+             const netChecksDiv = document.getElementById(`net-checks-${deviceId}`);
+             if (netChecksDiv) {
+                 netChecksDiv.classList.add('hidden');
+             }
+             
+             showToast('网络部门审批已完成!');
+         }
+         
+         // 确认网监评估
+         function confirmMonitorApproval(deviceId) {
+             // 获取勾选框状态
+             const checkboxes = document.querySelectorAll(`.monitor-check[data-device="${deviceId}"]`);
+             const checkedStates = Array.from(checkboxes).map(cb => cb.checked);
+             
+             // 检查是否全部勾选
+             const allChecked = checkedStates.every(state => state === true);
+             
+             if (!allChecked) {
+                 showToast('请完成所有检查项后再确认!');
+                 return;
+             }
+             
+             // 记录勾选框状态
+             deviceCheckboxes[deviceId] = {
+                 net: [false, false, false],
+                 monitor: checkedStates
+             };
+             
+             // 标记设备
+             markDevice(deviceId, 'monitor');
+             
+             // 隐藏勾选框
+             const monitorChecksDiv = document.getElementById(`monitor-checks-${deviceId}`);
+             if (monitorChecksDiv) {
+                 monitorChecksDiv.classList.add('hidden');
+             }
+             
+             showToast('网监评估已完成!');
+         }
   
-        function markDevice(deviceId, type) {
-            // 获取设备信息
-            const deviceInfo = getDeviceInfoFromRow(deviceId);
-            
-            // 记录标记信息
-            deviceMarks[deviceId] = {
-                type: type,
-                timestamp: new Date(),
-                excluded: false,
-                deviceInfo: deviceInfo
-            };
-            
-            // 更新统计
-            updateStatistics();
-        }
+         function markDevice(deviceId, type) {
+             // 获取设备信息
+             const deviceInfo = getDeviceInfoFromRow(deviceId);
+             
+             // 记录标记信息
+             appData.deviceMarks[deviceId] = {
+                 type: type,
+                 timestamp: new Date().toISOString(),
+                 excluded: false,
+                 deviceInfo: deviceInfo
+             };
+             
+             // 更新统计
+             updateStatistics();
+             saveAppData();
+         }
         
         function getDeviceInfoFromRow(deviceId) {
             // 从搜索结果中获取设备信息
@@ -821,36 +828,37 @@
             return deviceId;
         }
   
-        // 切换剔除/恢复状态
-        function toggleExclude(deviceId, row, excludeBtn) {
-            if (!deviceMarks[deviceId]) {
-                showToast('请先完成审批或评估!');
-                return;
-            }
-            
-            const isExcluded = deviceMarks[deviceId].excluded;
-            
-            if (isExcluded) {
-                // 恢复
-                deviceMarks[deviceId].excluded = false;
-                row.style.opacity = '1';
-                row.style.textDecoration = 'none';
-                excludeBtn.textContent = '剔除';
-                excludeBtn.className = 'text-xs px-2 py-1 rounded border border-red-300 text-red-600 hover:bg-red-50 transition w-full';
-                showToast('设备已恢复到统计中');
-            } else {
-                // 剔除
-                deviceMarks[deviceId].excluded = true;
-                row.style.opacity = '0.3';
-                row.style.textDecoration = 'line-through';
-                excludeBtn.textContent = '恢复';
-                excludeBtn.className = 'text-xs px-2 py-1 rounded border border-green-300 text-green-600 hover:bg-green-50 transition w-full';
-                showToast('设备已从统计中剔除');
-            }
-            
-            // 更新统计
-            updateStatistics();
-        }
+         // 切换剔除/恢复状态
+         function toggleExclude(deviceId, row, excludeBtn) {
+             if (!appData.deviceMarks[deviceId]) {
+                 showToast('请先完成审批或评估!');
+                 return;
+             }
+             
+             const isExcluded = appData.deviceMarks[deviceId].excluded;
+             
+             if (isExcluded) {
+                 // 恢复
+                 appData.deviceMarks[deviceId].excluded = false;
+                 row.style.opacity = '1';
+                 row.style.textDecoration = 'none';
+                 excludeBtn.textContent = '剔除';
+                 excludeBtn.className = 'text-xs px-2 py-1 rounded border border-red-300 text-red-600 hover:bg-red-50 transition w-full';
+                 showToast('设备已恢复到统计中');
+             } else {
+                 // 剔除
+                 appData.deviceMarks[deviceId].excluded = true;
+                 row.style.opacity = '0.3';
+                 row.style.textDecoration = 'line-through';
+                 excludeBtn.textContent = '恢复';
+                 excludeBtn.className = 'text-xs px-2 py-1 rounded border border-green-300 text-green-600 hover:bg-green-50 transition w-full';
+                 showToast('设备已从统计中剔除');
+             }
+             
+             // 更新统计
+             updateStatistics();
+             saveAppData();
+         }
  
           function updateStatistics() {
               const now = new Date();
@@ -1111,15 +1119,15 @@
             return grouped;
         }
         
-        function getDeviceInfo(deviceId) {
-            // 从deviceMarks中获取设备信息
-            if (deviceMarks[deviceId] && deviceMarks[deviceId].deviceInfo) {
-                return deviceMarks[deviceId].deviceInfo;
-            }
-            
-            // 如果找不到,返回设备ID
-            return deviceId;
-        }
+         function getDeviceInfo(deviceId) {
+             // 从appData.deviceMarks中获取设备信息
+             if (appData.deviceMarks[deviceId] && appData.deviceMarks[deviceId].deviceInfo) {
+                 return appData.deviceMarks[deviceId].deviceInfo;
+             }
+             
+             // 如果找不到,返回设备ID
+             return deviceId;
+         }
         
         // 点击弹窗外部关闭
         document.getElementById('recordDetailsModal').addEventListener('click', function(e) {
