@@ -51,15 +51,32 @@
       "timestamp": "2026-04-30T06:57:07.039Z",
       "excluded": false,
       "deviceInfo": "黄埔2-RCMSAP01"
+    },
+    "device-4": {
+      "type": "net",
+      "timestamp": "2026-04-30T07:50:29.410Z",
+      "excluded": false,
+      "deviceInfo": "3703-东城机楼九层C网基站",
+      "deviceData": {
+        "所属行政区域": "从化",
+        "集团名称": "从化市东成机楼C网基站/东成C网汇聚环1华为SDH2.5G001/155M03链",
+        "网管中名称": "3703-东城机楼九层C网基站",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260414）": "已拆除，可退网",
+        "0407备注_承载室": ""
+      }
     }
   },
   "statistics": {
     "today": {
-      "netCount": 3,
+      "netCount": 4,
       "monitorCount": 0
     },
     "week": {
-      "netCount": 3,
+      "netCount": 4,
       "monitorCount": 0
     }
   },
