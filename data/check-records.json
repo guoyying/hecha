@@ -39,7 +39,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "data/check-records.json",
-    "lastSync": "2026-04-30T05:20:23.477Z",
-    "version": 2
+    "lastSync": "2026-04-30T06:53:04.795Z",
+    "version": 3
   }
 }
