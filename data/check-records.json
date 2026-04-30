@@ -29,12 +29,6 @@
         "0407备注_承载室": ""
       }
     },
-    "device-3": {
-      "type": "net",
-      "timestamp": "2026-04-30T06:52:44.900Z",
-      "excluded": false,
-      "deviceInfo": "device-3"
-    },
     "device-1": {
       "type": "net",
       "timestamp": "2026-04-30T06:57:07.039Z",
