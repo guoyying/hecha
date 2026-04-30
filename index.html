@@ -653,13 +653,21 @@
             headerRow.appendChild(actionTh);
             thead.appendChild(headerRow);
  
-             // 创建数据行
-             let deviceIndex = 0;
-             results.forEach(result => {
-                 result.matches.forEach(row => {
-                     const deviceId = `device-${deviceIndex++}`;
-                     const tr = document.createElement('tr');
-                     tr.id = deviceId;
+              // 创建数据行
+              // 获取数据库中已有的设备数量,作为起始索引
+              // 这样可以确保设备ID在整个数据库中是唯一的
+              // 设备ID从1开始计数,更符合人类习惯
+              const existingDeviceCount = Object.keys(appData.deviceMarks).length;
+              console.log(`📊 数据库中已有设备数量: ${existingDeviceCount}`);
+              console.log(`📊 数据库中的设备ID:`, Object.keys(appData.deviceMarks));
+              let deviceIndex = existingDeviceCount + 1;
+              console.log(`📊 新设备起始索引: ${deviceIndex}`);
+              results.forEach(result => {
+                  result.matches.forEach(row => {
+                      const deviceId = `device-${deviceIndex++}`;
+                      console.log(`📝 生成设备ID: ${deviceId}`);
+                      const tr = document.createElement('tr');
+                      tr.id = deviceId;
                      tr.setAttribute('data-device-id', deviceId);
                      tr.className = 'device-row';
                      
@@ -816,11 +824,18 @@
                  return;
              }
              
-             // 记录勾选框状态
-             deviceCheckboxes[deviceId] = {
-                 net: checkedStates,
-                 monitor: [false, false, false]
-             };
+             // 记录勾选框状态,保留其他类型的勾选框状态
+             if (!deviceCheckboxes[deviceId]) {
+                 deviceCheckboxes[deviceId] = {
+                     net: checkedStates,
+                     monitor: [false, false, false]
+                 };
+             } else {
+                 // 保留原有的 monitor 状态
+                 deviceCheckboxes[deviceId].net = checkedStates;
+             }
+             
+             console.log(`✅ 网络部门审批完成: ${deviceId}`, deviceCheckboxes[deviceId]);
              
              // 标记设备
              markDevice(deviceId, 'net');
@@ -848,11 +863,18 @@
                  return;
              }
              
-             // 记录勾选框状态
-             deviceCheckboxes[deviceId] = {
-                 net: [false, false, false],
-                 monitor: checkedStates
-             };
+             // 记录勾选框状态,保留其他类型的勾选框状态
+             if (!deviceCheckboxes[deviceId]) {
+                 deviceCheckboxes[deviceId] = {
+                     net: [false, false, false],
+                     monitor: checkedStates
+                 };
+             } else {
+                 // 保留原有的 net 状态
+                 deviceCheckboxes[deviceId].monitor = checkedStates;
+             }
+             
+             console.log(`✅ 网监评估完成: ${deviceId}`, deviceCheckboxes[deviceId]);
              
              // 标记设备
              markDevice(deviceId, 'monitor');
@@ -867,20 +889,43 @@
          }
   
          function markDevice(deviceId, type) {
+             console.log(`🎯 markDevice 被调用: deviceId=${deviceId}, type=${type}`);
+             console.log(`🎯 当前数据库中的设备:`, Object.keys(appData.deviceMarks));
+             
              // 获取设备信息
              const deviceInfo = getDeviceInfoFromRow(deviceId);
              
              // 获取完整的设备数据(只包含用户选择的字段)
              const deviceData = getDeviceDataFromRow(deviceId);
              
-             // 记录标记信息
-             appData.deviceMarks[deviceId] = {
-                 type: type,
-                 timestamp: new Date().toISOString(),
-                 excluded: false,
-                 deviceInfo: deviceInfo,
-                 deviceData: deviceData  // 保存完整的设备数据
-             };
+             // 检查是否已经存在该设备的标记
+             if (appData.deviceMarks[deviceId]) {
+                 // 如果已存在,保留原有的 excluded 状态
+                 const existingMark = appData.deviceMarks[deviceId];
+                 
+                 // 更新标记信息,保留原有的 excluded 状态
+                 appData.deviceMarks[deviceId] = {
+                     type: type,
+                     timestamp: new Date().toISOString(),
+                     excluded: existingMark.excluded,  // 保留原有的剔除状态
+                     deviceInfo: deviceInfo,
+                     deviceData: deviceData  // 保存完整的设备数据
+                 };
+                 
+                 console.log(`📝 更新设备标记: ${deviceId}, 保留 excluded 状态: ${existingMark.excluded}`);
+             } else {
+                 // 如果不存在,创建新的标记
+                 appData.deviceMarks[deviceId] = {
+                     type: type,
+                     timestamp: new Date().toISOString(),
+                     excluded: false,
+                     deviceInfo: deviceInfo,
+                     deviceData: deviceData  // 保存完整的设备数据
+                 };
+                 
+                 console.log(`✅ 创建新设备标记: ${deviceId}`);
+                 console.log(`✅ 创建后数据库中的设备:`, Object.keys(appData.deviceMarks));
+             }
              
              // 更新统计
              updateStatistics();
