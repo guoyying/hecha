@@ -14,13 +14,13 @@
   "deviceMarks": {
     "device-0": {
       "type": "net",
-      "timestamp": "2026-04-30T07:11:55.703Z",
+      "timestamp": "2026-04-30T07:16:25.028Z",
       "excluded": false,
-      "deviceInfo": "3703-东城机楼九层C网基站",
+      "deviceInfo": "良口盘溪C网基站-LKPXWC001/A01",
       "deviceData": {
         "所属行政区域": "从化",
-        "集团名称": "从化市东成机楼C网基站/东成C网汇聚环1华为SDH2.5G001/155M03链",
-        "网管中名称": "3703-东城机楼九层C网基站",
+        "集团名称": "良口盘溪C网基站/良口盘溪烽火SDH2.5G001/155M01",
+        "网管中名称": "良口盘溪C网基站-LKPXWC001/A01",
         "高值业务数": "0",
         "局内业务数": "0",
         "局内光路数": "",
@@ -28,6 +28,12 @@
         "800M基站设备可退（20260414）": "已拆除，可退网",
         "0407备注_承载室": ""
       }
+    },
+    "device-3": {
+      "type": "net",
+      "timestamp": "2026-04-30T06:52:44.900Z",
+      "excluded": false,
+      "deviceInfo": "device-3"
     },
     "device-1": {
       "type": "net",
@@ -51,7 +57,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "data/check-records.json",
-    "lastSync": "2026-04-30T07:12:21.257Z",
+    "lastSync": "2026-04-30T07:14:04.519Z",
     "version": 3
   }
 }
