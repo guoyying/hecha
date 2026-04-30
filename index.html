@@ -660,6 +660,7 @@
                      const deviceId = `device-${deviceIndex++}`;
                      const tr = document.createElement('tr');
                      tr.id = deviceId;
+                     tr.setAttribute('data-device-id', deviceId);
                      tr.className = 'device-row';
                      
                      // 添加数据列
@@ -869,12 +870,16 @@
              // 获取设备信息
              const deviceInfo = getDeviceInfoFromRow(deviceId);
              
+             // 获取完整的设备数据(只包含用户选择的字段)
+             const deviceData = getDeviceDataFromRow(deviceId);
+             
              // 记录标记信息
              appData.deviceMarks[deviceId] = {
                  type: type,
                  timestamp: new Date().toISOString(),
                  excluded: false,
-                 deviceInfo: deviceInfo
+                 deviceInfo: deviceInfo,
+                 deviceData: deviceData  // 保存完整的设备数据
              };
              
              // 更新统计
@@ -886,7 +891,24 @@
             // 从搜索结果中获取设备信息
             const row = document.querySelector(`[data-device-id="${deviceId}"]`);
             if (row) {
-                // 获取第一列的内容作为设备信息
+                // 获取搜索列的值作为设备信息
+                const searchColumn = document.getElementById('searchColumn').value;
+                if (searchColumn) {
+                    // 找到搜索列对应的单元格
+                    const cells = row.querySelectorAll('td');
+                    // 获取当前显示的字段列表
+                    const displayFields = selectedFields.length > 0 ? selectedFields : excelHeaders;
+                    // 找到搜索列在显示字段中的索引
+                    const columnIndex = displayFields.indexOf(searchColumn);
+                    if (columnIndex >= 0 && columnIndex < cells.length) {
+                        const cell = cells[columnIndex];
+                        if (cell) {
+                            return cell.textContent.trim();
+                        }
+                    }
+                }
+                
+                // 如果找不到搜索列,获取第一列的内容作为设备信息
                 const firstCell = row.querySelector('td:first-child');
                 if (firstCell) {
                     return firstCell.textContent.trim();
@@ -895,6 +917,33 @@
             
             // 如果找不到,返回设备ID
             return deviceId;
+        }
+        
+        function getDeviceDataFromRow(deviceId) {
+            // 从搜索结果中获取完整的设备数据(只包含用户选择的字段)
+            const row = document.querySelector(`[data-device-id="${deviceId}"]`);
+            if (row) {
+                // 获取当前显示的字段列表
+                const displayFields = selectedFields.length > 0 ? selectedFields : excelHeaders;
+                
+                // 获取所有数据单元格(排除操作列)
+                const cells = row.querySelectorAll('td');
+                
+                // 创建设备数据对象
+                const deviceData = {};
+                
+                // 遍历显示字段,获取对应的单元格值
+                displayFields.forEach((field, index) => {
+                    if (index < cells.length) {
+                        deviceData[field] = cells[index].textContent.trim();
+                    }
+                });
+                
+                return deviceData;
+            }
+            
+            // 如果找不到,返回空对象
+            return {};
         }
   
          // 切换剔除/恢复状态
@@ -1127,10 +1176,6 @@
             }, 3000);
         }
 
-        // 原有的表格点击复制功能
-
-
- 
         // 记录详情相关函数
         function showRecordDetails(period, type) {
             const modal = document.getElementById('recordDetailsModal');
@@ -1166,16 +1211,31 @@
                     dateRecords.forEach(record => {
                         const time = new Date(record.timestamp).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
                         const deviceInfo = record.deviceInfo || '未知设备';
+                        const deviceData = record.deviceData || {};
+                        
+                        // 生成设备数据的HTML
+                        let dataHtml = '';
+                        if (Object.keys(deviceData).length > 0) {
+                            dataHtml = '<div class="mt-2 text-xs text-slate-600 space-y-1">';
+                            for (const [key, value] of Object.entries(deviceData)) {
+                                dataHtml += `<div><span class="font-medium">${key}:</span> ${value}</div>`;
+                            }
+                            dataHtml += '</div>';
+                        }
+                        
                         html += `
-                            <div class="flex items-center justify-between bg-white rounded p-3 border border-slate-200">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-2 h-2 rounded-full ${type === 'net' ? 'bg-blue-500' : 'bg-purple-500'}"></div>
-                                    <div>
-                                        <div class="font-medium text-slate-800">${deviceInfo}</div>
-                                        <div class="text-xs text-slate-500">${time}</div>
+                            <div class="bg-white rounded p-3 border border-slate-200">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-2 h-2 rounded-full ${type === 'net' ? 'bg-blue-500' : 'bg-purple-500'}"></div>
+                                        <div>
+                                            <div class="font-medium text-slate-800">${deviceInfo}</div>
+                                            <div class="text-xs text-slate-500">${time}</div>
+                                        </div>
                                     </div>
+                                    ${record.excluded ? '<span class="text-xs text-red-500 font-medium">已剔除</span>' : ''}
                                 </div>
-                                ${record.excluded ? '<span class="text-xs text-red-500 font-medium">已剔除</span>' : ''}
+                                ${dataHtml}
                             </div>
                         `;
                     });
@@ -1228,7 +1288,8 @@
                          deviceInfo: deviceInfo,
                          type: mark.type,
                          timestamp: mark.timestamp,
-                         excluded: mark.excluded
+                         excluded: mark.excluded,
+                         deviceData: mark.deviceData || {}  // 添加设备数据
                      });
                  }
               });
@@ -1264,6 +1325,33 @@
              // 从appData.deviceMarks中获取设备信息
              if (appData.deviceMarks[deviceId] && appData.deviceMarks[deviceId].deviceInfo) {
                  return appData.deviceMarks[deviceId].deviceInfo;
+             }
+             
+             // 如果找不到,尝试从搜索结果中获取
+             const row = document.querySelector(`[data-device-id="${deviceId}"]`);
+             if (row) {
+                 // 获取搜索列的值作为设备信息
+                 const searchColumn = document.getElementById('searchColumn').value;
+                 if (searchColumn) {
+                     // 找到搜索列对应的单元格
+                     const cells = row.querySelectorAll('td');
+                     // 获取当前显示的字段列表
+                     const displayFields = selectedFields.length > 0 ? selectedFields : excelHeaders;
+                     // 找到搜索列在显示字段中的索引
+                     const columnIndex = displayFields.indexOf(searchColumn);
+                     if (columnIndex >= 0 && columnIndex < cells.length) {
+                         const cell = cells[columnIndex];
+                         if (cell) {
+                             return cell.textContent.trim();
+                         }
+                     }
+                 }
+                 
+                 // 如果找不到搜索列,获取第一列的内容作为设备信息
+                 const firstCell = row.querySelector('td:first-child');
+                 if (firstCell) {
+                     return firstCell.textContent.trim();
+                 }
              }
              
              // 如果找不到,返回设备ID
@@ -1738,6 +1826,9 @@
                                   const loaded = JSON.parse(saved);
                                   console.log('✅ 解析成功, loaded.github:', loaded.github);
                                   
+                                  // 数据迁移：将旧数据格式转换为新数据格式
+                                  migrateOldData(loaded);
+                                  
                                   // 合并数据，保留新版本的结构
                                   // 采用 refer.html 的方式：逐个属性合并，避免对象展开运算符的问题
                                   if (loaded.excelData !== undefined) appData.excelData = loaded.excelData;
@@ -1787,6 +1878,71 @@
                           }
                           
                           updateGithubStatus();
+                      }
+                      
+                      // 数据迁移函数：将旧数据格式转换为新数据格式
+                      function migrateOldData(loaded) {
+                          console.log('🔄 开始数据迁移...');
+                          
+                          // 检查是否需要迁移
+                          let needsMigration = false;
+                          
+                          // 检查 deviceMarks 是否缺少 deviceData 字段
+                          if (loaded.deviceMarks) {
+                              for (const [deviceId, mark] of Object.entries(loaded.deviceMarks)) {
+                                  if (!mark.deviceData) {
+                                      needsMigration = true;
+                                      console.log(`  📝 发现旧数据: ${deviceId} 缺少 deviceData 字段`);
+                                      
+                                      // 为旧数据添加 deviceData 字段
+                                      // 尝试从 deviceInfo 中提取信息
+                                      if (mark.deviceInfo) {
+                                          // 如果有 deviceInfo，创建一个简单的 deviceData 对象
+                                          mark.deviceData = {
+                                              '设备信息': mark.deviceInfo
+                                          };
+                                          console.log(`  ✅ 已为 ${deviceId} 添加 deviceData 字段`);
+                                      } else {
+                                          // 如果没有 deviceInfo，创建一个空的 deviceData 对象
+                                          mark.deviceData = {};
+                                          console.log(`  ⚠️ ${deviceId} 没有 deviceInfo，已创建空的 deviceData`);
+                                      }
+                                  }
+                              }
+                          }
+                          
+                          // 检查是否缺少 selectedFields 字段
+                          if (!loaded.selectedFields && loaded.excelHeaders) {
+                              needsMigration = true;
+                              console.log('📝 发现旧数据: 缺少 selectedFields 字段');
+                              // 默认使用所有表头作为选中字段
+                              loaded.selectedFields = [...loaded.excelHeaders];
+                              console.log('✅ 已添加 selectedFields 字段，默认选中所有字段');
+                          }
+                          
+                          // 检查 github 对象是否缺少新字段
+                          if (loaded.github) {
+                              if (!loaded.github.version) {
+                                  needsMigration = true;
+                                  console.log('📝 发现旧数据: github 对象缺少 version 字段');
+                                  loaded.github.version = 0;
+                                  console.log('✅ 已添加 github.version 字段');
+                              }
+                              if (!loaded.github.lastSync) {
+                                  needsMigration = true;
+                                  console.log('📝 发现旧数据: github 对象缺少 lastSync 字段');
+                                  loaded.github.lastSync = null;
+                                  console.log('✅ 已添加 github.lastSync 字段');
+                              }
+                          }
+                          
+                          if (needsMigration) {
+                              console.log('✅ 数据迁移完成，已保存到 localStorage');
+                              // 保存迁移后的数据
+                              localStorage.setItem('appData', JSON.stringify(loaded));
+                          } else {
+                              console.log('ℹ️ 数据已是最新格式，无需迁移');
+                          }
                       }
                    async function saveToGitHub(path, content, config) {
              const [owner, repo] = config.repo.split('/');
