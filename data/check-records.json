@@ -1,35 +1,14 @@
 {
   "excelHeaders": [],
-  "selectedFields": [
-    "所属行政区域",
-    "网管中名称",
-    "高值业务数",
-    "局内业务数",
-    "局内光路数",
-    "退网评估",
-    "0407备注_承载室"
-  ],
-  "deviceMarks": {
-    "device-0": {
-      "type": "net",
-      "timestamp": "2026-04-30T03:25:12.849Z",
-      "excluded": false,
-      "deviceInfo": "device-0"
-    },
-    "device-1": {
-      "type": "net",
-      "timestamp": "2026-04-30T03:25:16.085Z",
-      "excluded": false,
-      "deviceInfo": "device-1"
-    }
-  },
+  "selectedFields": [],
+  "deviceMarks": {},
   "statistics": {
     "today": {
-      "netCount": 2,
+      "netCount": 0,
       "monitorCount": 0
     },
     "week": {
-      "netCount": 2,
+      "netCount": 0,
       "monitorCount": 0
     }
   },
@@ -38,7 +17,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "data/check-records.json",
-    "lastSync": "2026-04-30T03:15:37.188Z",
-    "version": 2
+    "lastSync": null,
+    "version": 0
   }
 }
