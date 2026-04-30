@@ -102,15 +102,31 @@
         "800M基站设备可退（20260414）": "",
         "0407备注_承载室": ""
       }
+    },
+    "device-%E9%BB%84%E5%9F%942-RCMSAP01": {
+      "type": "net",
+      "timestamp": "2026-04-30T09:05:41.773Z",
+      "excluded": false,
+      "deviceInfo": "黄埔2-RCMSAP01",
+      "deviceData": {
+        "所属行政区域": "黄埔",
+        "集团名称": "黄埔机楼1楼传输机房2/瑞斯康达MSAP01",
+        "网管中名称": "黄埔2-RCMSAP01",
+        "高值业务数": "0",
+        "局内业务数": "1",
+        "局内光路数": "1",
+        "退网评估": "",
+        "800M基站设备可退（20260414）": ""
+      }
     }
   },
   "statistics": {
     "today": {
-      "netCount": 6,
+      "netCount": 7,
       "monitorCount": 0
     },
     "week": {
-      "netCount": 6,
+      "netCount": 7,
       "monitorCount": 0
     }
   },
@@ -119,7 +135,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "data/check-records.json",
-    "lastSync": "2026-04-30T07:50:39.981Z",
-    "version": 3
+    "lastSync": "2026-04-30T09:04:20.741Z",
+    "version": 4
   }
 }
