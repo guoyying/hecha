@@ -1,0 +1,31 @@
+{
+  "excelHeaders": [],
+  "selectedFields": [
+    "所属行政区域",
+    "网管中名称",
+    "高值业务数",
+    "局内业务数",
+    "局内光路数",
+    "退网评估",
+    "0407备注_承载室"
+  ],
+  "deviceMarks": {},
+  "statistics": {
+    "today": {
+      "netCount": 0,
+      "monitorCount": 0
+    },
+    "week": {
+      "netCount": 0,
+      "monitorCount": 0
+    }
+  },
+  "github": {
+    "repo": "guoyying/hecha",
+    "branch": "main",
+    "configPath": "config/field-config.json",
+    "dataPath": "data/check-records.json",
+    "lastSync": "2026-04-30T03:15:37.188Z",
+    "version": 2
+  }
+}
