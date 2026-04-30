@@ -68,15 +68,49 @@
         "800M基站设备可退（20260414）": "已拆除，可退网",
         "0407备注_承载室": ""
       }
+    },
+    "device-5": {
+      "type": "net",
+      "timestamp": "2026-04-30T07:51:18.632Z",
+      "excluded": false,
+      "deviceInfo": "萝岗-GZWC048",
+      "deviceData": {
+        "所属行政区域": "黄埔",
+        "集团名称": "萝岗机楼2楼综合机房1/广州武邮SDH2.5G048",
+        "网管中名称": "萝岗-GZWC048",
+        "高值业务数": "0",
+        "局内业务数": "1",
+        "局内光路数": "1",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260414）": "已拆除，可退网",
+        "0407备注_承载室": ""
+      }
+    },
+    "device-7": {
+      "type": "net",
+      "timestamp": "2026-04-30T07:52:54.991Z",
+      "excluded": false,
+      "deviceInfo": "萝岗机楼HC004",
+      "deviceData": {
+        "所属行政区域": "黄埔",
+        "集团名称": "萝岗机楼2楼综合机房1/开发区华为SDH2.5G004",
+        "网管中名称": "萝岗机楼HC004",
+        "高值业务数": "0",
+        "局内业务数": "4",
+        "局内光路数": "4",
+        "退网评估": "",
+        "800M基站设备可退（20260414）": "",
+        "0407备注_承载室": ""
+      }
     }
   },
   "statistics": {
     "today": {
-      "netCount": 4,
+      "netCount": 6,
       "monitorCount": 0
     },
     "week": {
-      "netCount": 4,
+      "netCount": 6,
       "monitorCount": 0
     }
   },
@@ -85,7 +119,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "data/check-records.json",
-    "lastSync": "2026-04-30T07:14:04.519Z",
+    "lastSync": "2026-04-30T07:50:39.981Z",
     "version": 3
   }
 }
