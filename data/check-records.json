@@ -13,24 +13,30 @@
   "deviceMarks": {
     "device-0": {
       "type": "net",
-      "timestamp": "2026-04-30T06:52:16.769Z",
+      "timestamp": "2026-04-30T06:56:38.500Z",
       "excluded": false,
-      "deviceInfo": "device-0"
+      "deviceInfo": "大沙东1-GZHC011"
     },
     "device-3": {
       "type": "net",
       "timestamp": "2026-04-30T06:52:44.900Z",
       "excluded": false,
       "deviceInfo": "device-3"
+    },
+    "device-1": {
+      "type": "net",
+      "timestamp": "2026-04-30T06:57:07.039Z",
+      "excluded": false,
+      "deviceInfo": "黄埔2-RCMSAP01"
     }
   },
   "statistics": {
     "today": {
-      "netCount": 2,
+      "netCount": 3,
       "monitorCount": 0
     },
     "week": {
-      "netCount": 2,
+      "netCount": 3,
       "monitorCount": 0
     }
   },
