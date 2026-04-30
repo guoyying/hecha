@@ -201,12 +201,19 @@
                 <div>
                     <div class="flex items-center justify-between mb-2">
                         <label class="block text-sm font-medium text-slate-700">搜索内容(每行一个)</label>
-                        <button onclick="pasteFromClipboard()" class="flex items-center gap-1 text-sm text-blue-600 hover:text-blue-700 font-medium transition">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                            粘贴截图识别
-                        </button>
+                        <div class="flex items-center gap-2">
+                            <button onclick="pasteFromClipboard()" class="flex items-center gap-1 text-sm text-blue-600 hover:text-blue-700 font-medium transition">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                粘贴截图识别
+                            </button>
+                            <button onclick="document.getElementById('imageFileInput').click()" class="flex items-center gap-1 text-sm text-green-600 hover:text-green-700 font-medium transition">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                上传图片识别
+                            </button>
+                            <input type="file" id="imageFileInput" accept="image/*" style="display:none" onchange="handleImageUpload(this)">
+                        </div>
                     </div>
-                    <textarea id="searchInput" rows="4" placeholder="输入搜索内容或点击右上角粘贴截图识别..." class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                    <textarea id="searchInput" rows="4" placeholder="输入搜索内容或点击右上角粘贴/上传截图识别..." class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
                 </div>
                 <button onclick="executeSearch()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-4 py-2 rounded-lg transition">执行搜索</button>
             </div>
@@ -594,8 +601,12 @@
 
             searchTerms.forEach(term => {
                 const matchedRows = excelData.filter(row => {
+                    // 获取指定列的值
                     const cellValue = String(row[searchColumn] || '').toLowerCase();
-                    return cellValue.includes(term.toLowerCase());
+                    const searchTerm = term.toLowerCase();
+                    
+                    // 模糊搜索:只要包含搜索词就匹配
+                    return cellValue.includes(searchTerm);
                 });
                 
                 if (matchedRows.length > 0) {
@@ -965,25 +976,85 @@
               updateStatisticsDisplay();
           }
  
+        // 图片上传处理
+        async function handleImageUpload(input) {
+            const file = input.files[0];
+            if (!file) return;
+            
+            // 检查 Tesseract.js 是否加载
+            if (typeof Tesseract === 'undefined') {
+                showToast('OCR功能需要加载Tesseract.js库,请刷新页面重试');
+                return;
+            }
+            
+            showToast('正在识别图片中的文字...');
+            
+            try {
+                // 创建 worker
+                const worker = await Tesseract.createWorker({
+                    logger: m => {
+                        if (m.status === 'recognizing text') {
+                            console.log(`识别进度: ${Math.round(m.progress * 100)}%`);
+                        }
+                    }
+                });
+                
+                // 设置语言和参数
+                await worker.loadLanguage('chi_sim+eng');
+                await worker.initialize('chi_sim+eng');
+                
+                // 执行识别
+                const result = await worker.recognize(file);
+                
+                // 终止 worker 释放资源
+                await worker.terminate();
+                
+                const recognizedText = result.data.text.trim();
+                if (recognizedText) {
+                    const searchInput = document.getElementById('searchInput');
+                    searchInput.value = recognizedText;
+                    showToast('图片识别成功!');
+                } else {
+                    showToast('未能识别到文字,请重试');
+                }
+            } catch (error) {
+                console.error('图片识别失败:', error);
+                showToast('图片识别失败: ' + (error.message || '未知错误'));
+            }
+            
+            // 清空文件输入
+            input.value = '';
+        }
+ 
         // 业务类型选择
         async function pasteFromClipboard() {
             try {
-                // 尝试读取剪贴板中的图片
-                const clipboardItems = await navigator.clipboard.read();
+                // 检查 Tesseract.js 是否加载
+                if (typeof Tesseract === 'undefined') {
+                    showToast('OCR功能需要加载Tesseract.js库,请刷新页面重试');
+                    return;
+                }
                 
-                for (const item of clipboardItems) {
-                    for (const type of item.types) {
-                        if (type.startsWith('image/')) {
-                            const blob = await item.getType(type);
-                            
-                            // 使用Tesseract.js进行OCR识别
-                            if (typeof Tesseract !== 'undefined') {
+                // 尝试读取剪贴板中的图片
+                try {
+                    const clipboardItems = await navigator.clipboard.read();
+                    
+                    for (const item of clipboardItems) {
+                        for (const type of item.types) {
+                            if (type.startsWith('image/')) {
+                                const blob = await item.getType(type);
+                                
+                                // 使用Tesseract.js进行OCR识别
                                 showToast('正在识别截图中的文字...');
                                 
                                 try {
-                                    // 配置 Tesseract 使用内存存储，避免浏览器的跟踪防护阻止 localStorage 访问
+                                    // 创建 worker
                                     const worker = await Tesseract.createWorker({
-                                        logger: m => console.log(m)
+                                        logger: m => {
+                                            if (m.status === 'recognizing text') {
+                                                console.log(`识别进度: ${Math.round(m.progress * 100)}%`);
+                                            }
+                                        }
                                     });
                                     
                                     // 设置语言和参数
@@ -1008,13 +1079,12 @@
                                     console.error('OCR识别失败:', ocrError);
                                     showToast('OCR识别失败: ' + (ocrError.message || '未知错误'));
                                 }
-                            } else {
-                                // 如果没有Tesseract.js,提示用户
-                                showToast('OCR功能需要加载Tesseract.js库');
+                                return;
                             }
-                            return;
                         }
                     }
+                } catch (clipboardError) {
+                    console.log('无法读取剪贴板图片:', clipboardError);
                 }
                 
                 // 如果没有图片,尝试读取文本
@@ -1028,7 +1098,8 @@
                         showToast('剪贴板中没有内容');
                     }
                 } catch (textError) {
-                    showToast('剪贴板中没有图片或文本');
+                    console.log('无法读取剪贴板文本:', textError);
+                    showToast('请先复制图片或文本到剪贴板');
                 }
             } catch (error) {
                 console.error('读取剪贴板失败:', error);
