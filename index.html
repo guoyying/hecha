@@ -244,41 +244,66 @@
                 <h2 class="text-lg font-bold text-slate-800">统计信息</h2>
             </div>
             
-             <!-- 今日统计 -->
-             <div class="mb-6">
+             <!-- 统计概览 -->
+             <div>
                  <h3 class="text-sm font-semibold text-slate-600 mb-3 flex items-center gap-2">
-                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                     今日统计
+                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                     统计概览
                  </h3>
                   <div class="grid grid-cols-2 gap-4">
-                      <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center cursor-pointer hover:bg-blue-100 transition" onclick="showRecordDetails('today', 'net')">
-                          <div class="text-2xl font-bold text-blue-700" id="todayNetCount">0</div>
+                      <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center cursor-pointer hover:bg-blue-100 transition" onclick="showRecordDetails('all', 'net')">
+                          <div class="text-2xl font-bold text-blue-700" id="totalNetCount">0</div>
                           <div class="text-sm text-blue-600 mt-1">网络部门审批</div>
                       </div>
-                      <div class="bg-purple-50 border border-purple-200 rounded-lg p-4 text-center cursor-pointer hover:bg-purple-100 transition" onclick="showRecordDetails('today', 'monitor')">
-                          <div class="text-2xl font-bold text-purple-700" id="todayMonitorCount">0</div>
+                      <div class="bg-purple-50 border border-purple-200 rounded-lg p-4 text-center cursor-pointer hover:bg-purple-100 transition" onclick="showRecordDetails('all', 'monitor')">
+                          <div class="text-2xl font-bold text-purple-700" id="totalMonitorCount">0</div>
                           <div class="text-sm text-purple-600 mt-1">网监评估</div>
                       </div>
                   </div>
              </div>
              
-             <!-- 周总结 -->
-             <div>
-                 <h3 class="text-sm font-semibold text-slate-600 mb-3 flex items-center gap-2">
-                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                     本周统计
-                 </h3>
-                  <div class="grid grid-cols-2 gap-4">
-                      <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center cursor-pointer hover:bg-blue-100 transition" onclick="showRecordDetails('week', 'net')">
-                          <div class="text-2xl font-bold text-blue-700" id="weekNetCount">0</div>
-                          <div class="text-sm text-blue-600 mt-1">网络部门审批</div>
-                      </div>
-                      <div class="bg-purple-50 border border-purple-200 rounded-lg p-4 text-center cursor-pointer hover:bg-purple-100 transition" onclick="showRecordDetails('week', 'monitor')">
-                          <div class="text-2xl font-bold text-purple-700" id="weekMonitorCount">0</div>
-                          <div class="text-sm text-purple-600 mt-1">网监评估</div>
-                      </div>
-                  </div>
-              </div>
+             <!-- 日历视图 -->
+             <div class="mt-6">
+                 <div class="flex items-center justify-between mb-3">
+                     <h3 class="text-sm font-semibold text-slate-600 flex items-center gap-2">
+                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                         周统计日历
+                     </h3>
+                     <div class="flex items-center gap-2">
+                         <button onclick="changeMonth(-1)" class="p-1 hover:bg-slate-100 rounded transition">
+                             <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                         </button>
+                         <span id="calendarMonth" class="text-sm font-medium text-slate-700 min-w-[100px] text-center"></span>
+                         <button onclick="changeMonth(1)" class="p-1 hover:bg-slate-100 rounded transition">
+                             <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                         </button>
+                     </div>
+                 </div>
+                 <div class="bg-slate-50 rounded-lg p-4">
+                     <div class="grid grid-cols-7 gap-1 mb-2">
+                         <div class="text-xs font-medium text-slate-500 text-center py-1">日</div>
+                         <div class="text-xs font-medium text-slate-500 text-center py-1">一</div>
+                         <div class="text-xs font-medium text-slate-500 text-center py-1">二</div>
+                         <div class="text-xs font-medium text-slate-500 text-center py-1">三</div>
+                         <div class="text-xs font-medium text-slate-500 text-center py-1">四</div>
+                         <div class="text-xs font-medium text-slate-500 text-center py-1">五</div>
+                         <div class="text-xs font-medium text-slate-500 text-center py-1">六</div>
+                     </div>
+                     <div id="calendarGrid" class="grid grid-cols-7 gap-1">
+                         <!-- 日历格子将在这里动态生成 -->
+                     </div>
+                     <div class="flex items-center justify-center gap-6 mt-4 pt-3 border-t border-slate-200">
+                         <div class="flex items-center gap-2">
+                             <div class="w-3 h-3 rounded-full bg-blue-500"></div>
+                             <span class="text-xs text-slate-600">网络部门审批</span>
+                         </div>
+                         <div class="flex items-center gap-2">
+                             <div class="w-3 h-3 rounded-full bg-purple-500"></div>
+                             <span class="text-xs text-slate-600">网监评估</span>
+                         </div>
+                     </div>
+                 </div>
+             </div>
              </div>
          </div>
   
@@ -826,9 +851,9 @@
              const cells = row.querySelectorAll('td');
              const deviceKey = columnIndex >= 0 && columnIndex < cells.length ? cells[columnIndex].textContent.trim() : tempId;
              
-             // 使用搜索列的值作为设备ID（进行URL编码以避免特殊字符问题）
-             const deviceId = `device-${encodeURIComponent(deviceKey)}`;
-             console.log(`📝 生成正式设备ID: ${deviceId} (基于搜索列值: ${deviceKey})`);
+             // 使用 deviceInfo（搜索列的值）作为设备ID（进行URL编码以避免特殊字符问题）
+             const deviceId = encodeURIComponent(deviceKey);
+             console.log(`📝 生成正式设备ID: ${deviceId} (基于 deviceInfo: ${deviceKey})`);
              
              // 更新表格行的ID和属性
              if (row) {
@@ -931,9 +956,9 @@
              const cells = row.querySelectorAll('td');
              const deviceKey = columnIndex >= 0 && columnIndex < cells.length ? cells[columnIndex].textContent.trim() : tempId;
              
-             // 使用搜索列的值作为设备ID（进行URL编码以避免特殊字符问题）
-             const deviceId = `device-${encodeURIComponent(deviceKey)}`;
-             console.log(`📝 生成正式设备ID: ${deviceId} (基于搜索列值: ${deviceKey})`);
+             // 使用 deviceInfo（搜索列的值）作为设备ID（进行URL编码以避免特殊字符问题）
+             const deviceId = encodeURIComponent(deviceKey);
+             console.log(`📝 生成正式设备ID: ${deviceId} (基于 deviceInfo: ${deviceKey})`);
              
              // 更新表格行的ID和属性
              if (row) {
@@ -1154,25 +1179,55 @@
               const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
               const weekStart = getWeekStart(now);
               
+              console.log('📊 开始更新统计...');
+              console.log('  - 当前时间:', now.toISOString());
+              console.log('  - 今日开始:', today.toISOString());
+              console.log('  - 本周开始:', weekStart.toISOString());
+              
+              // 遍历所有设备，计算总数
+              const allDeviceIds = Object.keys(appData.deviceMarks);
+              const totalDevices = allDeviceIds.length;
+              console.log('  - 数据库中设备数量:', totalDevices);
+              console.log('  - 设备ID列表:', allDeviceIds);
+              
+              // 统计设备类型分布
+              let totalNet = 0, totalMonitor = 0, totalExcluded = 0;
+              
               // 重置统计
               let todayNet = 0, todayMonitor = 0;
               let weekNet = 0, weekMonitor = 0;
               
-              // 遍历所有标记的设备
-              Object.values(appData.deviceMarks).forEach(mark => {
-                  // 跳过被剔除的设备
+              // 遍历所有标记的设备（每个设备ID只统计一次）
+              Object.entries(appData.deviceMarks).forEach(([deviceId, mark]) => {
+                  // 统计设备类型分布
+                  if (mark.type === 'net') {
+                      totalNet++;
+                  } else if (mark.type === 'monitor') {
+                      totalMonitor++;
+                  }
+                  
+                  // 统计被剔除的设备
                   if (mark.excluded) {
+                      totalExcluded++;
+                      console.log(`  ⏭️  跳过被剔除的设备: ${deviceId}`);
                       return;
                   }
                   
                   const markDate = new Date(mark.timestamp);
+                  console.log(`  📝 设备: ${deviceId}`);
+                  console.log(`    - 类型: ${mark.type}`);
+                  console.log(`    - 时间: ${mark.timestamp}`);
+                  console.log(`    - 是否今日: ${markDate >= today}`);
+                  console.log(`    - 是否本周: ${markDate >= weekStart}`);
                  
                   // 今日统计
-                  if (markDate >= today) {
+                  if (markDate == today) {
                       if (mark.type === 'net') {
                           todayNet++;
+                          console.log(`    ✅ 计入今日网络审批 (今日网络审批: ${todayNet})`);
                       } else if (mark.type === 'monitor') {
                           todayMonitor++;
+                          console.log(`    ✅ 计入今日网监评估 (今日网监评估: ${todayMonitor})`);
                       }
                   }
                   
@@ -1180,17 +1235,36 @@
                   if (markDate >= weekStart) {
                       if (mark.type === 'net') {
                           weekNet++;
+                          console.log(`    ✅ 计入本周网络审批 (本周网络审批: ${weekNet})`);
                       } else if (mark.type === 'monitor') {
                           weekMonitor++;
+                          console.log(`    ✅ 计入本周网监评估 (本周网监评估: ${weekMonitor})`);
                       }
                   }
               });
+              
+              console.log('📊 设备总数统计:');
+              console.log(`  - 设备总数: ${totalDevices}`);
+              console.log(`  - 网络部门审批总数: ${totalNet}`);
+              console.log(`  - 网监评估总数: ${totalMonitor}`);
+              console.log(`  - 被剔除设备数: ${totalExcluded}`);
+              console.log(`  - 有效设备数: ${totalDevices - totalExcluded}`);
+              
+              console.log('📊 统计结果:');
+              console.log(`  - 今日网络审批: ${todayNet}`);
+              console.log(`  - 今日网监评估: ${todayMonitor}`);
+              console.log(`  - 本周网络审批: ${weekNet}`);
+              console.log(`  - 本周网监评估: ${weekMonitor}`);
+              console.log(`  - 今日总计: ${todayNet + todayMonitor}`);
+              console.log(`  - 本周总计: ${weekNet + weekMonitor}`);
               
               // 更新全局统计
               appData.statistics.today.netCount = todayNet;
               appData.statistics.today.monitorCount = todayMonitor;
               appData.statistics.week.netCount = weekNet;
               appData.statistics.week.monitorCount = weekMonitor;
+              
+              console.log('📊 更新后的 appData.statistics:', JSON.stringify(appData.statistics));
               
               saveAppData();
               updateStatisticsDisplay();
@@ -1354,7 +1428,14 @@
             const content = document.getElementById('recordDetailsContent');
             
             // 设置标题
-            const periodText = period === 'today' ? '今日' : '本周';
+            let periodText = '';
+            if (period === 'all') {
+                periodText = '全部';
+            } else if (period === 'today') {
+                periodText = '今日';
+            } else if (period === 'week') {
+                periodText = '本周';
+            }
             const typeText = type === 'net' ? '网络部门审批' : '网监评估';
             title.textContent = `${periodText}${typeText}记录详情`;
             
@@ -1444,7 +1525,10 @@
                  
                  // 检查是否在指定时间段内
                  let inPeriod = false;
-                 if (period === 'today') {
+                 if (period === 'all') {
+                     // 显示所有记录
+                     inPeriod = true;
+                 } else if (period === 'today') {
                      inPeriod = markDate >= today;
                  } else if (period === 'week') {
                      inPeriod = markDate >= weekStart;
@@ -1552,34 +1636,14 @@
              const currentToken = appData.github.token;
              console.log('  - 保存当前 token:', currentToken ? '存在' : '不存在');
              
-             // 检查是否需要重置今日统计(新的一天)
-             const now = new Date();
-             const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-             const lastUpdate = new Date(appData.github.lastStatsUpdate || today);
-             
-             if (lastUpdate < today) {
-                 // 新的一天,重置今日统计
-                 appData.statistics.today = {
-                     netCount: 0,
-                     monitorCount: 0
-                 };
-                 console.log('  - 重置今日统计');
-             }
-             
-             // 检查是否需要重置本周统计(新的一周)
-             const weekStart = getWeekStart(now);
-             const lastWeekStart = new Date(appData.github.lastWeekStart || weekStart);
-             
-             if (lastWeekStart < weekStart) {
-                 // 新的一周,重置本周统计
-                 appData.statistics.week = {
-                     netCount: 0,
-                     monitorCount: 0
-                 };
-                 console.log('  - 重置本周统计');
-             }
+             // 不再重置统计，直接根据 deviceMarks 中的数据计算
+             // 统计依据：deviceMarks 中设备的个数和时间戳
              
              // 更新时间戳
+             const now = new Date();
+             const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+             const weekStart = getWeekStart(now);
+             
              appData.github.lastStatsUpdate = today.toISOString();
              appData.github.lastWeekStart = weekStart.toISOString();
              
@@ -1588,19 +1652,260 @@
              console.log('  - 恢复 token:', appData.github.token ? '存在' : '不存在');
              
              saveAppData();
-             updateStatisticsDisplay();
+             
+             // 重新计算统计数据，基于 deviceMarks 中的设备个数和时间戳
+             updateStatistics();
          }
   
          function updateStatisticsDisplay() {
-             // 更新今日统计
-             document.getElementById('todayNetCount').textContent = appData.statistics.today.netCount;
-             document.getElementById('todayMonitorCount').textContent = appData.statistics.today.monitorCount;
+             console.log('🖥️  开始更新统计显示...');
              
-             // 更新本周统计
-             document.getElementById('weekNetCount').textContent = appData.statistics.week.netCount;
-             document.getElementById('weekMonitorCount').textContent = appData.statistics.week.monitorCount;
+             // 计算总数统计
+             let totalNet = 0, totalMonitor = 0;
+             Object.values(appData.deviceMarks).forEach(mark => {
+                 if (mark.excluded) {
+                     return;
+                 }
+                 if (mark.type === 'net') {
+                     totalNet++;
+                 } else if (mark.type === 'monitor') {
+                     totalMonitor++;
+                 }
+             });
+             
+             console.log('  - 总网络审批数:', totalNet);
+             console.log('  - 总网监评估数:', totalMonitor);
+             
+             // 更新统计显示
+             document.getElementById('totalNetCount').textContent = totalNet;
+             document.getElementById('totalMonitorCount').textContent = totalMonitor;
+             console.log('🖥️  统计显示已更新');
+             console.log('  - 总网络审批元素值:', document.getElementById('totalNetCount').textContent);
+             console.log('  - 总网监评估元素值:', document.getElementById('totalMonitorCount').textContent);
          }
- 
+         
+         // 日历相关变量
+         let currentCalendarDate = new Date();
+         
+         // 初始化日历
+         function initCalendar() {
+             renderCalendar();
+         }
+         
+         // 切换月份
+         function changeMonth(delta) {
+             currentCalendarDate.setMonth(currentCalendarDate.getMonth() + delta);
+             renderCalendar();
+         }
+         
+         // 渲染日历
+         function renderCalendar() {
+             const year = currentCalendarDate.getFullYear();
+             const month = currentCalendarDate.getMonth();
+             
+             // 更新月份标题
+             const monthNames = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'];
+             document.getElementById('calendarMonth').textContent = `${year}年 ${monthNames[month]}`;
+             
+             // 获取当月第一天和最后一天
+             const firstDay = new Date(year, month, 1);
+             const lastDay = new Date(year, month + 1, 0);
+             
+             // 获取当月第一天是星期几（0=周日，1=周一，...）
+             const startDay = firstDay.getDay();
+             
+             // 获取当月有多少天
+             const daysInMonth = lastDay.getDate();
+             
+             // 计算每周的统计数据
+             const weekStats = calculateWeekStats(year, month);
+             
+             // 生成日历格子
+             const calendarGrid = document.getElementById('calendarGrid');
+             calendarGrid.innerHTML = '';
+             
+             // 填充空白格子（上个月的日期）
+             for (let i = 0; i < startDay; i++) {
+                 const emptyCell = document.createElement('div');
+                 emptyCell.className = 'h-16 bg-slate-50 rounded';
+                 calendarGrid.appendChild(emptyCell);
+             }
+             
+             // 填充当月的日期
+             for (let day = 1; day <= daysInMonth; day++) {
+                 const currentDate = new Date(year, month, day);
+                 const weekNumber = getWeekNumber(currentDate);
+                 const weekStat = weekStats[weekNumber] || { net: 0, monitor: 0 };
+                 
+                 const cell = document.createElement('div');
+                 cell.className = 'h-16 bg-white border border-slate-200 rounded p-1 cursor-pointer hover:bg-slate-50 transition';
+                 
+                 // 日期数字
+                 const dayNumber = document.createElement('div');
+                 dayNumber.className = 'text-xs font-medium text-slate-700 mb-1';
+                 dayNumber.textContent = day;
+                 cell.appendChild(dayNumber);
+                 
+                 // 统计信息
+                 const statsDiv = document.createElement('div');
+                 statsDiv.className = 'flex flex-col gap-0.5';
+                 
+                 if (weekStat.net > 0) {
+                     const netBadge = document.createElement('div');
+                     netBadge.className = 'flex items-center gap-1';
+                     netBadge.innerHTML = `<div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div><span class="text-[10px] text-blue-600">${weekStat.net}</span>`;
+                     statsDiv.appendChild(netBadge);
+                 }
+                 
+                 if (weekStat.monitor > 0) {
+                     const monitorBadge = document.createElement('div');
+                     monitorBadge.className = 'flex items-center gap-1';
+                     monitorBadge.innerHTML = `<div class="w-1.5 h-1.5 rounded-full bg-purple-500"></div><span class="text-[10px] text-purple-600">${weekStat.monitor}</span>`;
+                     statsDiv.appendChild(monitorBadge);
+                 }
+                 
+                 cell.appendChild(statsDiv);
+                 
+                 // 点击事件：显示该周的详细记录
+                 cell.onclick = () => showWeekDetails(weekNumber, currentDate);
+                 
+                 calendarGrid.appendChild(cell);
+             }
+         }
+         
+         // 计算每周的统计数据
+         function calculateWeekStats(year, month) {
+             const weekStats = {};
+             
+             Object.entries(appData.deviceMarks).forEach(([deviceId, mark]) => {
+                 if (mark.excluded) {
+                     return;
+                 }
+                 
+                 const markDate = new Date(mark.timestamp);
+                 
+                 // 只统计指定月份的数据
+                 if (markDate.getFullYear() !== year || markDate.getMonth() !== month) {
+                     return;
+                 }
+                 
+                 const weekNumber = getWeekNumber(markDate);
+                 
+                 if (!weekStats[weekNumber]) {
+                     weekStats[weekNumber] = { net: 0, monitor: 0 };
+                 }
+                 
+                 if (mark.type === 'net') {
+                     weekStats[weekNumber].net++;
+                 } else if (mark.type === 'monitor') {
+                     weekStats[weekNumber].monitor++;
+                 }
+             });
+             
+             return weekStats;
+         }
+         
+         // 获取周数（ISO周数）
+         function getWeekNumber(date) {
+             const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+             const dayNum = d.getUTCDay() || 7;
+             d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+             const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+             return Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+         }
+         
+         // 显示某周的详细记录
+         function showWeekDetails(weekNumber, date) {
+             const weekStart = getWeekStart(date);
+             const weekEnd = new Date(weekStart);
+             weekEnd.setDate(weekEnd.getDate() + 6);
+             
+             const records = [];
+             
+             Object.entries(appData.deviceMarks).forEach(([deviceId, mark]) => {
+                 if (mark.excluded) {
+                     return;
+                 }
+                 
+                 const markDate = new Date(mark.timestamp);
+                 
+                 // 检查是否在该周内
+                 if (markDate >= weekStart && markDate <= weekEnd) {
+                     const deviceInfo = getDeviceInfo(deviceId);
+                     
+                     records.push({
+                         deviceId: deviceId,
+                         deviceInfo: deviceInfo,
+                         type: mark.type,
+                         timestamp: mark.timestamp,
+                         deviceData: mark.deviceData || {}
+                     });
+                 }
+             });
+             
+             // 按时间排序
+             records.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+             
+             // 显示弹窗
+             showWeekDetailsModal(weekNumber, weekStart, weekEnd, records);
+         }
+         
+         // 显示周详情弹窗
+         function showWeekDetailsModal(weekNumber, weekStart, weekEnd, records) {
+             const modal = document.getElementById('recordDetailsModal');
+             const title = document.getElementById('recordDetailsTitle');
+             const content = document.getElementById('recordDetailsContent');
+             
+             const formatDate = (date) => {
+                 return `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
+             };
+             
+             title.textContent = `第${weekNumber}周 (${formatDate(weekStart)} - ${formatDate(weekEnd)})`;
+             
+             if (records.length === 0) {
+                 content.innerHTML = '<div class="text-center text-slate-500 py-8">该周暂无记录</div>';
+             } else {
+                 // 按日期分组
+                 const groupedRecords = {};
+                 records.forEach(record => {
+                     const date = new Date(record.timestamp).toLocaleDateString('zh-CN');
+                     if (!groupedRecords[date]) {
+                         groupedRecords[date] = [];
+                     }
+                     groupedRecords[date].push(record);
+                 });
+                 
+                 // 生成HTML
+                 let html = '';
+                 Object.keys(groupedRecords).sort().forEach(date => {
+                     html += `<div class="mb-4">
+                         <div class="text-sm font-semibold text-slate-700 mb-2">${date}</div>
+                         <div class="space-y-2">`;
+                     
+                     groupedRecords[date].forEach(record => {
+                         const typeColor = record.type === 'net' ? 'blue' : 'purple';
+                         const typeText = record.type === 'net' ? '网络部门审批' : '网监评估';
+                         const time = new Date(record.timestamp).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
+                         
+                         html += `<div class="bg-${typeColor}-50 border border-${typeColor}-200 rounded-lg p-3">
+                             <div class="flex items-center justify-between mb-1">
+                                 <span class="text-sm font-medium text-${typeColor}-700">${record.deviceInfo}</span>
+                                 <span class="text-xs text-${typeColor}-600">${time}</span>
+                             </div>
+                             <div class="text-xs text-${typeColor}-600">${typeText}</div>
+                         </div>`;
+                     });
+                     
+                     html += `</div></div>`;
+                 });
+                 
+                 content.innerHTML = html;
+             }
+             
+             modal.classList.remove('hidden');
+         }
+
+       // 图片上传处理
  
           // 注意: loadStatistics() 已移到 DOMContentLoaded 事件中调用
           // 避免在页面加载前就调用 saveAppData() 覆盖 localStorage 中的数据
@@ -2107,7 +2412,7 @@
                               }
                           }
                           
-                          // 新增：迁移旧的设备ID格式（device-1, device-2）到新格式（基于搜索列值）
+                          // 新增：迁移旧的设备ID格式（device-1, device-2）到新格式（基于 deviceInfo）
                           if (loaded.deviceMarks) {
                               const newDeviceMarks = {};
                               let hasOldFormatDeviceIds = false;
@@ -2120,7 +2425,7 @@
                                       hasOldFormatDeviceIds = true;
                                       needsMigration = true;
                                       
-                                      // 尝试从 deviceData 中获取搜索列的值
+                                      // 尝试从 deviceData 中获取 deviceInfo
                                       let newDeviceId = oldDeviceId; // 默认保持原样
                                       
                                       if (mark.deviceData && Object.keys(mark.deviceData).length > 0) {
@@ -2129,12 +2434,12 @@
                                           const firstFieldValue = mark.deviceData[firstFieldKey];
                                           
                                           if (firstFieldValue && firstFieldValue.trim()) {
-                                              // 使用第一个字段的值作为新的设备ID
-                                              newDeviceId = `device-${encodeURIComponent(firstFieldValue.trim())}`;
+                                              // 使用第一个字段的值作为新的设备ID（直接使用 deviceInfo）
+                                              newDeviceId = encodeURIComponent(firstFieldValue.trim());
                                               console.log(`  🔄 迁移设备ID: ${oldDeviceId} -> ${newDeviceId} (基于字段: ${firstFieldKey} = ${firstFieldValue})`);
                                           } else if (mark.deviceInfo) {
                                               // 如果第一个字段为空，使用 deviceInfo
-                                              newDeviceId = `device-${encodeURIComponent(mark.deviceInfo.trim())}`;
+                                              newDeviceId = encodeURIComponent(mark.deviceInfo.trim());
                                               console.log(`  🔄 迁移设备ID: ${oldDeviceId} -> ${newDeviceId} (基于 deviceInfo: ${mark.deviceInfo})`);
                                           } else {
                                               // 如果都没有，保持原ID
@@ -2142,7 +2447,7 @@
                                           }
                                       } else if (mark.deviceInfo) {
                                           // 如果没有 deviceData，使用 deviceInfo
-                                          newDeviceId = `device-${encodeURIComponent(mark.deviceInfo.trim())}`;
+                                          newDeviceId = encodeURIComponent(mark.deviceInfo.trim());
                                           console.log(`  🔄 迁移设备ID: ${oldDeviceId} -> ${newDeviceId} (基于 deviceInfo: ${mark.deviceInfo})`);
                                       } else {
                                           // 如果都没有，保持原ID
@@ -2274,6 +2579,9 @@
                 // 1. 先加载保存的数据
                 loadAppData();
                 loadStatistics();
+                
+                // 2. 初始化日历
+                initCalendar();
                 
                 // 2. 自动填充已保存的 GitHub 配置到表单(页面加载时就填充,不需要打开弹窗)
                 if (appData.github) {
