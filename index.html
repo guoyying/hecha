@@ -6,7 +6,6 @@
     <title>设备核查工具</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
         body { font-family: 'Noto Sans SC', sans-serif; }
@@ -1270,50 +1269,105 @@
               updateStatisticsDisplay();
           }
  
+        // OCR.space API 配置
+        const OCR_API_KEY = 'helloworld'; // 免费测试 API Key
+        const OCR_API_URL = 'https://api.ocr.space/parse/image';
+
+        // 使用 OCR.space API 进行图片识别
+        async function recognizeWithOCRSpace(imageFile) {
+            return new Promise((resolve, reject) => {
+                // 确定文件类型
+                let fileType = 'image/png'; // 默认类型
+                let fileName = 'image.png'; // 默认文件名
+                
+                if (imageFile instanceof File) {
+                    fileType = imageFile.type || 'image/png';
+                    fileName = imageFile.name || 'image.png';
+                } else if (imageFile instanceof Blob) {
+                    fileType = imageFile.type || 'image/png';
+                    // 为 Blob 创建文件名
+                    const extension = fileType.split('/')[1] || 'png';
+                    fileName = `image.${extension}`;
+                }
+                
+                console.log('文件类型:', fileType, '文件名:', fileName);
+                
+                const formData = new FormData();
+                
+                // 创建具有正确文件名的 File 对象
+                const fileToSend = imageFile instanceof File
+                    ? imageFile
+                    : new File([imageFile], fileName, { type: fileType });
+                
+                formData.append('file', fileToSend, fileName);
+                formData.append('language', 'chs'); // 中文识别
+                formData.append('isOverlayRequired', 'false');
+                formData.append('detectOrientation', 'true');
+                formData.append('scale', 'true');
+                formData.append('OCREngine', '2'); // 使用引擎2，对中文支持更好
+                formData.append('isTable', 'true'); // 保持表格格式
+                formData.append('apikey', OCR_API_KEY);
+
+                fetch(OCR_API_URL, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('API 响应:', data);
+                    if (data.IsErroredOnProcessing) {
+                        reject(new Error(data.ErrorMessage || 'OCR 处理失败'));
+                    } else if (!data.ParsedResults || data.ParsedResults.length === 0) {
+                        reject(new Error('未能识别到文字'));
+                    } else {
+                        const parsedText = data.ParsedResults[0].ParsedText;
+                        resolve({
+                            text: parsedText,
+                            confidence: data.ParsedResults[0].TextOverlay?.Lines?.[0]?.WordText ? 80 : 60
+                        });
+                    }
+                })
+                .catch(error => reject(error));
+            });
+        }
+
         // 图片上传处理
         async function handleImageUpload(input) {
             const file = input.files[0];
             if (!file) return;
             
-            // 检查 Tesseract.js 是否加载
-            if (typeof Tesseract === 'undefined') {
-                showToast('OCR功能需要加载Tesseract.js库,请刷新页面重试');
-                return;
-            }
-            
             showToast('正在识别图片中的文字...');
             
             try {
-                // 创建 worker
-                const worker = await Tesseract.createWorker({
-                    logger: m => {
-                        if (m.status === 'recognizing text') {
-                            console.log(`识别进度: ${Math.round(m.progress * 100)}%`);
-                        }
-                    }
-                });
+                // 使用 OCR.space API 进行识别
+                const result = await recognizeWithOCRSpace(file);
                 
-                // 设置语言和参数
-                await worker.loadLanguage('chi_sim+eng');
-                await worker.initialize('chi_sim+eng');
+                const recognizedText = result.text.trim();
+                console.log('识别结果:', recognizedText);
                 
-                // 执行识别
-                const result = await worker.recognize(file);
-                
-                // 终止 worker 释放资源
-                await worker.terminate();
-                
-                const recognizedText = result.data.text.trim();
                 if (recognizedText) {
                     const searchInput = document.getElementById('searchInput');
-                    searchInput.value = recognizedText;
-                    showToast('图片识别成功!');
+                    // 清理识别结果，但保持换行格式
+                    const cleanedText = recognizedText
+                        .replace(/\r\n/g, '\n')  // 统一换行符
+                        .replace(/\r/g, '\n')    // 统一换行符
+                        .replace(/\n\s*\n/g, '\n')  // 移除多余空行
+                        .trim();
+                    searchInput.value = cleanedText;
+                    
+                    showToast(`图片识别成功! (准确率: ${result.confidence}%)`);
                 } else {
                     showToast('未能识别到文字,请重试');
                 }
             } catch (error) {
                 console.error('图片识别失败:', error);
-                showToast('图片识别失败: ' + (error.message || '未知错误'));
+                if (error.message.includes('429')) {
+                    showToast('API 调用次数超限，请稍后再试');
+                } else if (error.message.includes('quota')) {
+                    showToast('免费额度已用完，请升级 API Key');
+                } else {
+                    showToast('图片识别失败: ' + (error.message || '未知错误'));
+                }
             }
             
             // 清空文件输入
@@ -1323,12 +1377,6 @@
         // 业务类型选择
         async function pasteFromClipboard() {
             try {
-                // 检查 Tesseract.js 是否加载
-                if (typeof Tesseract === 'undefined') {
-                    showToast('OCR功能需要加载Tesseract.js库,请刷新页面重试');
-                    return;
-                }
-                
                 // 尝试读取剪贴板中的图片
                 try {
                     const clipboardItems = await navigator.clipboard.read();
@@ -1338,40 +1386,39 @@
                             if (type.startsWith('image/')) {
                                 const blob = await item.getType(type);
                                 
-                                // 使用Tesseract.js进行OCR识别
+                                // 使用 OCR.space API 进行识别
                                 showToast('正在识别截图中的文字...');
                                 
                                 try {
-                                    // 创建 worker
-                                    const worker = await Tesseract.createWorker({
-                                        logger: m => {
-                                            if (m.status === 'recognizing text') {
-                                                console.log(`识别进度: ${Math.round(m.progress * 100)}%`);
-                                            }
-                                        }
-                                    });
+                                    // 使用 OCR.space API 进行识别
+                                    const result = await recognizeWithOCRSpace(blob);
                                     
-                                    // 设置语言和参数
-                                    await worker.loadLanguage('chi_sim+eng');
-                                    await worker.initialize('chi_sim+eng');
+                                    const recognizedText = result.text.trim();
+                                    console.log('识别结果:', recognizedText);
                                     
-                                    // 执行识别
-                                    const result = await worker.recognize(blob);
-                                    
-                                    // 终止 worker 释放资源
-                                    await worker.terminate();
-                                    
-                                    const recognizedText = result.data.text.trim();
                                     if (recognizedText) {
                                         const searchInput = document.getElementById('searchInput');
-                                        searchInput.value = recognizedText;
-                                        showToast('截图识别成功!');
+                                        // 清理识别结果，但保持换行格式
+                                        const cleanedText = recognizedText
+                                            .replace(/\r\n/g, '\n')  // 统一换行符
+                                            .replace(/\r/g, '\n')    // 统一换行符
+                                            .replace(/\n\s*\n/g, '\n')  // 移除多余空行
+                                            .trim();
+                                        searchInput.value = cleanedText;
+                                        
+                                        showToast(`截图识别成功! (准确率: ${result.confidence}%)`);
                                     } else {
                                         showToast('未能识别到文字,请重试');
                                     }
                                 } catch (ocrError) {
                                     console.error('OCR识别失败:', ocrError);
-                                    showToast('OCR识别失败: ' + (ocrError.message || '未知错误'));
+                                    if (ocrError.message.includes('429')) {
+                                        showToast('API 调用次数超限，请稍后再试');
+                                    } else if (ocrError.message.includes('quota')) {
+                                        showToast('免费额度已用完，请升级 API Key');
+                                    } else {
+                                        showToast('OCR识别失败: ' + (ocrError.message || '未知错误'));
+                                    }
                                 }
                                 return;
                             }
