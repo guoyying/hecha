@@ -227,8 +227,8 @@
     "repo": "guoyying/hecha",
     "branch": "main",
     "configPath": "config/field-config.json",
-    "dataPath": "data/check-records.json",
-    "lastSync": "2026-05-08T03:16:11.011Z",
-    "version": 6
+    "dataPath": "check-records.json",
+    "lastSync": "2026-05-08T05:41:01.912Z",
+    "version": 7
   }
 }
