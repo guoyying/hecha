@@ -385,6 +385,27 @@
         "content": "已提醒白云上单",
         "timestamp": "2026-05-08T10:11:33.381Z"
       }
+    },
+    "%E5%85%83%E5%B2%97%E6%9C%BA%E6%A5%BCGZWC038": {
+      "type": "remark",
+      "timestamp": "2026-05-08T10:13:48.256Z",
+      "excluded": false,
+      "deviceInfo": "元岗机楼GZWC038",
+      "deviceData": {
+        "所属行政区域": "天河",
+        "集团名称": "元岗机楼3楼传输机房1/广州武邮SDH2.5G038",
+        "网管中名称": "元岗机楼GZWC038",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "已拆除，可退网",
+        "0407备注_承载室": ""
+      },
+      "remark": {
+        "content": "已提醒天河退网",
+        "timestamp": "2026-05-08T10:13:48.256Z"
+      }
     }
   },
   "statistics": {
@@ -417,7 +438,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-08T10:11:54.261Z",
+    "lastSync": "2026-05-08T10:12:49.590Z",
     "version": 6
   }
 }
