@@ -196,6 +196,27 @@
         "content": "提醒天河5月中旬上单，已屏蔽告警",
         "timestamp": "2026-05-08T03:05:21.673Z"
       }
+    },
+    "temp-2": {
+      "type": "remark",
+      "timestamp": "2026-05-08T08:48:33.816Z",
+      "excluded": false,
+      "deviceInfo": "同和机楼-GZWC023",
+      "deviceData": {
+        "所属行政区域": "白云",
+        "集团名称": "同和机楼2楼传输机房1/广州武邮SDH2.5G023（已下电）",
+        "网管中名称": "同和机楼-GZWC023",
+        "高值业务数": "1",
+        "局内业务数": "1",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "已拆除，可退网",
+        "0407备注_承载室": ""
+      },
+      "remark": {
+        "content": "1111",
+        "timestamp": "2026-05-08T08:48:33.816Z"
+      }
     }
   },
   "statistics": {
@@ -227,8 +248,8 @@
     "repo": "guoyying/hecha",
     "branch": "main",
     "configPath": "config/field-config.json",
-    "dataPath": "data/check-records.json",
-    "lastSync": "2026-05-08T03:16:11.011Z",
+    "dataPath": "check-records.json",
+    "lastSync": "2026-05-08T08:50:01.504Z",
     "version": 6
   }
 }
