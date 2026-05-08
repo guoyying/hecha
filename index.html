@@ -218,14 +218,20 @@
             </div>
         </div>
 
-        <!-- 搜索结果展示区域 -->
-        <div id="searchResults" class="bg-white rounded-xl shadow-sm border border-slate-200 p-5 mb-6 hidden">
-            <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100">
-                <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-                </div>
-                <h2 class="text-lg font-bold text-slate-800">搜索结果</h2>
-            </div>
+         <!-- 搜索结果展示区域 -->
+         <div id="searchResults" class="bg-white rounded-xl shadow-sm border border-slate-200 p-5 mb-6 hidden">
+             <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
+                 <div class="flex items-center gap-3">
+                     <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center">
+                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                     </div>
+                     <h2 class="text-lg font-bold text-slate-800">搜索结果</h2>
+                 </div>
+                  <button onclick="openBatchRemark()" class="px-3 py-1.5 bg-amber-500 hover:bg-amber-600 text-white text-sm font-medium rounded-lg transition flex items-center gap-2">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                      一键备注所有设备
+                  </button>
+             </div>
             <div class="overflow-x-auto">
                 <table class="w-full border-collapse" id="resultTable">
                     <thead id="resultTableHead"></thead>
@@ -243,23 +249,54 @@
                 <h2 class="text-lg font-bold text-slate-800">统计信息</h2>
             </div>
             
-             <!-- 统计概览 -->
-             <div>
-                 <h3 class="text-sm font-semibold text-slate-600 mb-3 flex items-center gap-2">
-                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                     统计概览
-                 </h3>
-                  <div class="grid grid-cols-2 gap-4">
-                      <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center cursor-pointer hover:bg-blue-100 transition" onclick="showRecordDetails('all', 'net')">
-                          <div class="text-2xl font-bold text-blue-700" id="totalNetCount">0</div>
-                          <div class="text-sm text-blue-600 mt-1">网络部门审批</div>
-                      </div>
-                      <div class="bg-purple-50 border border-purple-200 rounded-lg p-4 text-center cursor-pointer hover:bg-purple-100 transition" onclick="showRecordDetails('all', 'monitor')">
-                          <div class="text-2xl font-bold text-purple-700" id="totalMonitorCount">0</div>
-                          <div class="text-sm text-purple-600 mt-1">网监评估</div>
-                      </div>
-                  </div>
-             </div>
+              <!-- 统计概览 -->
+              <div>
+                  <h3 class="text-sm font-semibold text-slate-600 mb-3 flex items-center gap-2">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                      统计概览
+                  </h3>
+                   <div class="grid grid-cols-2 gap-4">
+                       <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center cursor-pointer hover:bg-blue-100 transition" onclick="showRecordDetails('all', 'net')">
+                           <div class="text-2xl font-bold text-blue-700" id="totalNetCount">0</div>
+                           <div class="text-sm text-blue-600 mt-1">网络部门审批</div>
+                       </div>
+                       <div class="bg-purple-50 border border-purple-200 rounded-lg p-4 text-center cursor-pointer hover:bg-purple-100 transition" onclick="showRecordDetails('all', 'monitor')">
+                           <div class="text-2xl font-bold text-purple-700" id="totalMonitorCount">0</div>
+                           <div class="text-sm text-purple-600 mt-1">网监评估</div>
+                       </div>
+                   </div>
+              </div>
+              
+               <!-- 季度目标统计 -->
+               <div class="mt-6">
+                   <div class="flex items-center justify-between mb-3">
+                       <h3 class="text-sm font-semibold text-slate-600 flex items-center gap-2">
+                           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                           季度目标统计
+                       </h3>
+                       <button onclick="openQuarterTargetConfig()" class="text-sm text-blue-600 hover:text-blue-700 font-medium transition flex items-center gap-1">
+                           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                           配置
+                       </button>
+                   </div>
+                   <div class="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-lg p-4">
+                       <div class="overflow-x-auto">
+                           <table class="w-full text-sm">
+                               <thead>
+                                   <tr class="border-b border-amber-200">
+                                       <th class="text-left py-2 px-3 font-semibold text-amber-800">行政区域</th>
+                                       <th class="text-center py-2 px-3 font-semibold text-amber-800">二季度目标</th>
+                                       <th class="text-center py-2 px-3 font-semibold text-green-800">预期有</th>
+                                       <th class="text-center py-2 px-3 font-semibold text-purple-800">实际已退</th>
+                                   </tr>
+                               </thead>
+                               <tbody id="quarterTargetTableBody">
+                                   <!-- 区域统计行将在这里动态生成 -->
+                               </tbody>
+                           </table>
+                       </div>
+                   </div>
+               </div>
              
              <!-- 日历视图 -->
              <div class="mt-6">
@@ -306,50 +343,160 @@
              </div>
          </div>
   
-         <!-- 记录详情弹窗 -->
-         <div id="recordDetailsModal" class="modal-overlay hidden">
-             <div class="modal-content">
-                 <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-200">
-                     <h2 class="text-xl font-bold text-slate-800" id="recordDetailsTitle">记录详情</h2>
-                     <button onclick="closeRecordDetails()" class="text-slate-400 hover:text-slate-600 transition">
-                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                     </button>
-                 </div>
-                 <div id="recordDetailsContent" class="space-y-4">
-                     <!-- 记录详情内容将在这里动态生成 -->
-                 </div>
-             </div>
-         </div>
-  
-     </div>
+          <!-- 记录详情弹窗 -->
+          <div id="recordDetailsModal" class="modal-overlay hidden">
+              <div class="modal-content">
+                  <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-200">
+                      <h2 class="text-xl font-bold text-slate-800" id="recordDetailsTitle">记录详情</h2>
+                      <button onclick="closeRecordDetails()" class="text-slate-400 hover:text-slate-600 transition">
+                          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                      </button>
+                  </div>
+                  <div id="recordDetailsContent" class="space-y-4">
+                      <!-- 记录详情内容将在这里动态生成 -->
+                  </div>
+              </div>
+          </div>
+   
+          <!-- 季度目标配置弹窗 -->
+           <div id="quarterTargetConfigModal" class="modal-overlay hidden">
+               <div class="modal-content" style="max-width: 600px;">
+                   <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-200">
+                       <h2 class="text-xl font-bold text-slate-800">季度目标配置</h2>
+                       <button onclick="closeQuarterTargetConfig()" class="text-slate-400 hover:text-slate-600 transition">
+                           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                       </button>
+                   </div>
+                   <div class="space-y-4">
+                       <div>
+                           <label class="block text-sm font-medium text-slate-700 mb-2">请输入各行政区域的二季度目标数量</label>
+                           <div id="regionTargetsContainer" class="grid grid-cols-2 gap-3">
+                               <!-- 区域目标输入框将在这里动态生成 -->
+                           </div>
+                       </div>
+                       <div class="flex gap-2">
+                           <button onclick="saveQuarterTargetConfig()" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg transition">保存配置</button>
+                           <button onclick="closeQuarterTargetConfig()" class="flex-1 bg-slate-600 hover:bg-slate-700 text-white font-medium px-4 py-2 rounded-lg transition">取消</button>
+                       </div>
+                   </div>
+               </div>
+           </div>
+   
+          <!-- 设备备注弹窗 -->
+          <div id="deviceRemarkModal" class="modal-overlay hidden">
+              <div class="modal-content">
+                  <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-200">
+                      <h2 class="text-xl font-bold text-slate-800" id="deviceRemarkTitle">设备备注</h2>
+                      <button onclick="closeDeviceRemark()" class="text-slate-400 hover:text-slate-600 transition">
+                          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                      </button>
+                  </div>
+                   <div class="space-y-4">
+                       <div>
+                           <label class="block text-sm font-medium text-slate-700 mb-2">设备名称</label>
+                           <div id="deviceRemarkDeviceName" class="px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-700"></div>
+                       </div>
+                        <div>
+                           <label class="block text-sm font-medium text-slate-700 mb-2">备注内容</label>
+                           <textarea id="deviceRemarkContent" rows="4" placeholder="请输入备注内容，例如：提醒天河5月上旬上单" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                       </div>
+                       <div id="deviceRemarkTimestamp" class="text-sm text-slate-500 hidden">
+                           备注时间：<span id="deviceRemarkTime"></span>
+                       </div>
+                       <div class="flex gap-2">
+                           <button onclick="saveDeviceRemark()" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg transition">保存备注</button>
+                           <button onclick="closeDeviceRemark()" class="flex-1 bg-slate-600 hover:bg-slate-700 text-white font-medium px-4 py-2 rounded-lg transition">取消</button>
+                       </div>
+                    </div>
+               </div>
+           </div>
+   
+           <!-- 批量备注弹窗 -->
+           <div id="batchRemarkModal" class="modal-overlay hidden">
+               <div class="modal-content">
+                   <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-200">
+                       <h2 class="text-xl font-bold text-slate-800">批量备注所有设备</h2>
+                       <button onclick="closeBatchRemark()" class="text-slate-400 hover:text-slate-600 transition">
+                           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                       </button>
+                   </div>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">备注内容</label>
+                            <textarea id="batchRemarkContent" rows="4" placeholder="请输入备注内容，例如：提醒天河5月上旬上单" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        <div class="flex gap-2">
+                            <button onclick="saveBatchRemark()" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg transition">批量备注</button>
+                            <button onclick="closeBatchRemark()" class="flex-1 bg-slate-600 hover:bg-slate-700 text-white font-medium px-4 py-2 rounded-lg transition">取消</button>
+                        </div>
+                     </div>
+                </div>
+            </div>
+    
+            <!-- 区域设备详情弹窗 -->
+            <div id="regionDeviceDetailsModal" class="modal-overlay hidden">
+                <div class="modal-content max-w-4xl">
+                    <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-200">
+                        <h2 class="text-xl font-bold text-slate-800" id="regionDeviceDetailsTitle">区域设备详情</h2>
+                        <button onclick="closeRegionDeviceDetails()" class="text-slate-400 hover:text-slate-600 transition">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        </button>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="overflow-x-auto">
+                            <table class="w-full border-collapse">
+                                 <thead>
+                                     <tr class="bg-slate-100">
+                                         <th class="px-4 py-2 border border-slate-200 text-left font-semibold text-slate-700">网管中名称</th>
+                                         <th class="px-4 py-2 border border-slate-200 text-left font-semibold text-slate-700">所属行政区域</th>
+                                         <th class="px-4 py-2 border border-slate-200 text-left font-semibold text-slate-700">备注内容</th>
+                                         <th class="px-4 py-2 border border-slate-200 text-left font-semibold text-slate-700">备注时间</th>
+                                     </tr>
+                                 </thead>
+                                <tbody id="regionDeviceDetailsBody">
+                                    <!-- 动态填充 -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="flex justify-end">
+                            <button onclick="closeRegionDeviceDetails()" class="bg-slate-600 hover:bg-slate-700 text-white font-medium px-4 py-2 rounded-lg transition">关闭</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+       </div>
 
     <script>
-        // 全局数据对象
-        let appData = {
-            excelData: null,
-            excelHeaders: [],
-            selectedFields: [],
-            deviceMarks: {},
-            statistics: {
-                today: {
-                    netCount: 0,
-                    monitorCount: 0
-                },
-                week: {
-                    netCount: 0,
-                    monitorCount: 0
-                }
-            },
-             github: {
-                 repo: '',
-                 branch: 'main',
-                 configPath: 'config/field-config.json',
-                 dataPath: 'data/check-records.json',
-                 token: null,  // 改为 null，避免空字符串覆盖有效 token
-                 lastSync: null,
-                 version: 0
-             }
-        };
+         // 全局数据对象
+         let appData = {
+             excelData: null,
+             excelHeaders: [],
+             selectedFields: [],
+             deviceMarks: {},
+             statistics: {
+                 today: {
+                     netCount: 0,
+                     monitorCount: 0
+                 },
+                 week: {
+                     netCount: 0,
+                     monitorCount: 0
+                 }
+             },
+               quarterTarget: {
+                   targets: {}  // 按行政区域存储目标 {区域名: 目标数量}
+               },
+              github: {
+                  repo: '',
+                  branch: 'main',
+                  configPath: 'config/field-config.json',
+                  dataPath: 'data/check-records.json',
+                  token: null,  // 改为 null，避免空字符串覆盖有效 token
+                  lastSync: null,
+                  version: 0
+              }
+         };
  
          // GitHub配置弹窗控制
          function openGitHubConfig() {
@@ -726,13 +873,21 @@
                      buttonGroup.appendChild(monitorBtn);
                      actionContainer.appendChild(buttonGroup);
                      
-                     // 剔除/恢复按钮
-                     const excludeBtn = document.createElement('button');
-                     excludeBtn.id = `exclude-${tempId}`;
-                     excludeBtn.className = 'text-xs px-2 py-1 rounded border border-red-300 text-red-600 hover:bg-red-50 transition w-full';
-                     excludeBtn.textContent = '剔除';
-                     excludeBtn.onclick = () => toggleExclude(tempId, tr, excludeBtn);
-                     actionContainer.appendChild(excludeBtn);
+                      // 剔除/恢复按钮
+                      const excludeBtn = document.createElement('button');
+                      excludeBtn.id = `exclude-${tempId}`;
+                      excludeBtn.className = 'text-xs px-2 py-1 rounded border border-red-300 text-red-600 hover:bg-red-50 transition w-full';
+                      excludeBtn.textContent = '剔除';
+                      excludeBtn.onclick = () => toggleExclude(tempId, tr, excludeBtn);
+                      actionContainer.appendChild(excludeBtn);
+                      
+                      // 备注按钮
+                      const remarkBtn = document.createElement('button');
+                      remarkBtn.id = `remark-${tempId}`;
+                      remarkBtn.className = 'text-xs px-2 py-1 rounded border border-amber-300 text-amber-600 hover:bg-amber-50 transition w-full';
+                      remarkBtn.textContent = '备注';
+                      remarkBtn.onclick = () => openDeviceRemark(tempId);
+                      actionContainer.appendChild(remarkBtn);
                      
                      // 网络部门审批勾选框区域(默认隐藏)
                      const netCheckboxesDiv = document.createElement('div');
@@ -1057,10 +1212,11 @@
                  appData.deviceMarks[deviceId] = {
                      type: type,
                      timestamp: new Date().toISOString(),
-                     excluded: existingMark.excluded,  // 保留原有的剔除状态
-                     deviceInfo: deviceInfo,
-                     deviceData: deviceData  // 保存完整的设备数据
-                 };
+                      excluded: existingMark.excluded,  // 保留原有的剔除状态
+                      deviceInfo: deviceInfo,
+                      deviceData: deviceData,  // 保存完整的设备数据
+                      remark: existingMark.remark || null  // 保留原有的备注信息
+                  };
                  
                  console.log(`📝 更新设备标记: ${deviceId}, 保留 excluded 状态: ${existingMark.excluded}`);
              } else {
@@ -1068,19 +1224,26 @@
                  appData.deviceMarks[deviceId] = {
                      type: type,
                      timestamp: new Date().toISOString(),
-                     excluded: false,
-                     deviceInfo: deviceInfo,
-                     deviceData: deviceData  // 保存完整的设备数据
-                 };
+                      excluded: false,
+                      deviceInfo: deviceInfo,
+                      deviceData: deviceData,  // 保存完整的设备数据
+                      remark: null  // 备注信息
+                  };
                  
                  console.log(`✅ 创建新设备标记: ${deviceId}`);
                  console.log(`✅ 创建后数据库中的设备:`, Object.keys(appData.deviceMarks));
-             }
-             
-             // 更新统计
-             updateStatistics();
-             saveAppData();
-         }
+              }
+              
+              // 更新统计
+              updateStatistics();
+              
+              // 如果是网监评估完成，更新季度目标统计
+              if (type === 'monitor') {
+                  updateQuarterTargetDisplay();
+              }
+              
+              saveAppData();
+          }
         
         function getDeviceInfoFromRow(deviceId) {
             // 从搜索结果中获取设备信息
@@ -2021,22 +2184,23 @@
                        const [owner, repoName] = repo.split('/');
                        const path = dataPath || 'data/check-records.json';
                        
-                       // 创建要推送的数据副本,移除敏感信息
-                       const dataToPush = {
-                           excelHeaders: appData.excelHeaders,
-                           selectedFields: appData.selectedFields,
-                           deviceMarks: appData.deviceMarks,
-                           statistics: appData.statistics,
-                           github: {
-                               repo: appData.github.repo,
-                               branch: appData.github.branch,
-                               configPath: appData.github.configPath,
-                               dataPath: appData.github.dataPath,
-                               lastSync: appData.github.lastSync,
-                               version: appData.github.version
-                               // 不包含 token
-                           }
-                       };
+                        // 创建要推送的数据副本,移除敏感信息
+                        const dataToPush = {
+                            excelHeaders: appData.excelHeaders,
+                            selectedFields: appData.selectedFields,
+                            deviceMarks: appData.deviceMarks,
+                            statistics: appData.statistics,
+                            quarterTarget: appData.quarterTarget,  // 包含季度目标和备注数据
+                            github: {
+                                repo: appData.github.repo,
+                                branch: appData.github.branch,
+                                configPath: appData.github.configPath,
+                                dataPath: appData.github.dataPath,
+                                lastSync: appData.github.lastSync,
+                                version: appData.github.version
+                                // 不包含 token
+                            }
+                        };
                        
                        const content = utf8ToBase64(JSON.stringify(dataToPush, null, 2));
                        const api = `https://api.github.com/repos/${owner}/${repoName}/contents/${path}`;
@@ -2358,50 +2522,56 @@
                                   if (loaded.excelHeaders) appData.excelHeaders = loaded.excelHeaders;
                                   if (loaded.selectedFields) appData.selectedFields = loaded.selectedFields;
                                   if (loaded.deviceMarks) appData.deviceMarks = loaded.deviceMarks;
-                                  if (loaded.statistics) appData.statistics = loaded.statistics;
-                                  
-                                  // 特别处理 github 对象，确保 token 不会丢失
-                                  if (loaded.github) {
-                                      console.log('🔧 处理 github 配置...');
-                                      console.log('  - loaded.github.token:', loaded.github.token ? '存在' : '不存在');
-                                      console.log('  - appData.github.token (加载前):', appData.github.token ? '存在' : '不存在');
-                                      
-                                      // 如果 loaded.github 存在，逐个属性合并
-                                      if (loaded.github.repo !== undefined) appData.github.repo = loaded.github.repo;
-                                      if (loaded.github.branch !== undefined) appData.github.branch = loaded.github.branch;
-                                      if (loaded.github.configPath !== undefined) appData.github.configPath = loaded.github.configPath;
-                                      if (loaded.github.dataPath !== undefined) appData.github.dataPath = loaded.github.dataPath;
-                                      if (loaded.github.lastSync !== undefined) appData.github.lastSync = loaded.github.lastSync;
-                                      if (loaded.github.version !== undefined) appData.github.version = loaded.github.version;
-                                      
-                                       // 关键修复：只有当 loaded.github.token 有实际值时才覆盖
-                                       // null、undefined 和空字符串都不会覆盖当前的 token 值
-                                       // 修改逻辑:只要 loaded.github.token 不是 undefined,就覆盖
-                                       // 这样可以正确处理 null 和空字符串的情况
-                                       if (loaded.github.token !== undefined) {
-                                           appData.github.token = loaded.github.token;
-                                           if (loaded.github.token) {
-                                               console.log('  ✅ Token 已加载 (' + loaded.github.token.length + ' 字符)');
-                                           } else {
-                                               console.log('  ⚠️ Token 为 null 或空字符串,已覆盖');
-                                           }
-                                       } else {
-                                           console.log('  ⚠️ Token 为 undefined,保持原值');
-                                       }
-                                       // 如果 loaded.github.token 是 null、undefined 或空字符串，保持当前的 token 值
-                                       // 这样可以避免空字符串覆盖有效的 token
-                                       
-                                       console.log('  - appData.github.token (加载后):', appData.github.token ? '存在' : '不存在');
-                                  }
-                              } catch (e) {
-                                  console.error('❌ 加载数据失败:', e);
-                              }
-                          } else {
-                              console.log('⚠️ localStorage 中没有保存的数据');
-                          }
-                          
-                          updateGithubStatus();
-                      }
+                                   if (loaded.statistics) appData.statistics = loaded.statistics;
+                                    
+                                    // 特别处理 github 对象，确保 token 不会丢失
+                                    if (loaded.github) {
+                                        console.log('🔧 处理 github 配置...');
+                                        console.log('  - loaded.github.token:', loaded.github.token ? '存在' : '不存在');
+                                        console.log('  - appData.github.token (加载前):', appData.github.token ? '存在' : '不存在');
+                                        
+                                        // 如果 loaded.github 存在，逐个属性合并
+                                        if (loaded.github.repo !== undefined) appData.github.repo = loaded.github.repo;
+                                        if (loaded.github.branch !== undefined) appData.github.branch = loaded.github.branch;
+                                        if (loaded.github.configPath !== undefined) appData.github.configPath = loaded.github.configPath;
+                                        if (loaded.github.dataPath !== undefined) appData.github.dataPath = loaded.github.dataPath;
+                                        if (loaded.github.lastSync !== undefined) appData.github.lastSync = loaded.github.lastSync;
+                                        if (loaded.github.version !== undefined) appData.github.version = loaded.github.version;
+                                        
+                                        // 关键修复：只有当 loaded.github.token 有实际值时才覆盖
+                                        // null、undefined 和空字符串都不会覆盖当前的 token 值
+                                        // 修改逻辑:只要 loaded.github.token 不是 undefined,就覆盖
+                                        // 这样可以正确处理 null 和空字符串的情况
+                                        if (loaded.github.token !== undefined) {
+                                            appData.github.token = loaded.github.token;
+                                            if (loaded.github.token) {
+                                                console.log('  ✅ Token 已加载 (' + loaded.github.token.length + ' 字符)');
+                                            } else {
+                                                console.log('  ⚠️ Token 为 null 或空字符串,已覆盖');
+                                            }
+                                        } else {
+                                            console.log('  ⚠️ Token 为 undefined,保持原值');
+                                        }
+                                        // 如果 loaded.github.token 是 null、undefined 或空字符串，保持当前的 token 值
+                                        // 这样可以避免空字符串覆盖有效的 token
+                                        
+                                        console.log('  - appData.github.token (加载后):', appData.github.token ? '存在' : '不存在');
+                                    }
+                                    
+                                      // 加载 quarterTarget 数据
+                                      if (loaded.quarterTarget) {
+                                          if (loaded.quarterTarget.targets) appData.quarterTarget.targets = loaded.quarterTarget.targets;
+                                          // 旧的 remarks 数据将在 migrateOldData 中迁移到 deviceMarks
+                                      }
+                               } catch (e) {
+                                   console.error('❌ 加载数据失败:', e);
+                               }
+                           } else {
+                               console.log('⚠️ localStorage 中没有保存的数据');
+                           }
+                           
+                           updateGithubStatus();
+                       }
                       
                       // 数据迁移函数：将旧数据格式转换为新数据格式
                       function migrateOldData(loaded) {
@@ -2514,16 +2684,84 @@
                                   loaded.deviceMarks = newDeviceMarks;
                                   console.log(`✅ 设备ID迁移完成，共迁移 ${Object.keys(newDeviceMarks).length} 个设备`);
                               }
-                          }
-                          
-                          if (needsMigration) {
-                              console.log('✅ 数据迁移完成，已保存到 localStorage');
-                              // 保存迁移后的数据
-                              localStorage.setItem('appData', JSON.stringify(loaded));
-                          } else {
-                              console.log('ℹ️ 数据已是最新格式，无需迁移');
-                          }
-                      }
+                           }
+                           
+                            // 检查是否缺少 quarterTarget 字段
+                            if (!loaded.quarterTarget) {
+                                needsMigration = true;
+                                console.log('📝 发现旧数据: 缺少 quarterTarget 字段');
+                                 loaded.quarterTarget = {
+                                    targets: {}
+                                };
+                                console.log('✅ 已添加 quarterTarget 字段');
+                            } else {
+                                // 检查 quarterTarget 的子字段
+                                if (loaded.quarterTarget.target !== undefined) {
+                                    needsMigration = true;
+                                    console.log('📝 发现旧数据: quarterTarget 使用旧的 target 字段，需要迁移到 targets');
+                                    // 将旧的 target 字段迁移到天河的目标
+                                    loaded.quarterTarget.targets = {
+                                        '天河': loaded.quarterTarget.target
+                                    };
+                                    delete loaded.quarterTarget.target;
+                                    console.log('✅ 已将旧 target 字段迁移到 targets.天河');
+                                }
+                                if (!loaded.quarterTarget.targets) {
+                                    needsMigration = true;
+                                    console.log('📝 发现旧数据: quarterTarget 缺少 targets 字段');
+                                    loaded.quarterTarget.targets = {};
+                                    console.log('✅ 已添加 quarterTarget.targets 字段');
+                                }
+                                
+                                  // 将旧的 remarks 数据迁移到 deviceMarks 中
+                                  if (loaded.quarterTarget.remarks && Object.keys(loaded.quarterTarget.remarks).length > 0) {
+                                      needsMigration = true;
+                                      console.log(`📝 发现旧数据: quarterTarget.remarks 包含 ${Object.keys(loaded.quarterTarget.remarks).length} 条备注，需要迁移到 deviceMarks`);
+                                      
+                                      for (const [deviceId, remark] of Object.entries(loaded.quarterTarget.remarks)) {
+                                          // 检查是否已存在该设备的标记
+                                          if (!loaded.deviceMarks[deviceId]) {
+                                              // 如果不存在，创建一个新的标记
+                                              loaded.deviceMarks[deviceId] = {
+                                                  type: 'remark',  // 标记类型为备注
+                                                  timestamp: remark.timestamp || new Date().toISOString(),
+                                                  excluded: false,
+                                                  deviceInfo: remark.deviceData?.['网管中名称'] || deviceId,
+                                                  deviceData: remark.deviceData || {},
+                                                  remark: {
+                                                      content: remark.content,
+                                                      timestamp: remark.timestamp || new Date().toISOString()
+                                                  }
+                                              };
+                                              console.log(`  ✅ 已将设备 ${deviceId} 的备注迁移到 deviceMarks`);
+                                          } else {
+                                              // 如果已存在，添加备注到现有标记
+                                              if (!loaded.deviceMarks[deviceId].remark) {
+                                                  loaded.deviceMarks[deviceId].remark = {
+                                                      content: remark.content,
+                                                      timestamp: remark.timestamp || new Date().toISOString()
+                                                  };
+                                                  console.log(`  ✅ 已将设备 ${deviceId} 的备注添加到现有标记`);
+                                              } else {
+                                                  console.log(`  ⚠️ 设备 ${deviceId} 已有备注，跳过迁移`);
+                                              }
+                                          }
+                                      }
+                                      
+                                      // 清空旧的 remarks 数据
+                                      delete loaded.quarterTarget.remarks;
+                                      console.log('✅ 已清空旧的 quarterTarget.remarks 数据');
+                                  }
+                             }
+                           
+                           if (needsMigration) {
+                               console.log('✅ 数据迁移完成，已保存到 localStorage');
+                               // 保存迁移后的数据
+                               localStorage.setItem('appData', JSON.stringify(loaded));
+                           } else {
+                               console.log('ℹ️ 数据已是最新格式，无需迁移');
+                           }
+                       }
                    async function saveToGitHub(path, content, config) {
              const [owner, repo] = config.repo.split('/');
              const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
@@ -2619,16 +2857,19 @@
               return JSON.parse(content);
            }
            
-            // 页面加载完成后初始化
-            document.addEventListener('DOMContentLoaded', function() {
-                console.log('🚀 页面加载完成,开始初始化...');
-                
-                // 1. 先加载保存的数据
-                loadAppData();
-                loadStatistics();
-                
-                // 2. 初始化日历
-                initCalendar();
+             // 页面加载完成后初始化
+             document.addEventListener('DOMContentLoaded', function() {
+                 console.log('🚀 页面加载完成,开始初始化...');
+                 
+                 // 1. 先加载保存的数据
+                 loadAppData();
+                 loadStatistics();
+                 
+                 // 2. 初始化日历
+                 initCalendar();
+                 
+                 // 3. 初始化季度目标统计
+                 updateQuarterTargetDisplay();
                 
                 // 2. 自动填充已保存的 GitHub 配置到表单(页面加载时就填充,不需要打开弹窗)
                 if (appData.github) {
@@ -2672,9 +2913,471 @@
                     // 如果有配置,显示提示
                     if (appData.github.repo || appData.github.token) {
                         console.log('✅ GitHub 配置已从 localStorage 自动加载');
+                     }
+                 }
+             });
+             
+              // ==================== 季度目标相关函数 ====================
+              
+              // 11个县分列表
+              const regions = ['天河', '越秀', '海珠', '荔湾', '白云', '黄埔', '番禺', '花都', '南沙', '从化', '增城'];
+              
+              // 打开季度目标配置弹窗
+              function openQuarterTargetConfig() {
+                  const modal = document.getElementById('quarterTargetConfigModal');
+                  const container = document.getElementById('regionTargetsContainer');
+                  
+                  // 清空容器
+                  container.innerHTML = '';
+                  
+                  // 为每个区域创建输入框
+                  regions.forEach(region => {
+                      const div = document.createElement('div');
+                      div.innerHTML = `
+                          <label class="block text-xs font-medium text-slate-700 mb-1">${region}</label>
+                          <input type="number" id="region-target-${region}" min="0" placeholder="0"
+                              value="${appData.quarterTarget.targets[region] || 0}"
+                              class="w-full px-2 py-1 text-sm border border-slate-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                      `;
+                      container.appendChild(div);
+                  });
+                  
+                  modal.classList.remove('hidden');
+              }
+              
+              // 关闭季度目标配置弹窗
+              function closeQuarterTargetConfig() {
+                  document.getElementById('quarterTargetConfigModal').classList.add('hidden');
+              }
+              
+              // 保存季度目标配置
+              function saveQuarterTargetConfig() {
+                  // 初始化 targets 对象
+                  if (!appData.quarterTarget.targets) {
+                      appData.quarterTarget.targets = {};
+                  }
+                  
+                  // 保存每个区域的目标
+                  regions.forEach(region => {
+                      const input = document.getElementById(`region-target-${region}`);
+                      const target = parseInt(input.value) || 0;
+                      
+                      if (target < 0) {
+                          showToast(`${region}的目标数量不能为负数`);
+                          return;
+                      }
+                      
+                      appData.quarterTarget.targets[region] = target;
+                  });
+                  
+                  saveAppData();
+                  updateQuarterTargetDisplay();
+                  
+                  closeQuarterTargetConfig();
+                  showToast('季度目标配置已保存!');
+              }
+              
+                // 获取设备的行政区域
+                function getDeviceRegion(deviceId) {
+                     // 1. 首先从设备标记中获取设备数据
+                     const mark = appData.deviceMarks[deviceId];
+                     if (mark && mark.deviceData) {
+                         const region = mark.deviceData['所属行政区域'];
+                         if (region) {
+                             const trimmedRegion = region.trim();
+                             if (regions.includes(trimmedRegion)) {
+                                 return trimmedRegion;
+                             }
+                         }
+                     }
+                     
+                     // 2. 如果设备标记中没有，尝试从搜索结果中获取设备数据
+                    const row = document.getElementById(deviceId);
+                    if (row) {
+                        const searchColumn = document.getElementById('searchColumn').value;
+                        const displayFields = selectedFields.length > 0 ? selectedFields : excelHeaders;
+                        const columnIndex = displayFields.indexOf(searchColumn);
+                        const cells = row.querySelectorAll('td');
+                        
+                        if (columnIndex >= 0 && columnIndex < cells.length) {
+                            // 找到"所属行政区域"列
+                            const regionIndex = displayFields.indexOf('所属行政区域');
+                            if (regionIndex >= 0 && regionIndex < cells.length) {
+                                const region = cells[regionIndex].textContent.trim();
+                                if (regions.includes(region)) {
+                                    return region;
+                                }
+                            }
+                        }
                     }
+                    
+                    return null;
                 }
-            });
-     </script>
- </body>
- </html>
+              
+              // 更新季度目标统计显示
+              function updateQuarterTargetDisplay() {
+                  const tbody = document.getElementById('quarterTargetTableBody');
+                  tbody.innerHTML = '';
+                  
+                  // 为每个区域创建统计行
+                  regions.forEach(region => {
+                      // 获取目标数量
+                      const target = appData.quarterTarget.targets[region] || 0;
+                      
+                        // 计算预期数量（该区域有备注的设备数）
+                        let expectedCount = 0;
+                        Object.entries(appData.deviceMarks || {}).forEach(([deviceId, mark]) => {
+                            if (mark.remark) {  // 只统计有备注的设备
+                                const deviceRegion = getDeviceRegion(deviceId);
+                                if (deviceRegion === region) {
+                                    expectedCount++;
+                                }
+                            }
+                        });
+                      
+                      // 计算实际已退数量（该区域网监评估完成的设备数）
+                      let actualReturnedCount = 0;
+                      Object.entries(appData.deviceMarks || {}).forEach(([deviceId, mark]) => {
+                          if (mark.type === 'monitor' && !mark.excluded) {
+                              const deviceRegion = getDeviceRegion(deviceId);
+                              if (deviceRegion === region) {
+                                  actualReturnedCount++;
+                              }
+                          }
+                      });
+                      
+                       // 创建表格行
+                       const tr = document.createElement('tr');
+                       tr.className = 'border-b border-amber-100 hover:bg-amber-50/50 transition';
+                       tr.innerHTML = `
+                           <td class="py-2 px-3 font-medium text-slate-700">${region}</td>
+                           <td class="py-2 px-3 text-center text-amber-700 font-semibold">${target}</td>
+                           <td class="py-2 px-3 text-center text-green-700 font-semibold cursor-pointer hover:text-green-600 hover:underline" onclick="showRegionDeviceDetails('${region}', 'expected')">${expectedCount}</td>
+                           <td class="py-2 px-3 text-center text-purple-700 font-semibold cursor-pointer hover:text-purple-600 hover:underline" onclick="showRegionDeviceDetails('${region}', 'actual')">${actualReturnedCount}</td>
+                      `;
+                      tbody.appendChild(tr);
+                  });
+              }
+             
+             // ==================== 设备备注相关函数 ====================
+             
+             let currentRemarkDeviceId = null;
+             
+               // 打开设备备注弹窗
+               function openDeviceRemark(deviceId) {
+                   const modal = document.getElementById('deviceRemarkModal');
+                   const title = document.getElementById('deviceRemarkTitle');
+                   const deviceName = document.getElementById('deviceRemarkDeviceName');
+                   const content = document.getElementById('deviceRemarkContent');
+                   const timestampDiv = document.getElementById('deviceRemarkTimestamp');
+                   const timeSpan = document.getElementById('deviceRemarkTime');
+                   
+                   // 获取设备信息
+                   const deviceInfo = getDeviceInfoFromRow(deviceId);
+                   
+                   // 设置设备名称
+                   deviceName.textContent = deviceInfo;
+                   
+                   // 检查是否已有备注
+                   const deviceMark = appData.deviceMarks[deviceId];
+                   const existingRemark = deviceMark ? deviceMark.remark : null;
+                   if (existingRemark) {
+                       content.value = existingRemark.content;
+                       timestampDiv.classList.remove('hidden');
+                       timeSpan.textContent = new Date(existingRemark.timestamp).toLocaleString('zh-CN');
+                   } else {
+                       content.value = '';
+                       timestampDiv.classList.add('hidden');
+                   }
+                   
+                   currentRemarkDeviceId = deviceId;
+                   modal.classList.remove('hidden');
+               }
+              
+              // 关闭设备备注弹窗
+              function closeDeviceRemark() {
+                  document.getElementById('deviceRemarkModal').classList.add('hidden');
+                  currentRemarkDeviceId = null;
+              }
+              
+                // 保存设备备注
+                function saveDeviceRemark() {
+                    const content = document.getElementById('deviceRemarkContent').value.trim();
+                    
+                    if (!content) {
+                        showToast('请输入备注内容');
+                        return;
+                    }
+                    
+                    if (!currentRemarkDeviceId) {
+                        showToast('设备ID无效');
+                        return;
+                    }
+                    
+                    // 获取设备数据
+                    const deviceData = getDeviceDataFromRow(currentRemarkDeviceId);
+                    
+                    // 保存备注到设备标记中
+                    if (!appData.deviceMarks[currentRemarkDeviceId]) {
+                        // 如果没有设备标记，创建一个
+                        appData.deviceMarks[currentRemarkDeviceId] = {
+                            type: 'remark',
+                            timestamp: new Date().toISOString(),
+                            excluded: false,
+                            deviceInfo: deviceData['网管中名称'] || currentRemarkDeviceId,
+                            deviceData: deviceData,
+                            remark: {
+                                content: content,
+                                timestamp: new Date().toISOString()
+                            }
+                        };
+                    } else {
+                        // 如果已有设备标记，更新备注
+                        appData.deviceMarks[currentRemarkDeviceId].remark = {
+                            content: content,
+                            timestamp: new Date().toISOString()
+                        };
+                        // 更新设备数据
+                        appData.deviceMarks[currentRemarkDeviceId].deviceData = deviceData;
+                    }
+                    
+                    saveAppData();
+                    updateQuarterTargetDisplay();
+                    
+                    // 更新备注按钮样式
+                   const remarkBtn = document.getElementById(`remark-${currentRemarkDeviceId}`);
+                   if (remarkBtn) {
+                       remarkBtn.textContent = '已备注';
+                       remarkBtn.className = 'text-xs px-2 py-1 rounded bg-amber-500 text-white font-medium w-full';
+                   }
+                   
+                   closeDeviceRemark();
+                   showToast('备注已保存!');
+               }
+               
+               // 从表格行获取设备数据
+               function getDeviceDataFromRow(deviceId) {
+                   const row = document.getElementById(deviceId);
+                   if (!row) return null;
+                   
+                   const searchColumn = document.getElementById('searchColumn').value;
+                   const displayFields = selectedFields.length > 0 ? selectedFields : excelHeaders;
+                   const cells = row.querySelectorAll('td');
+                   
+                   const deviceData = {};
+                   displayFields.forEach((field, index) => {
+                       if (index < cells.length) {
+                           deviceData[field] = cells[index].textContent.trim();
+                       }
+                   });
+                   
+                                      return deviceData;
+                                  }
+                                  
+                                  // 一键备注所有设备
+                                   // 打开批量备注弹窗
+                                   function openBatchRemark() {
+                                       const rows = document.querySelectorAll('.device-row');
+                                       if (rows.length === 0) {
+                                           showToast('没有可备注的设备');
+                                           return;
+                                       }
+                                       
+                                       // 清空备注内容
+                                       document.getElementById('batchRemarkContent').value = '';
+                                       
+                                       // 显示弹窗
+                                       document.getElementById('batchRemarkModal').classList.remove('hidden');
+                                   }
+                                   
+                                   // 关闭批量备注弹窗
+                                   function closeBatchRemark() {
+                                       document.getElementById('batchRemarkModal').classList.add('hidden');
+                                   }
+                                   
+                                   // 保存批量备注
+                                   function saveBatchRemark() {
+                                       const content = document.getElementById('batchRemarkContent').value.trim();
+                                       
+                                       if (!content) {
+                                           showToast('请输入备注内容');
+                                           return;
+                                       }
+                                       
+                                       const rows = document.querySelectorAll('.device-row');
+                                       let count = 0;
+                                       
+                                        rows.forEach(row => {
+                                            const deviceId = row.id;
+                                            if (!deviceId) return;
+                                            
+                                            // 获取设备数据
+                                            const deviceData = getDeviceDataFromRow(deviceId);
+                                            if (!deviceData) return;
+                                            
+                                            // 检查是否已有设备标记
+                                            if (!appData.deviceMarks[deviceId]) {
+                                                // 如果没有设备标记，创建一个
+                                                appData.deviceMarks[deviceId] = {
+                                                    type: 'remark',  // 标记类型为备注
+                                                    timestamp: new Date().toISOString(),
+                                                    excluded: false,
+                                                    deviceInfo: deviceData['网管中名称'] || deviceId,
+                                                    deviceData: deviceData,
+                                                    remark: {
+                                                        content: content,
+                                                        timestamp: new Date().toISOString()
+                                                    }
+                                                };
+                                            } else {
+                                                // 如果已有设备标记，检查是否已有备注
+                                                if (appData.deviceMarks[deviceId].remark) {
+                                                    return; // 跳过已备注的设备
+                                                }
+                                                
+                                                // 添加备注到现有标记
+                                                appData.deviceMarks[deviceId].remark = {
+                                                    content: content,
+                                                    timestamp: new Date().toISOString()
+                                                };
+                                            }
+                                            
+                                            // 更新备注按钮样式
+                                            const remarkBtn = document.getElementById(`remark-${deviceId}`);
+                                            if (remarkBtn) {
+                                                remarkBtn.textContent = '已备注';
+                                                remarkBtn.className = 'text-xs px-2 py-1 rounded bg-amber-500 text-white font-medium w-full';
+                                            }
+                                            
+                                            count++;
+                                        });
+                                       
+                                       if (count > 0) {
+                                           saveAppData();
+                                           updateQuarterTargetDisplay();
+                                           closeBatchRemark();
+                                           showToast(`已成功备注 ${count} 台设备`);
+                                       } else {
+                                           showToast('所有设备都已备注');
+                                           closeBatchRemark();
+                                       }
+                                   }
+                                 
+                                // 点击弹窗外部关闭
+                                document.getElementById('quarterTargetConfigModal').addEventListener('click', function(e) {
+                                    if (e.target === this) {
+                                        closeQuarterTargetConfig();
+                                    }
+                                });
+             
+              document.getElementById('deviceRemarkModal').addEventListener('click', function(e) {
+                  if (e.target === this) {
+                      closeDeviceRemark();
+                  }
+              });
+              
+               document.getElementById('batchRemarkModal').addEventListener('click', function(e) {
+                   if (e.target === this) {
+                       closeBatchRemark();
+                   }
+               });
+               
+               // ==================== 区域设备详情相关函数 ====================
+               
+               // 显示区域设备详情
+               function showRegionDeviceDetails(region, type) {
+                   const modal = document.getElementById('regionDeviceDetailsModal');
+                   const title = document.getElementById('regionDeviceDetailsTitle');
+                   const tbody = document.getElementById('regionDeviceDetailsBody');
+                   
+                   // 设置标题
+                   const typeText = type === 'expected' ? '预期有' : '实际已退';
+                   title.textContent = `${region} - ${typeText}设备详情`;
+                   
+                   // 清空表格
+                   tbody.innerHTML = '';
+                   
+                   if (type === 'expected') {
+                       // 显示预期有设备（有备注的设备）
+                       Object.entries(appData.deviceMarks || {}).forEach(([deviceId, mark]) => {
+                           if (mark.remark) {  // 只显示有备注的设备
+                               const deviceRegion = getDeviceRegion(deviceId);
+                               if (deviceRegion === region) {
+                                    const tr = document.createElement('tr');
+                                    tr.className = 'border-b border-slate-100 hover:bg-slate-50';
+                                    
+                                    // 获取网管中名称（deviceInfo）
+                                    const deviceName = mark.deviceData ? (mark.deviceData['网管中名称'] || mark.deviceInfo || deviceId) : deviceId;
+                                    
+                                    // 获取所属行政区域
+                                    const deviceRegionName = mark.deviceData ? (mark.deviceData['所属行政区域'] || region) : region;
+                                    
+                                    tr.innerHTML = `
+                                        <td class="px-4 py-2 border border-slate-200 text-slate-700">${deviceName}</td>
+                                        <td class="px-4 py-2 border border-slate-200 text-slate-700">${deviceRegionName}</td>
+                                        <td class="px-4 py-2 border border-slate-200 text-slate-700">${mark.remark.content}</td>
+                                        <td class="px-4 py-2 border border-slate-200 text-slate-500 text-sm">${new Date(mark.remark.timestamp).toLocaleString('zh-CN')}</td>
+                                    `;
+                                    tbody.appendChild(tr);
+                               }
+                           }
+                       });
+                   } else if (type === 'actual') {
+                       // 显示实际已退设备（网监评估完成的设备）
+                       Object.entries(appData.deviceMarks || {}).forEach(([deviceId, mark]) => {
+                           if (mark.type === 'monitor' && !mark.excluded) {
+                               const deviceRegion = getDeviceRegion(deviceId);
+                               if (deviceRegion === region) {
+                                    const tr = document.createElement('tr');
+                                    tr.className = 'border-b border-slate-100 hover:bg-slate-50';
+                                    
+                                    // 获取网管中名称（deviceInfo）
+                                    const deviceName = mark.deviceData ? (mark.deviceData['网管中名称'] || mark.deviceInfo || deviceId) : deviceId;
+                                    
+                                    // 获取所属行政区域
+                                    const deviceRegionName = mark.deviceData ? (mark.deviceData['所属行政区域'] || region) : region;
+                                    
+                                    // 获取备注内容（如果有）
+                                    const remarkContent = mark.remark ? mark.remark.content : '-';
+                                    
+                                    // 获取备注时间（如果有）
+                                    const remarkTime = mark.remark ? new Date(mark.remark.timestamp).toLocaleString('zh-CN') : '-';
+                                    
+                                    tr.innerHTML = `
+                                        <td class="px-4 py-2 border border-slate-200 text-slate-700">${deviceName}</td>
+                                        <td class="px-4 py-2 border border-slate-200 text-slate-700">${deviceRegionName}</td>
+                                        <td class="px-4 py-2 border border-slate-200 text-slate-700">${remarkContent}</td>
+                                        <td class="px-4 py-2 border border-slate-200 text-slate-500 text-sm">${remarkTime}</td>
+                                    `;
+                                    tbody.appendChild(tr);
+                               }
+                           }
+                       });
+                   }
+                   
+                   // 如果没有数据，显示提示
+                   if (tbody.children.length === 0) {
+                       const tr = document.createElement('tr');
+                       tr.innerHTML = `
+                           <td colspan="4" class="px-4 py-8 text-center text-slate-500">暂无${typeText}设备</td>
+                       `;
+                       tbody.appendChild(tr);
+                   }
+                   
+                   modal.classList.remove('hidden');
+               }
+               
+               // 关闭区域设备详情弹窗
+               function closeRegionDeviceDetails() {
+                   document.getElementById('regionDeviceDetailsModal').classList.add('hidden');
+               }
+               
+               // 点击弹窗外部关闭
+               document.getElementById('regionDeviceDetailsModal').addEventListener('click', function(e) {
+                   if (e.target === this) {
+                       closeRegionDeviceDetails();
+                   }
+               });
+            </script>
+       </body>
+       </html>
