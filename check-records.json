@@ -196,6 +196,27 @@
         "content": "提醒天河5月中旬上单，已屏蔽告警",
         "timestamp": "2026-05-08T03:05:21.673Z"
       }
+    },
+    "temp-1": {
+      "type": "remark",
+      "timestamp": "2026-05-08T06:13:48.197Z",
+      "excluded": false,
+      "deviceInfo": "元岗机楼GZWC038",
+      "deviceData": {
+        "所属行政区域": "天河",
+        "集团名称": "元岗机楼3楼传输机房1/广州武邮SDH2.5G038",
+        "网管中名称": "元岗机楼GZWC038",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "已拆除，可退网",
+        "0407备注_承载室": ""
+      },
+      "remark": {
+        "content": "天河重新上单了，800M已拆除电路，可退网的。",
+        "timestamp": "2026-05-08T06:13:48.197Z"
+      }
     }
   },
   "statistics": {
@@ -228,7 +249,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-08T05:43:43.358Z",
+    "lastSync": "2026-05-08T05:44:07.063Z",
     "version": 7
   }
 }
