@@ -224,6 +224,96 @@
         "content": "提醒天河5月中旬上单，已屏蔽告警.",
         "timestamp": "2026-05-08T09:26:14.667Z"
       }
+    },
+    "%E5%85%83%E5%B2%97%E6%9C%BA%E6%A5%BCGZWC038": {
+      "type": "remark",
+      "timestamp": "2026-05-08T09:27:12.323Z",
+      "excluded": false,
+      "remark": {
+        "content": "已联系天河上退网单。重新上",
+        "timestamp": "2026-05-08T09:27:12.323Z"
+      }
+    },
+    "%E7%99%BD%E4%BA%91%E5%B1%B1%E5%BE%AE%E6%B3%A2%E5%B1%80C%E7%BD%91(800M)-GZWC053-HA15L": {
+      "type": "remark",
+      "timestamp": "2026-05-08T09:27:55.063Z",
+      "excluded": false,
+      "remark": {
+        "content": "属于天河，可以退网的。",
+        "timestamp": "2026-05-08T09:27:55.063Z"
+      }
+    },
+    "%E6%96%B0%E5%B8%82%E6%9C%BA%E6%A5%BC-%E7%99%BD%E4%BA%91HB008": {
+      "type": "remark",
+      "timestamp": "2026-05-08T09:29:54.387Z",
+      "excluded": false,
+      "remark": {
+        "content": "已提醒白云，可以退网",
+        "timestamp": "2026-05-08T09:29:54.387Z"
+      }
+    },
+    "3231-%E9%92%9F%E8%90%BD%E6%BD%AD%E6%9C%BA%E6%A5%BC2%E6%A5%BC-GZHC766": {
+      "type": "remark",
+      "timestamp": "2026-05-08T09:29:57.081Z",
+      "excluded": false,
+      "remark": {
+        "content": "已提醒白云，可以退网",
+        "timestamp": "2026-05-08T09:29:57.081Z"
+      }
+    },
+    "1894-%E6%9C%BA%E5%9C%BA%E4%B8%9C%E9%97%A8(800M)-GZHC341-HA31L": {
+      "type": "remark",
+      "timestamp": "2026-05-08T09:30:00.381Z",
+      "excluded": false,
+      "remark": {
+        "content": "已提醒白云，可以退网",
+        "timestamp": "2026-05-08T09:30:00.381Z"
+      }
+    },
+    "2233-%E9%A3%9E%E6%9C%BA%E7%BB%B4%E4%BF%AE%E5%85%AC%E5%8F%B8%E6%96%B0%E5%8A%9E%E5%85%AC%E5%8C%BA4-5FC%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC346-HA11L": {
+      "type": "remark",
+      "timestamp": "2026-05-08T09:30:02.949Z",
+      "excluded": false,
+      "remark": {
+        "content": "已提醒白云，可以退网",
+        "timestamp": "2026-05-08T09:30:02.949Z"
+      }
+    },
+    "5792-%E6%B1%9F%E5%A4%8F%E6%9D%91%E6%90%AC%E8%BF%81%E6%97%A0%E7%BA%BF%E5%9F%BA%E7%AB%99-GZHC699-HA15L": {
+      "type": "remark",
+      "timestamp": "2026-05-08T09:30:05.878Z",
+      "excluded": false,
+      "remark": {
+        "content": "已提醒白云，可以退网",
+        "timestamp": "2026-05-08T09:30:05.878Z"
+      }
+    },
+    "%E5%B9%BF%E5%B7%9E%E6%B0%91%E8%88%AA%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2C%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC346-HA04L": {
+      "type": "remark",
+      "timestamp": "2026-05-08T09:30:14.488Z",
+      "excluded": false,
+      "remark": {
+        "content": "已提醒白云，可以退网",
+        "timestamp": "2026-05-08T09:30:14.488Z"
+      }
+    },
+    "%E5%8D%97%E8%88%AA%E6%9C%BA%E5%8A%A1C%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC346-HA05L": {
+      "type": "remark",
+      "timestamp": "2026-05-08T09:30:17.165Z",
+      "excluded": false,
+      "remark": {
+        "content": "已提醒白云，可以退网",
+        "timestamp": "2026-05-08T09:30:17.165Z"
+      }
+    },
+    "%E5%90%8C%E5%92%8C%E6%9C%BA%E6%A5%BC-GZWC023": {
+      "type": "remark",
+      "timestamp": "2026-05-08T09:30:19.090Z",
+      "excluded": false,
+      "remark": {
+        "content": "已提醒白云，可以退网",
+        "timestamp": "2026-05-08T09:30:19.090Z"
+      }
     }
   },
   "statistics": {
@@ -256,7 +346,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "data/check-records.json",
-    "lastSync": "2026-05-08T03:16:11.011Z",
+    "lastSync": "2026-05-08T09:26:28.685Z",
     "version": 6
   }
 }
