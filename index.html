@@ -825,15 +825,16 @@
             thead.appendChild(headerRow);
  
               // 创建数据行
-              // 使用临时ID，点击确认后才生成正式的设备ID
-              let tempIndex = 1;
+              // 直接使用网管中名称作为设备ID
               results.forEach(result => {
                   result.matches.forEach(row => {
-                      const tempId = `temp-${tempIndex++}`;
-                      console.log(`📝 生成临时ID: ${tempId}`);
+                      // 使用网管中名称作为设备ID（进行URL编码以避免特殊字符问题）
+                      const deviceKey = row['网管中名称'] || `unknown-${Date.now()}`;
+                      const deviceId = encodeURIComponent(deviceKey);
+                      console.log(`📝 生成设备ID: ${deviceId} (基于网管中名称: ${deviceKey})`);
                       const tr = document.createElement('tr');
-                      tr.id = tempId;
-                     tr.setAttribute('data-temp-id', tempId);
+                      tr.id = deviceId;
+                     tr.setAttribute('data-device-id', deviceId);
                      tr.className = 'device-row';
                      
                      // 添加数据列
@@ -861,13 +862,13 @@
                      const netBtn = document.createElement('button');
                      netBtn.className = 'text-xs px-2 py-1 rounded border border-blue-300 text-blue-600 hover:bg-blue-50 transition';
                      netBtn.textContent = '网络审批';
-                     netBtn.onclick = () => showNetCheckboxes(tempId, netBtn, monitorBtn);
-                     
+                     netBtn.onclick = () => showNetCheckboxes(deviceId, netBtn, monitorBtn);
+
                      // 网监评估按钮
                      const monitorBtn = document.createElement('button');
                      monitorBtn.className = 'text-xs px-2 py-1 rounded border border-purple-300 text-purple-600 hover:bg-purple-50 transition';
                      monitorBtn.textContent = '网监评估';
-                     monitorBtn.onclick = () => showMonitorCheckboxes(tempId, monitorBtn, netBtn);
+                     monitorBtn.onclick = () => showMonitorCheckboxes(deviceId, monitorBtn, netBtn);
                      
                      buttonGroup.appendChild(netBtn);
                      buttonGroup.appendChild(monitorBtn);
@@ -875,61 +876,61 @@
                      
                       // 剔除/恢复按钮
                       const excludeBtn = document.createElement('button');
-                      excludeBtn.id = `exclude-${tempId}`;
+                      excludeBtn.id = `exclude-${deviceId}`;
                       excludeBtn.className = 'text-xs px-2 py-1 rounded border border-red-300 text-red-600 hover:bg-red-50 transition w-full';
                       excludeBtn.textContent = '剔除';
-                      excludeBtn.onclick = () => toggleExclude(tempId, tr, excludeBtn);
+                      excludeBtn.onclick = () => toggleExclude(deviceId, tr, excludeBtn);
                       actionContainer.appendChild(excludeBtn);
-                      
+
                       // 备注按钮
                       const remarkBtn = document.createElement('button');
-                      remarkBtn.id = `remark-${tempId}`;
+                      remarkBtn.id = `remark-${deviceId}`;
                       remarkBtn.className = 'text-xs px-2 py-1 rounded border border-amber-300 text-amber-600 hover:bg-amber-50 transition w-full';
                       remarkBtn.textContent = '备注';
-                      remarkBtn.onclick = () => openDeviceRemark(tempId);
+                      remarkBtn.onclick = () => openDeviceRemark(deviceId);
                       actionContainer.appendChild(remarkBtn);
                      
                      // 网络部门审批勾选框区域(默认隐藏)
                      const netCheckboxesDiv = document.createElement('div');
-                     netCheckboxesDiv.id = `net-checks-${tempId}`;
+                     netCheckboxesDiv.id = `net-checks-${deviceId}`;
                      netCheckboxesDiv.className = 'hidden space-y-1 mt-2 p-2 bg-blue-50 rounded border border-blue-200';
                      netCheckboxesDiv.innerHTML = `
                          <div class="text-xs font-semibold text-blue-700 mb-1">网络部门审批检查项:</div>
                          <label class="flex items-center gap-1 text-xs">
-                             <input type="checkbox" class="net-check w-3 h-3" data-temp-id="${tempId}" data-check="1">
+                             <input type="checkbox" class="net-check w-3 h-3" data-device-id="${deviceId}" data-check="1">
                              <span>SDH路径确认无在用业务</span>
                          </label>
                          <label class="flex items-center gap-1 text-xs">
-                             <input type="checkbox" class="net-check w-3 h-3" data-temp-id="${tempId}" data-check="2">
+                             <input type="checkbox" class="net-check w-3 h-3" data-device-id="${deviceId}" data-check="2">
                              <span>端口屏蔽告警</span>
                          </label>
                          <label class="flex items-center gap-1 text-xs">
-                             <input type="checkbox" class="net-check w-3 h-3" data-temp-id="${tempId}" data-check="3">
+                             <input type="checkbox" class="net-check w-3 h-3" data-device-id="${deviceId}" data-check="3">
                              <span>预配置网元</span>
                          </label>
-                         <button onclick="confirmNetApproval('${tempId}')" class="text-xs px-2 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 transition w-full mt-1">确认完成</button>
+                         <button onclick="confirmNetApproval('${deviceId}')" class="text-xs px-2 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 transition w-full mt-1">确认完成</button>
                      `;
                      actionContainer.appendChild(netCheckboxesDiv);
                      
                      // 网监评估勾选框区域(默认隐藏)
                      const monitorCheckboxesDiv = document.createElement('div');
-                     monitorCheckboxesDiv.id = `monitor-checks-${tempId}`;
+                     monitorCheckboxesDiv.id = `monitor-checks-${deviceId}`;
                      monitorCheckboxesDiv.className = 'hidden space-y-1 mt-2 p-2 bg-purple-50 rounded border border-purple-200';
                      monitorCheckboxesDiv.innerHTML = `
                          <div class="text-xs font-semibold text-purple-700 mb-1">网监评估检查项:</div>
                          <label class="flex items-center gap-1 text-xs">
-                             <input type="checkbox" class="monitor-check w-3 h-3" data-temp-id="${tempId}">
+                             <input type="checkbox" class="monitor-check w-3 h-3" data-device-id="${deviceId}">
                              <span>查看设备是否关电</span>
                          </label>
                          <label class="flex items-center gap-1 text-xs">
-                             <input type="checkbox" class="monitor-check w-3 h-3" data-temp-id="${tempId}">
+                             <input type="checkbox" class="monitor-check w-3 h-3" data-device-id="${deviceId}">
                              <span>是否提供关电照片</span>
                          </label>
                          <label class="flex items-center gap-1 text-xs">
-                             <input type="checkbox" class="monitor-check w-3 h-3" data-temp-id="${tempId}">
+                             <input type="checkbox" class="monitor-check w-3 h-3" data-device-id="${deviceId}">
                              <span>删除纤缆</span>
                          </label>
-                         <button onclick="confirmMonitorApproval('${tempId}')" class="text-xs px-2 py-1 bg-purple-500 text-white rounded hover:bg-purple-600 transition w-full mt-1">确认完成</button>
+                         <button onclick="confirmMonitorApproval('${deviceId}')" class="text-xs px-2 py-1 bg-purple-500 text-white rounded hover:bg-purple-600 transition w-full mt-1">确认完成</button>
                      `;
                      actionContainer.appendChild(monitorCheckboxesDiv);
                      
@@ -956,37 +957,37 @@
          let deviceCheckboxes = {}; // 存储设备勾选框状态 {deviceId: {net: [bool, bool, bool], monitor: [bool, bool, bool]}}
   
         // 显示网络部门审批勾选框
-        function showNetCheckboxes(tempId, netBtn, monitorBtn) {
+        function showNetCheckboxes(deviceId, netBtn, monitorBtn) {
             // 隐藏其他勾选框
             document.querySelectorAll('[id^="monitor-checks-"]').forEach(el => el.classList.add('hidden'));
-            
+
             // 显示网络部门审批勾选框
-            const checkboxesDiv = document.getElementById(`net-checks-${tempId}`);
+            const checkboxesDiv = document.getElementById(`net-checks-${deviceId}`);
             checkboxesDiv.classList.toggle('hidden');
-            
+
             // 更新按钮样式
             netBtn.className = 'text-xs px-2 py-1 rounded bg-blue-500 text-white font-medium';
             monitorBtn.className = 'text-xs px-2 py-1 rounded border border-purple-300 text-purple-600 hover:bg-purple-50 transition';
         }
         
         // 显示网监评估勾选框
-        function showMonitorCheckboxes(tempId, monitorBtn, netBtn) {
+        function showMonitorCheckboxes(deviceId, monitorBtn, netBtn) {
             // 隐藏其他勾选框
             document.querySelectorAll('[id^="net-checks-"]').forEach(el => el.classList.add('hidden'));
-            
+
             // 显示网监评估勾选框
-            const checkboxesDiv = document.getElementById(`monitor-checks-${tempId}`);
+            const checkboxesDiv = document.getElementById(`monitor-checks-${deviceId}`);
             checkboxesDiv.classList.toggle('hidden');
-            
+
             // 更新按钮样式
             monitorBtn.className = 'text-xs px-2 py-1 rounded bg-purple-500 text-white font-medium';
             netBtn.className = 'text-xs px-2 py-1 rounded border border-blue-300 text-blue-600 hover:bg-blue-50 transition';
         }
         
          // 确认网络部门审批
-         function confirmNetApproval(tempId) {
+         function confirmNetApproval(deviceId) {
              // 获取勾选框状态
-             const checkboxes = document.querySelectorAll(`.net-check[data-temp-id="${tempId}"]`);
+             const checkboxes = document.querySelectorAll(`.net-check[data-device-id="${deviceId}"]`);
              const checkedStates = Array.from(checkboxes).map(cb => cb.checked);
              
              // 检查是否全部勾选
@@ -995,72 +996,6 @@
              if (!allChecked) {
                  showToast('请完成所有检查项后再确认!');
                  return;
-             }
-             
-             // 获取搜索列的值作为设备唯一标识
-             const row = document.getElementById(tempId);
-             const searchColumn = document.getElementById('searchColumn').value;
-             const displayFields = selectedFields.length > 0 ? selectedFields : excelHeaders;
-             const columnIndex = displayFields.indexOf(searchColumn);
-             const cells = row.querySelectorAll('td');
-             const deviceKey = columnIndex >= 0 && columnIndex < cells.length ? cells[columnIndex].textContent.trim() : tempId;
-             
-             // 使用 deviceInfo（搜索列的值）作为设备ID（进行URL编码以避免特殊字符问题）
-             const deviceId = encodeURIComponent(deviceKey);
-             console.log(`📝 生成正式设备ID: ${deviceId} (基于 deviceInfo: ${deviceKey})`);
-             
-             // 更新表格行的ID和属性
-             if (row) {
-                 row.id = deviceId;
-                 row.setAttribute('data-device-id', deviceId);
-                 row.removeAttribute('data-temp-id');
-                 
-                 // 更新所有相关元素的ID
-                 const excludeBtn = document.getElementById(`exclude-${tempId}`);
-                 if (excludeBtn) {
-                     excludeBtn.id = `exclude-${deviceId}`;
-                     excludeBtn.onclick = () => toggleExclude(deviceId, row, excludeBtn);
-                 }
-                 
-                 const netChecksDiv = document.getElementById(`net-checks-${tempId}`);
-                 if (netChecksDiv) {
-                     netChecksDiv.id = `net-checks-${deviceId}`;
-                     // 更新勾选框的data-device属性
-                     netChecksDiv.querySelectorAll('.net-check').forEach(cb => {
-                         cb.setAttribute('data-device', deviceId);
-                         cb.removeAttribute('data-temp-id');
-                     });
-                     // 更新确认按钮的onclick
-                     const confirmBtn = netChecksDiv.querySelector('button');
-                     if (confirmBtn) {
-                         confirmBtn.setAttribute('onclick', `confirmNetApproval('${deviceId}')`);
-                     }
-                 }
-                 
-                 const monitorChecksDiv = document.getElementById(`monitor-checks-${tempId}`);
-                 if (monitorChecksDiv) {
-                     monitorChecksDiv.id = `monitor-checks-${deviceId}`;
-                     // 更新勾选框的data-device属性
-                     monitorChecksDiv.querySelectorAll('.monitor-check').forEach(cb => {
-                         cb.setAttribute('data-device', deviceId);
-                         cb.removeAttribute('data-temp-id');
-                     });
-                     // 更新确认按钮的onclick
-                     const confirmBtn = monitorChecksDiv.querySelector('button');
-                     if (confirmBtn) {
-                         confirmBtn.setAttribute('onclick', `confirmMonitorApproval('${deviceId}')`);
-                     }
-                 }
-                 
-                 // 更新按钮的onclick
-                 const netBtn = row.querySelector('button:first-of-type');
-                 const monitorBtn = row.querySelector('button:nth-of-type(2)');
-                 if (netBtn) {
-                     netBtn.onclick = () => showNetCheckboxes(deviceId, netBtn, monitorBtn);
-                 }
-                 if (monitorBtn) {
-                     monitorBtn.onclick = () => showMonitorCheckboxes(deviceId, monitorBtn, netBtn);
-                 }
              }
              
              // 记录勾选框状态,保留其他类型的勾选框状态
@@ -1089,9 +1024,9 @@
          }
          
          // 确认网监评估
-         function confirmMonitorApproval(tempId) {
+         function confirmMonitorApproval(deviceId) {
              // 获取勾选框状态
-             const checkboxes = document.querySelectorAll(`.monitor-check[data-temp-id="${tempId}"]`);
+             const checkboxes = document.querySelectorAll(`.monitor-check[data-device-id="${deviceId}"]`);
              const checkedStates = Array.from(checkboxes).map(cb => cb.checked);
              
              // 检查是否全部勾选
@@ -1100,72 +1035,6 @@
              if (!allChecked) {
                  showToast('请完成所有检查项后再确认!');
                  return;
-             }
-             
-             // 获取搜索列的值作为设备唯一标识
-             const row = document.getElementById(tempId);
-             const searchColumn = document.getElementById('searchColumn').value;
-             const displayFields = selectedFields.length > 0 ? selectedFields : excelHeaders;
-             const columnIndex = displayFields.indexOf(searchColumn);
-             const cells = row.querySelectorAll('td');
-             const deviceKey = columnIndex >= 0 && columnIndex < cells.length ? cells[columnIndex].textContent.trim() : tempId;
-             
-             // 使用 deviceInfo（搜索列的值）作为设备ID（进行URL编码以避免特殊字符问题）
-             const deviceId = encodeURIComponent(deviceKey);
-             console.log(`📝 生成正式设备ID: ${deviceId} (基于 deviceInfo: ${deviceKey})`);
-             
-             // 更新表格行的ID和属性
-             if (row) {
-                 row.id = deviceId;
-                 row.setAttribute('data-device-id', deviceId);
-                 row.removeAttribute('data-temp-id');
-                 
-                 // 更新所有相关元素的ID
-                 const excludeBtn = document.getElementById(`exclude-${tempId}`);
-                 if (excludeBtn) {
-                     excludeBtn.id = `exclude-${deviceId}`;
-                     excludeBtn.onclick = () => toggleExclude(deviceId, row, excludeBtn);
-                 }
-                 
-                 const netChecksDiv = document.getElementById(`net-checks-${tempId}`);
-                 if (netChecksDiv) {
-                     netChecksDiv.id = `net-checks-${deviceId}`;
-                     // 更新勾选框的data-device属性
-                     netChecksDiv.querySelectorAll('.net-check').forEach(cb => {
-                         cb.setAttribute('data-device', deviceId);
-                         cb.removeAttribute('data-temp-id');
-                     });
-                     // 更新确认按钮的onclick
-                     const confirmBtn = netChecksDiv.querySelector('button');
-                     if (confirmBtn) {
-                         confirmBtn.setAttribute('onclick', `confirmNetApproval('${deviceId}')`);
-                     }
-                 }
-                 
-                 const monitorChecksDiv = document.getElementById(`monitor-checks-${tempId}`);
-                 if (monitorChecksDiv) {
-                     monitorChecksDiv.id = `monitor-checks-${deviceId}`;
-                     // 更新勾选框的data-device属性
-                     monitorChecksDiv.querySelectorAll('.monitor-check').forEach(cb => {
-                         cb.setAttribute('data-device', deviceId);
-                         cb.removeAttribute('data-temp-id');
-                     });
-                     // 更新确认按钮的onclick
-                     const confirmBtn = monitorChecksDiv.querySelector('button');
-                     if (confirmBtn) {
-                         confirmBtn.setAttribute('onclick', `confirmMonitorApproval('${deviceId}')`);
-                     }
-                 }
-                 
-                 // 更新按钮的onclick
-                 const netBtn = row.querySelector('button:first-of-type');
-                 const monitorBtn = row.querySelector('button:nth-of-type(2)');
-                 if (netBtn) {
-                     netBtn.onclick = () => showNetCheckboxes(deviceId, netBtn, monitorBtn);
-                 }
-                 if (monitorBtn) {
-                     monitorBtn.onclick = () => showMonitorCheckboxes(deviceId, monitorBtn, netBtn);
-                 }
              }
              
              // 记录勾选框状态,保留其他类型的勾选框状态
@@ -1245,37 +1114,33 @@
               saveAppData();
           }
         
-        function getDeviceInfoFromRow(deviceId) {
-            // 从搜索结果中获取设备信息
-            const row = document.querySelector(`[data-device-id="${deviceId}"]`);
-            if (row) {
-                // 获取搜索列的值作为设备信息
-                const searchColumn = document.getElementById('searchColumn').value;
-                if (searchColumn) {
-                    // 找到搜索列对应的单元格
-                    const cells = row.querySelectorAll('td');
-                    // 获取当前显示的字段列表
-                    const displayFields = selectedFields.length > 0 ? selectedFields : excelHeaders;
-                    // 找到搜索列在显示字段中的索引
-                    const columnIndex = displayFields.indexOf(searchColumn);
-                    if (columnIndex >= 0 && columnIndex < cells.length) {
-                        const cell = cells[columnIndex];
-                        if (cell) {
-                            return cell.textContent.trim();
-                        }
-                    }
-                }
-                
-                // 如果找不到搜索列,获取第一列的内容作为设备信息
-                const firstCell = row.querySelector('td:first-child');
-                if (firstCell) {
-                    return firstCell.textContent.trim();
-                }
-            }
-            
-            // 如果找不到,返回设备ID
-            return deviceId;
-        }
+         function getDeviceInfoFromRow(deviceId) {
+             // 从搜索结果中获取设备信息
+             const row = document.querySelector(`[data-device-id="${deviceId}"]`);
+             if (row) {
+                 // 获取"网管中名称"列的值作为设备信息
+                 const cells = row.querySelectorAll('td');
+                 // 获取当前显示的字段列表
+                 const displayFields = selectedFields.length > 0 ? selectedFields : excelHeaders;
+                 // 找到"网管中名称"在显示字段中的索引
+                 const columnIndex = displayFields.indexOf('网管中名称');
+                 if (columnIndex >= 0 && columnIndex < cells.length) {
+                     const cell = cells[columnIndex];
+                     if (cell) {
+                         return cell.textContent.trim();
+                     }
+                 }
+                 
+                 // 如果找不到"网管中名称"列,获取第一列的内容作为设备信息
+                 const firstCell = row.querySelector('td:first-child');
+                 if (firstCell) {
+                     return firstCell.textContent.trim();
+                 }
+             }
+             
+             // 如果找不到,返回设备ID
+             return deviceId;
+         }
         
         function getDeviceDataFromRow(deviceId) {
             // 从搜索结果中获取完整的设备数据(只包含用户选择的字段)
@@ -3158,13 +3023,17 @@
                             }
                         };
                     } else {
-                        // 如果已有设备标记，更新备注
+                        // 如果已有设备标记，更新备注和设备信息
                         appData.deviceMarks[currentRemarkDeviceId].remark = {
                             content: content,
                             timestamp: new Date().toISOString()
                         };
                         // 更新设备数据
                         appData.deviceMarks[currentRemarkDeviceId].deviceData = deviceData;
+                        // 确保设备信息是最新的
+                        appData.deviceMarks[currentRemarkDeviceId].deviceInfo = deviceData['网管中名称'] || currentRemarkDeviceId;
+                        // 更新时间戳
+                        appData.deviceMarks[currentRemarkDeviceId].timestamp = new Date().toISOString();
                     }
                     
                     saveAppData();
