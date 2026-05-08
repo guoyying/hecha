@@ -124,7 +124,7 @@
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-slate-700 mb-1">数据文件路径</label>
-                        <input type="text" id="githubDataPath" placeholder="data/check-records.json" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <input type="text" id="githubDataPath" placeholder="check-records.json" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-slate-700 mb-1">Token</label>
@@ -491,7 +491,7 @@
                   repo: '',
                   branch: 'main',
                   configPath: 'config/field-config.json',
-                  dataPath: 'data/check-records.json',
+                  dataPath: 'check-records.json',
                   token: null,  // 改为 null，避免空字符串覆盖有效 token
                   lastSync: null,
                   version: 0
@@ -2182,7 +2182,7 @@
                        
                        const {repo, token, dataPath} = appData.github;
                        const [owner, repoName] = repo.split('/');
-                       const path = dataPath || 'data/check-records.json';
+                       const path = dataPath || 'check-records.json';
                        
                         // 创建要推送的数据副本,移除敏感信息
                         const dataToPush = {
@@ -2279,7 +2279,7 @@
                        
                        const {repo, token, dataPath} = appData.github;
                        const [owner, repoName] = repo.split('/');
-                       const path = dataPath || 'data/check-records.json';
+                       const path = dataPath || 'check-records.json';
                        
                        try {
                            const cacheBuster = appData.github.version ? '?v=' + appData.github.version : '';
