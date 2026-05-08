@@ -209,14 +209,26 @@
     }
   },
   "quarterTarget": {
-    "targets": {}
+    "targets": {
+      "天河": 50,
+      "越秀": 0,
+      "海珠": 0,
+      "荔湾": 0,
+      "白云": 0,
+      "黄埔": 0,
+      "番禺": 0,
+      "花都": 0,
+      "南沙": 0,
+      "从化": 0,
+      "增城": 0
+    }
   },
   "github": {
     "repo": "guoyying/hecha",
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-08T05:41:01.912Z",
+    "lastSync": "2026-05-08T05:43:43.358Z",
     "version": 7
   }
 }
