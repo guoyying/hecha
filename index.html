@@ -1226,6 +1226,12 @@
               
               // 遍历所有标记的设备（每个设备ID只统计一次）
               Object.entries(appData.deviceMarks).forEach(([deviceId, mark]) => {
+                  // 跳过备注类型的设备（不统计）
+                  if (mark.type === 'remark') {
+                      console.log(`  ⏭️  跳过备注类型的设备: ${deviceId}`);
+                      return;
+                  }
+                  
                   // 统计设备类型分布
                   if (mark.type === 'net') {
                       totalNet++;
@@ -1738,7 +1744,8 @@
              // 计算总数统计
              let totalNet = 0, totalMonitor = 0;
              Object.values(appData.deviceMarks).forEach(mark => {
-                 if (mark.excluded) {
+                 // 跳过被剔除的设备和备注类型的设备
+                 if (mark.excluded || mark.type === 'remark') {
                      return;
                  }
                  if (mark.type === 'net') {
@@ -1898,7 +1905,8 @@
              const records = [];
              
              Object.entries(appData.deviceMarks).forEach(([deviceId, mark]) => {
-                 if (mark.excluded) {
+                 // 跳过被剔除的设备和备注类型的设备
+                 if (mark.excluded || mark.type === 'remark') {
                      return;
                  }
                  
