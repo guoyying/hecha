@@ -2324,6 +2324,11 @@
                            if (remote.selectedFields) appData.selectedFields = remote.selectedFields;
                            if (remote.deviceMarks) appData.deviceMarks = remote.deviceMarks;
                            if (remote.statistics) appData.statistics = remote.statistics;
+                           if (remote.quarterTarget && remote.quarterTarget.targets) {
+                               if (!appData.quarterTarget) appData.quarterTarget = {};
+                               appData.quarterTarget.targets = remote.quarterTarget.targets;
+                               console.log('✅ 已更新季度目标数据');
+                           }
                            
                            // 不覆盖本地的 github.token 配置
                            if (remote.github) {
@@ -2337,6 +2342,7 @@
                            
                            saveAppData();
                            updateStatisticsDisplay();
+                           updateQuarterTargetDisplay();
                            
                            if (manual) {
                                showBanner('✅ 拉取成功', '#4caf50', 2000);
@@ -2919,8 +2925,14 @@
              
               // ==================== 季度目标相关函数 ====================
               
-              // 11个县分列表
-              const regions = ['天河', '越秀', '海珠', '荔湾', '白云', '黄埔', '番禺', '花都', '南沙', '从化', '增城'];
+              // 获取区域列表（按照JSON中的顺序）
+              function getRegions() {
+                  if (appData.quarterTarget && appData.quarterTarget.targets) {
+                      return Object.keys(appData.quarterTarget.targets);
+                  }
+                  // 如果没有数据，返回默认顺序
+                  return ['天河', '越秀', '海珠', '荔湾', '白云', '黄埔', '番禺', '花都', '南沙', '从化', '增城'];
+              }
               
               // 打开季度目标配置弹窗
               function openQuarterTargetConfig() {
@@ -2929,6 +2941,9 @@
                   
                   // 清空容器
                   container.innerHTML = '';
+                  
+                  // 获取区域列表（按照JSON中的顺序）
+                  const regions = getRegions();
                   
                   // 为每个区域创建输入框
                   regions.forEach(region => {
@@ -2957,6 +2972,9 @@
                       appData.quarterTarget.targets = {};
                   }
                   
+                  // 获取区域列表（按照JSON中的顺序）
+                  const regions = getRegions();
+                  
                   // 保存每个区域的目标
                   regions.forEach(region => {
                       const input = document.getElementById(`region-target-${region}`);
@@ -2979,6 +2997,9 @@
               
                 // 获取设备的行政区域
                 function getDeviceRegion(deviceId) {
+                     // 获取当前的区域列表
+                     const regions = getRegions();
+                     
                      // 1. 首先从设备标记中获取设备数据
                      const mark = appData.deviceMarks[deviceId];
                      if (mark && mark.deviceData) {
@@ -3004,7 +3025,9 @@
                             const regionIndex = displayFields.indexOf('所属行政区域');
                             if (regionIndex >= 0 && regionIndex < cells.length) {
                                 const region = cells[regionIndex].textContent.trim();
-                                if (regions.includes(region)) {
+                                // 使用动态的区域列表
+                                const currentRegions = getRegions();
+                                if (currentRegions.includes(region)) {
                                     return region;
                                 }
                             }
@@ -3018,6 +3041,9 @@
               function updateQuarterTargetDisplay() {
                   const tbody = document.getElementById('quarterTargetTableBody');
                   tbody.innerHTML = '';
+                  
+                  // 获取区域列表（按照JSON中的顺序）
+                  const regions = getRegions();
                   
                   // 为每个区域创建统计行
                   regions.forEach(region => {
