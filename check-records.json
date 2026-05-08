@@ -196,6 +196,27 @@
         "content": "提醒天河5月中旬上单，已屏蔽告警",
         "timestamp": "2026-05-08T03:05:21.673Z"
       }
+    },
+    "temp-1": {
+      "type": "remark",
+      "timestamp": "2026-05-08T10:03:28.262Z",
+      "excluded": false,
+      "deviceInfo": "白云国际机场东北C网基站-GZHC346-HA03L",
+      "deviceData": {
+        "所属行政区域": "白云",
+        "集团名称": "白云国际机场东北C网基站/广州华为SDH2.5G346/155M03链",
+        "网管中名称": "白云国际机场东北C网基站-GZHC346-HA03L",
+        "高值业务数": "0",
+        "局内业务数": "1",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": {
+        "content": "111",
+        "timestamp": "2026-05-08T10:03:28.262Z"
+      }
     }
   },
   "statistics": {
@@ -227,7 +248,7 @@
     "repo": "guoyying/hecha",
     "branch": "main",
     "configPath": "config/field-config.json",
-    "dataPath": "data/check-records.json",
+    "dataPath": "check-records.json",
     "lastSync": "2026-05-08T03:16:11.011Z",
     "version": 6
   }
