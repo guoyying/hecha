@@ -286,6 +286,7 @@
                                    <tr class="border-b border-amber-200">
                                        <th class="text-left py-2 px-3 font-semibold text-amber-800">行政区域</th>
                                        <th class="text-center py-2 px-3 font-semibold text-amber-800">二季度目标</th>
+                                       <th class="text-center py-2 px-3 font-semibold text-blue-800">网络部门审批</th>
                                        <th class="text-center py-2 px-3 font-semibold text-green-800">预期有</th>
                                        <th class="text-center py-2 px-3 font-semibold text-purple-800">实际已退</th>
                                    </tr>
@@ -2923,10 +2924,21 @@
                       // 获取目标数量
                       const target = appData.quarterTarget.targets[region] || 0;
                       
-                        // 计算预期数量（该区域有备注的设备数）
+                        // 计算网络部门审批数量（该区域type=net的设备数）
+                        let netCount = 0;
+                        Object.entries(appData.deviceMarks || {}).forEach(([deviceId, mark]) => {
+                            if (mark.type === 'net' && !mark.excluded) {
+                                const deviceRegion = getDeviceRegion(deviceId);
+                                if (deviceRegion === region) {
+                                    netCount++;
+                                }
+                            }
+                        });
+                        
+                        // 计算预期数量（该区域type=remark的设备数）
                         let expectedCount = 0;
                         Object.entries(appData.deviceMarks || {}).forEach(([deviceId, mark]) => {
-                            if (mark.remark) {  // 只统计有备注的设备
+                            if (mark.type === 'remark' && mark.remark) {  // 只统计type=remark且有备注的设备
                                 const deviceRegion = getDeviceRegion(deviceId);
                                 if (deviceRegion === region) {
                                     expectedCount++;
@@ -2951,6 +2963,7 @@
                        tr.innerHTML = `
                            <td class="py-2 px-3 font-medium text-slate-700">${region}</td>
                            <td class="py-2 px-3 text-center text-amber-700 font-semibold">${target}</td>
+                           <td class="py-2 px-3 text-center text-blue-700 font-semibold cursor-pointer hover:text-blue-600 hover:underline" onclick="showRegionDeviceDetails('${region}', 'net')">${netCount}</td>
                            <td class="py-2 px-3 text-center text-green-700 font-semibold cursor-pointer hover:text-green-600 hover:underline" onclick="showRegionDeviceDetails('${region}', 'expected')">${expectedCount}</td>
                            <td class="py-2 px-3 text-center text-purple-700 font-semibold cursor-pointer hover:text-purple-600 hover:underline" onclick="showRegionDeviceDetails('${region}', 'actual')">${actualReturnedCount}</td>
                       `;
@@ -3194,13 +3207,51 @@
                    const tbody = document.getElementById('regionDeviceDetailsBody');
                    
                    // 设置标题
-                   const typeText = type === 'expected' ? '预期有' : '实际已退';
+                   let typeText = '';
+                   if (type === 'net') {
+                       typeText = '网络部门审批';
+                   } else if (type === 'expected') {
+                       typeText = '预期有';
+                   } else if (type === 'actual') {
+                       typeText = '实际已退';
+                   }
                    title.textContent = `${region} - ${typeText}设备详情`;
                    
                    // 清空表格
                    tbody.innerHTML = '';
                    
-                   if (type === 'expected') {
+                   if (type === 'net') {
+                       // 显示网络部门审批设备（type=net的设备）
+                       Object.entries(appData.deviceMarks || {}).forEach(([deviceId, mark]) => {
+                           if (mark.type === 'net' && !mark.excluded) {
+                               const deviceRegion = getDeviceRegion(deviceId);
+                               if (deviceRegion === region) {
+                                    const tr = document.createElement('tr');
+                                    tr.className = 'border-b border-slate-100 hover:bg-slate-50';
+                                    
+                                    // 获取网管中名称（deviceInfo）
+                                    const deviceName = mark.deviceData ? (mark.deviceData['网管中名称'] || mark.deviceInfo || deviceId) : deviceId;
+                                    
+                                    // 获取所属行政区域
+                                    const deviceRegionName = mark.deviceData ? (mark.deviceData['所属行政区域'] || region) : region;
+                                    
+                                    // 获取备注内容（如果有）
+                                    const remarkContent = mark.remark ? mark.remark.content : '-';
+                                    
+                                    // 获取备注时间（如果有）
+                                    const remarkTime = mark.remark ? new Date(mark.remark.timestamp).toLocaleString('zh-CN') : '-';
+                                    
+                                    tr.innerHTML = `
+                                        <td class="px-4 py-2 border border-slate-200 text-slate-700">${deviceName}</td>
+                                        <td class="px-4 py-2 border border-slate-200 text-slate-700">${deviceRegionName}</td>
+                                        <td class="px-4 py-2 border border-slate-200 text-slate-700">${remarkContent}</td>
+                                        <td class="px-4 py-2 border border-slate-200 text-slate-500 text-sm">${remarkTime}</td>
+                                    `;
+                                    tbody.appendChild(tr);
+                               }
+                           }
+                       });
+                   } else if (type === 'expected') {
                        // 显示预期有设备（有备注的设备）
                        Object.entries(appData.deviceMarks || {}).forEach(([deviceId, mark]) => {
                            if (mark.remark) {  // 只显示有备注的设备
