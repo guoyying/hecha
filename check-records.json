@@ -727,6 +727,29 @@
         "0407备注_承载室": ""
       },
       "remark": null
+    },
+    "%E5%90%8C%E5%92%8C%E6%9C%BA%E6%A5%BC-GZWC023": {
+      "type": "net",
+      "timestamp": "2026-05-08T10:12:37.410Z",
+      "excluded": false,
+      "deviceInfo": "同和机楼-GZWC023",
+      "deviceData": {
+        "所属行政区域": "白云",
+        "集团名称": "同和机楼2楼传输机房1/广州武邮SDH2.5G023（已下电）",
+        "网管中名称": "同和机楼-GZWC023",
+        "高值业务数": "1",
+        "局内业务数": "1",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "已拆除，可退网",
+        "0407备注_承载室": ""
+      },
+      "remark": {
+        "content": "已提醒白云上单",
+        "timestamp": "2026-05-08T10:11:33.381Z"
+      },
+      "removedAt": "2026-05-09T08:29:19.832Z",
+      "restoredAt": "2026-05-09T08:31:48.839Z"
     }
   },
   "statistics": {
@@ -735,7 +758,7 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 11,
+      "netCount": 12,
       "monitorCount": 10
     }
   },
@@ -759,7 +782,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-09T08:22:50.045Z",
+    "lastSync": "2026-05-09T08:29:32.171Z",
     "version": 6
   }
 }
