@@ -883,10 +883,10 @@
                       // 剔除/恢复按钮
                       const excludeBtn = document.createElement('button');
                       excludeBtn.id = `exclude-${deviceId}`;
-                      excludeBtn.className = 'text-xs px-2 py-1 rounded border border-red-300 text-red-600 hover:bg-red-50 transition w-full';
-                      excludeBtn.textContent = '剔除';
-                      excludeBtn.onclick = () => toggleExclude(deviceId, tr, excludeBtn);
-                      actionContainer.appendChild(excludeBtn);
+                       excludeBtn.className = 'text-xs px-2 py-1 rounded border border-red-300 text-red-600 hover:bg-red-50 transition w-full';
+                       excludeBtn.textContent = '移除';
+                       excludeBtn.onclick = () => removeDevice(deviceId, tr, excludeBtn);
+                       actionContainer.appendChild(excludeBtn);
 
                       // 备注按钮
                       const remarkBtn = document.createElement('button');
@@ -1175,32 +1175,65 @@
             return {};
         }
   
-         // 切换剔除/恢复状态
-         function toggleExclude(deviceId, row, excludeBtn) {
+         // 初始化撤销移除的存储
+         if (!appData.removedDevices) {
+             appData.removedDevices = {};
+         }
+ 
+         // 移除设备（从数据库中删除）
+         function removeDevice(deviceId, row, excludeBtn) {
              if (!appData.deviceMarks[deviceId]) {
                  showToast('请先完成审批或评估!');
                  return;
              }
              
-             const isExcluded = appData.deviceMarks[deviceId].excluded;
+             // 保存到撤销移除的存储中
+             appData.removedDevices[deviceId] = {
+                 ...appData.deviceMarks[deviceId],
+                 removedAt: new Date().toISOString()
+             };
              
-             if (isExcluded) {
-                 // 恢复
-                 appData.deviceMarks[deviceId].excluded = false;
-                 row.style.opacity = '1';
-                 row.style.textDecoration = 'none';
-                 excludeBtn.textContent = '剔除';
-                 excludeBtn.className = 'text-xs px-2 py-1 rounded border border-red-300 text-red-600 hover:bg-red-50 transition w-full';
-                 showToast('设备已恢复到统计中');
-             } else {
-                 // 剔除
-                 appData.deviceMarks[deviceId].excluded = true;
-                 row.style.opacity = '0.3';
-                 row.style.textDecoration = 'line-through';
-                 excludeBtn.textContent = '恢复';
-                 excludeBtn.className = 'text-xs px-2 py-1 rounded border border-green-300 text-green-600 hover:bg-green-50 transition w-full';
-                 showToast('设备已从统计中剔除');
+             // 从数据库中删除
+             delete appData.deviceMarks[deviceId];
+             
+             // 更新UI
+             row.style.opacity = '0.3';
+             row.style.textDecoration = 'line-through';
+             excludeBtn.textContent = '撤销移除';
+             excludeBtn.className = 'text-xs px-2 py-1 rounded border border-green-300 text-green-600 hover:bg-green-50 transition w-full';
+             excludeBtn.onclick = () => undoRemoveDevice(deviceId, row, excludeBtn);
+             
+             showToast('设备已从数据库中移除');
+             
+             // 更新统计
+             updateStatistics();
+             saveAppData();
+         }
+ 
+         // 撤销移除（恢复设备到数据库）
+         function undoRemoveDevice(deviceId, row, excludeBtn) {
+             if (!appData.removedDevices[deviceId]) {
+                 showToast('无法撤销移除，设备数据不存在');
+                 return;
              }
+             
+             // 从撤销移除的存储中恢复到数据库
+             appData.deviceMarks[deviceId] = {
+                 ...appData.removedDevices[deviceId],
+                 restoredAt: new Date().toISOString()
+             };
+             
+             // 从撤销移除的存储中删除
+             delete appData.removedDevices[deviceId];
+             
+             // 更新UI
+             row.style.opacity = '1';
+             row.style.textDecoration = 'none';
+             excludeBtn.textContent = '移除';
+             excludeBtn.className = 'text-xs px-2 py-1 rounded border border-red-300 text-red-600 hover:bg-red-50 transition w-full';
+             excludeBtn.onclick = () => removeDevice(deviceId, row, excludeBtn);
+             
+             showToast('设备已恢复到数据库');
              
              // 更新统计
              updateStatistics();
@@ -1604,6 +1637,11 @@
              const records = [];
              
              Object.entries(appData.deviceMarks).forEach(([deviceId, mark]) => {
+                 // 过滤掉 type=remark 的数据（备注类型不参与统计）
+                 if (mark.type === 'remark') {
+                     return;
+                 }
+                 
                  if (mark.type !== type) {
                      return;
                  }
@@ -3257,9 +3295,9 @@
                            }
                        });
                    } else if (type === 'expected') {
-                       // 显示预期有设备（有备注的设备）
+                       // 显示预期有设备（type=remark且有备注的设备）
                        Object.entries(appData.deviceMarks || {}).forEach(([deviceId, mark]) => {
-                           if (mark.remark) {  // 只显示有备注的设备
+                           if (mark.type === 'remark' && mark.remark) {  // 只显示type=remark且有备注的设备
                                const deviceRegion = getDeviceRegion(deviceId);
                                if (deviceRegion === region) {
                                     const tr = document.createElement('tr');
