@@ -729,6 +729,11 @@
                 option.textContent = header;
                 select.appendChild(option);
             });
+            
+            // 默认选中'网管中名称'
+            if (excelHeaders.includes('网管中名称')) {
+                select.value = '网管中名称';
+            }
         }
 
         function showExcelInfo(fileName) {
