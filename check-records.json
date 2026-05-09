@@ -203,7 +203,7 @@
     "%E5%90%8C%E5%92%8C%E6%9C%BA%E6%A5%BC-GZWC023": {
       "type": "net",
       "timestamp": "2026-05-08T10:12:37.410Z",
-      "excluded": true,
+      "excluded": false,
       "deviceInfo": "同和机楼-GZWC023",
       "deviceData": {
         "所属行政区域": "白云",
@@ -756,7 +756,7 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 11,
+      "netCount": 12,
       "monitorCount": 10
     }
   },
@@ -780,7 +780,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-09T07:17:26.562Z",
+    "lastSync": "2026-05-09T08:22:50.045Z",
     "version": 6
   }
 }
