@@ -118,7 +118,7 @@
     },
     "943-%E9%A9%AC%E5%9C%BA%E8%B7%AF%E6%9C%BA%E6%A5%BC(800M)-GZHC343-HA41L": {
       "type": "net",
-      "timestamp": "2026-05-08T03:32:02.627Z",
+      "timestamp": "2026-05-09T06:56:55.885Z",
       "excluded": false,
       "deviceInfo": "943-马场路机楼(800M)-GZHC343-HA41L",
       "deviceData": {
@@ -138,8 +138,8 @@
       }
     },
     "1115-%E5%B2%91%E6%9D%91%E5%9C%A3%E5%A0%82%E8%B7%AF%E9%9B%86%E7%BE%A4C%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC332-HA29L%EF%BC%88800M%EF%BC%89": {
-      "type": "remark",
-      "timestamp": "2026-05-08T03:01:58.804Z",
+      "type": "net",
+      "timestamp": "2026-05-09T06:56:51.873Z",
       "excluded": false,
       "deviceInfo": "1115-岑村圣堂路集群C网基站-GZHC332-HA29L（800M）",
       "deviceData": {
@@ -159,8 +159,8 @@
       }
     },
     "1109-%E5%85%83%E5%B2%97%E6%9C%BA%E6%A5%BC(800M)-GZHC332-HA26L": {
-      "type": "remark",
-      "timestamp": "2026-05-08T03:15:26.057Z",
+      "type": "net",
+      "timestamp": "2026-05-09T06:56:48.884Z",
       "excluded": false,
       "deviceInfo": "1109-元岗机楼(800M)-GZHC332-HA26L",
       "deviceData": {
@@ -264,8 +264,8 @@
       }
     },
     "%E7%99%BD%E4%BA%91%E5%B1%B1%E5%BE%AE%E6%B3%A2%E5%B1%80C%E7%BD%91(800M)-GZWC053-HA15L": {
-      "type": "remark",
-      "timestamp": "2026-05-08T10:11:33.381Z",
+      "type": "net",
+      "timestamp": "2026-05-09T06:59:14.418Z",
       "excluded": false,
       "deviceInfo": "白云山微波局C网(800M)-GZWC053-HA15L",
       "deviceData": {
@@ -390,8 +390,8 @@
       }
     },
     "%E5%85%83%E5%B2%97%E6%9C%BA%E6%A5%BCGZWC038": {
-      "type": "remark",
-      "timestamp": "2026-05-08T10:13:48.256Z",
+      "type": "net",
+      "timestamp": "2026-05-09T06:55:18.465Z",
       "excluded": false,
       "deviceInfo": "元岗机楼GZWC038",
       "deviceData": {
@@ -553,7 +553,7 @@
     },
     "182-N%E8%8A%B1%E5%9C%B0%E6%B9%BE%E6%9C%BA%E6%A5%BC%EF%BC%88N%E8%8A%B1%E5%9C%B0%E5%A4%A7%E9%81%93%EF%BC%89(800M)C%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC351-HA01L": {
       "type": "monitor",
-      "timestamp": "2026-05-09T06:47:08.790Z",
+      "timestamp": "2026-05-09T07:09:25.977Z",
       "excluded": false,
       "deviceInfo": "182-N花地湾机楼（N花地大道）(800M)C网基站-GZHC351-HA01L",
       "deviceData": {
@@ -658,6 +658,96 @@
         "0407备注_承载室": "可以退网"
       },
       "remark": null
+    },
+    "%E9%B3%8C%E5%A4%B4%E7%99%BD%E7%9F%B3%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-ATBSWC001-A01": {
+      "type": "net",
+      "timestamp": "2026-05-09T07:00:11.693Z",
+      "excluded": false,
+      "deviceInfo": "鳌头白石（800M）C网基站-ATBSWC001-A01",
+      "deviceData": {
+        "所属行政区域": "从化",
+        "集团名称": "鳌头白石C网基站/鳌头白石烽火SDH2.5G001/155M01",
+        "网管中名称": "鳌头白石（800M）C网基站-ATBSWC001-A01",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "已拆除，可退网",
+        "0407备注_承载室": ""
+      },
+      "remark": null
+    },
+    "%E9%B3%8C%E5%A4%B4%E6%9C%BA%E6%A5%BC-CHATWC001": {
+      "type": "net",
+      "timestamp": "2026-05-09T07:01:51.385Z",
+      "excluded": false,
+      "deviceInfo": "鳌头机楼-CHATWC001",
+      "deviceData": {
+        "所属行政区域": "从化",
+        "集团名称": "鳌头机楼综合机房/从化鳌头烽火SDH2.5G001",
+        "网管中名称": "鳌头机楼-CHATWC001",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "已拆除，可退网",
+        "0407备注_承载室": ""
+      },
+      "remark": null
+    },
+    "3756-%E6%B8%A9%E6%B3%89%E4%BA%91%E5%8F%B0%E5%B1%B1(800M)-WQC1HWSDH2.5G001-HA01": {
+      "type": "net",
+      "timestamp": "2026-05-09T07:02:49.059Z",
+      "excluded": false,
+      "deviceInfo": "3756-温泉云台山(800M)-WQC1HWSDH2.5G001-HA01",
+      "deviceData": {
+        "所属行政区域": "从化",
+        "集团名称": "温泉云台山集群基站/温泉C网汇聚环1华为SDH2.5G001/155M01",
+        "网管中名称": "3756-温泉云台山(800M)-WQC1HWSDH2.5G001-HA01",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "已拆除，可退网",
+        "0407备注_承载室": ""
+      },
+      "remark": null
+    },
+    "3737-%E7%A5%9E%E5%B2%97%EF%BC%88800M%EF%BC%89-SGC1HWSDH155M001%2F2.5G001": {
+      "type": "net",
+      "timestamp": "2026-05-09T07:07:06.166Z",
+      "excluded": false,
+      "deviceInfo": "3737-神岗（800M）-SGC1HWSDH155M001/2.5G001",
+      "deviceData": {
+        "所属行政区域": "从化",
+        "集团名称": "神岗集群基站/神岗C网汇聚环1华为SDH155M001/2.5G001",
+        "网管中名称": "3737-神岗（800M）-SGC1HWSDH155M001/2.5G001",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "已拆除，可退网",
+        "0407备注_承载室": ""
+      },
+      "remark": null
+    },
+    "%E8%89%AF%E5%8F%A3%E7%9B%98%E6%BA%AAC%E7%BD%91%E5%9F%BA%E7%AB%99-LKPXWC001%2FA01": {
+      "type": "monitor",
+      "timestamp": "2026-05-09T07:08:04.269Z",
+      "excluded": false,
+      "deviceInfo": "良口盘溪C网基站-LKPXWC001/A01",
+      "deviceData": {
+        "所属行政区域": "从化",
+        "集团名称": "良口盘溪C网基站/良口盘溪烽火SDH2.5G001/155M01",
+        "网管中名称": "良口盘溪C网基站-LKPXWC001/A01",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "已拆除，可退网",
+        "0407备注_承载室": ""
+      },
+      "remark": null
     }
   },
   "statistics": {
@@ -666,8 +756,8 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 4,
-      "monitorCount": 9
+      "netCount": 12,
+      "monitorCount": 10
     }
   },
   "quarterTarget": {
@@ -690,7 +780,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-09T06:50:27.154Z",
+    "lastSync": "2026-05-09T06:54:36.535Z",
     "version": 6
   }
 }
