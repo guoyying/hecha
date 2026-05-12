@@ -315,8 +315,8 @@
       }
     },
     "%E5%85%83%E5%B2%97%E6%9C%BA%E6%A5%BCGZWC038": {
-      "type": "net",
-      "timestamp": "2026-05-09T06:55:18.465Z",
+      "type": "monitor",
+      "timestamp": "2026-05-12T09:40:17.367Z",
       "excluded": false,
       "deviceInfo": "元岗机楼GZWC038",
       "deviceData": {
@@ -600,7 +600,7 @@
     },
     "week": {
       "netCount": 0,
-      "monitorCount": 3
+      "monitorCount": 4
     }
   },
   "quarterTarget": {
@@ -623,7 +623,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-12T09:24:12.689Z",
+    "lastSync": "2026-05-12T09:39:32.873Z",
     "version": 6
   }
 }
