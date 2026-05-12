@@ -63,8 +63,8 @@
       }
     },
     "943-%E9%A9%AC%E5%9C%BA%E8%B7%AF%E6%9C%BA%E6%A5%BC(800M)-GZHC343-HA41L": {
-      "type": "net",
-      "timestamp": "2026-05-09T06:56:55.885Z",
+      "type": "monitor",
+      "timestamp": "2026-05-12T09:39:17.313Z",
       "excluded": false,
       "deviceInfo": "943-马场路机楼(800M)-GZHC343-HA41L",
       "deviceData": {
@@ -72,7 +72,7 @@
         "集团名称": "马场路机楼集群基站/广州华为SDH2.5G343/155M41链",
         "网管中名称": "943-马场路机楼(800M)-GZHC343-HA41L",
         "高值业务数": "0",
-        "局内业务数": "3",
+        "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
         "800M基站设备可退（20260506）": "已拆除，可退网",
@@ -84,8 +84,8 @@
       }
     },
     "1115-%E5%B2%91%E6%9D%91%E5%9C%A3%E5%A0%82%E8%B7%AF%E9%9B%86%E7%BE%A4C%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC332-HA29L%EF%BC%88800M%EF%BC%89": {
-      "type": "net",
-      "timestamp": "2026-05-09T06:56:51.873Z",
+      "type": "monitor",
+      "timestamp": "2026-05-12T09:39:18.178Z",
       "excluded": false,
       "deviceInfo": "1115-岑村圣堂路集群C网基站-GZHC332-HA29L（800M）",
       "deviceData": {
@@ -105,8 +105,8 @@
       }
     },
     "1109-%E5%85%83%E5%B2%97%E6%9C%BA%E6%A5%BC(800M)-GZHC332-HA26L": {
-      "type": "net",
-      "timestamp": "2026-05-09T06:56:48.884Z",
+      "type": "monitor",
+      "timestamp": "2026-05-12T09:39:19.603Z",
       "excluded": false,
       "deviceInfo": "1109-元岗机楼(800M)-GZHC332-HA26L",
       "deviceData": {
@@ -600,7 +600,7 @@
     },
     "week": {
       "netCount": 0,
-      "monitorCount": 0
+      "monitorCount": 3
     }
   },
   "quarterTarget": {
@@ -623,7 +623,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-12T08:33:15.829Z",
+    "lastSync": "2026-05-12T09:24:12.689Z",
     "version": 6
   }
 }
