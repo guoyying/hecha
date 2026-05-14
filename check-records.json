@@ -1495,27 +1495,6 @@
         "timestamp": "2026-05-14T08:39:22.286Z"
       }
     },
-    "4273-%E5%B9%BF%E5%B7%9E%E5%8A%A0%E9%80%9F%E5%99%A8IDC%E4%B8%89%E5%B1%82%E6%A0%B8%E5%BF%83%E6%9C%BA%E6%88%BF-GZHD015(ASON)": {
-      "type": "remark",
-      "timestamp": "2026-05-14T08:39:22.286Z",
-      "excluded": false,
-      "deviceInfo": "4273-广州加速器IDC三层核心机房-GZHD015(ASON)",
-      "deviceData": {
-        "所属行政区域": "黄埔",
-        "集团名称": "广州加速器IDC三层核心机房/广州华为SDH10G015(ASON)",
-        "网管中名称": "4273-广州加速器IDC三层核心机房-GZHD015(ASON)",
-        "高值业务数": "0",
-        "局内业务数": "0",
-        "局内光路数": "",
-        "退网评估": "资源系统零业务",
-        "800M基站设备可退（20260506）": "",
-        "0407备注_承载室": ""
-      },
-      "remark": {
-        "content": "已提醒县分上单",
-        "timestamp": "2026-05-14T08:39:22.286Z"
-      }
-    },
     "1406-%E8%90%9D%E5%B2%97%E9%A6%99%E9%9B%AA(800M)-GZHC574-HA19L%EF%BC%88%E7%89%A9%E4%B8%9A%E5%8E%9F%E5%9B%A0--%E6%96%AD%E7%94%B5%EF%BC%89": {
       "type": "remark",
       "timestamp": "2026-05-14T08:39:22.286Z",
@@ -1652,7 +1631,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-13T02:32:39.570Z",
+    "lastSync": "2026-05-14T08:42:37.821Z",
     "version": 6
   }
 }
