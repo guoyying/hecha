@@ -860,19 +860,33 @@
                      const actionContainer = document.createElement('div');
                      actionContainer.className = 'space-y-2';
                      
+                     // 获取设备的type信息
+                     const deviceMark = appData.deviceMarks[deviceId];
+                     const deviceType = deviceMark ? deviceMark.type : null;
+                     
                      // 业务类型选择按钮
                      const buttonGroup = document.createElement('div');
                      buttonGroup.className = 'flex gap-1';
                      
                      // 网络部门审批按钮
                      const netBtn = document.createElement('button');
-                     netBtn.className = 'text-xs px-2 py-1 rounded border border-blue-300 text-blue-600 hover:bg-blue-50 transition';
+                     // 如果type=net，使用深蓝色背景
+                     if (deviceType === 'net') {
+                         netBtn.className = 'text-xs px-2 py-1 rounded border border-blue-600 bg-blue-600 text-white hover:bg-blue-700 transition';
+                     } else {
+                         netBtn.className = 'text-xs px-2 py-1 rounded border border-blue-300 text-blue-600 hover:bg-blue-50 transition';
+                     }
                      netBtn.textContent = '网络审批';
                      netBtn.onclick = () => showNetCheckboxes(deviceId, netBtn, monitorBtn);
 
                      // 网监评估按钮
                      const monitorBtn = document.createElement('button');
-                     monitorBtn.className = 'text-xs px-2 py-1 rounded border border-purple-300 text-purple-600 hover:bg-purple-50 transition';
+                     // 如果type=monitor，使用深紫色背景
+                     if (deviceType === 'monitor') {
+                         monitorBtn.className = 'text-xs px-2 py-1 rounded border border-purple-600 bg-purple-600 text-white hover:bg-purple-700 transition';
+                     } else {
+                         monitorBtn.className = 'text-xs px-2 py-1 rounded border border-purple-300 text-purple-600 hover:bg-purple-50 transition';
+                     }
                      monitorBtn.textContent = '网监评估';
                      monitorBtn.onclick = () => showMonitorCheckboxes(deviceId, monitorBtn, netBtn);
                      
@@ -891,7 +905,12 @@
                       // 备注按钮
                       const remarkBtn = document.createElement('button');
                       remarkBtn.id = `remark-${deviceId}`;
-                      remarkBtn.className = 'text-xs px-2 py-1 rounded border border-amber-300 text-amber-600 hover:bg-amber-50 transition w-full';
+                      // 如果type=remark，使用深琥珀色背景
+                      if (deviceType === 'remark') {
+                          remarkBtn.className = 'text-xs px-2 py-1 rounded border border-amber-600 bg-amber-600 text-white hover:bg-amber-700 transition w-full';
+                      } else {
+                          remarkBtn.className = 'text-xs px-2 py-1 rounded border border-amber-300 text-amber-600 hover:bg-amber-50 transition w-full';
+                      }
                       remarkBtn.textContent = '备注';
                       remarkBtn.onclick = () => openDeviceRemark(deviceId);
                       actionContainer.appendChild(remarkBtn);
