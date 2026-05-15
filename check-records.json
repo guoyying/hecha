@@ -13,8 +13,8 @@
   ],
   "deviceMarks": {
     "3703-%E4%B8%9C%E5%9F%8E%E6%9C%BA%E6%A5%BC%E4%B9%9D%E5%B1%82C%E7%BD%91%E5%9F%BA%E7%AB%99": {
-      "type": "net",
-      "timestamp": "2026-04-30T07:50:29.410Z",
+      "type": "monitor",
+      "timestamp": "2026-05-15T09:03:25.382Z",
       "excluded": false,
       "deviceInfo": "3703-东城机楼九层C网基站",
       "deviceData": {
@@ -25,9 +25,10 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260414）": "已拆除，可退网",
+        "800M基站设备可退（20260506）": "已拆除，可退网",
         "0407备注_承载室": ""
-      }
+      },
+      "remark": null
     },
     "%E8%90%9D%E5%B2%97%E6%9C%BA%E6%A5%BCHC004": {
       "type": "net",
@@ -1761,7 +1762,7 @@
     },
     "week": {
       "netCount": 0,
-      "monitorCount": 13
+      "monitorCount": 14
     }
   },
   "quarterTarget": {
@@ -1784,7 +1785,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-15T09:01:49.689Z",
+    "lastSync": "2026-05-15T09:01:55.841Z",
     "version": 6
   }
 }
