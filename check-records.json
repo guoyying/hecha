@@ -477,8 +477,8 @@
       "remark": null
     },
     "%E9%B3%8C%E5%A4%B4%E7%99%BD%E7%9F%B3%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-ATBSWC001-A01": {
-      "type": "net",
-      "timestamp": "2026-05-09T07:00:11.693Z",
+      "type": "monitor",
+      "timestamp": "2026-05-15T02:02:31.139Z",
       "excluded": false,
       "deviceInfo": "鳌头白石（800M）C网基站-ATBSWC001-A01",
       "deviceData": {
@@ -495,8 +495,8 @@
       "remark": null
     },
     "%E9%B3%8C%E5%A4%B4%E6%9C%BA%E6%A5%BC-CHATWC001": {
-      "type": "net",
-      "timestamp": "2026-05-09T07:01:51.385Z",
+      "type": "monitor",
+      "timestamp": "2026-05-15T01:59:17.592Z",
       "excluded": false,
       "deviceInfo": "鳌头机楼-CHATWC001",
       "deviceData": {
@@ -513,8 +513,8 @@
       "remark": null
     },
     "3756-%E6%B8%A9%E6%B3%89%E4%BA%91%E5%8F%B0%E5%B1%B1(800M)-WQC1HWSDH2.5G001-HA01": {
-      "type": "net",
-      "timestamp": "2026-05-09T07:02:49.059Z",
+      "type": "monitor",
+      "timestamp": "2026-05-15T01:58:37.274Z",
       "excluded": false,
       "deviceInfo": "3756-温泉云台山(800M)-WQC1HWSDH2.5G001-HA01",
       "deviceData": {
@@ -531,8 +531,8 @@
       "remark": null
     },
     "3737-%E7%A5%9E%E5%B2%97%EF%BC%88800M%EF%BC%89-SGC1HWSDH155M001%2F2.5G001": {
-      "type": "net",
-      "timestamp": "2026-05-09T07:07:06.166Z",
+      "type": "monitor",
+      "timestamp": "2026-05-15T01:56:25.326Z",
       "excluded": false,
       "deviceInfo": "3737-神岗（800M）-SGC1HWSDH155M001/2.5G001",
       "deviceData": {
@@ -1180,27 +1180,6 @@
         "timestamp": "2026-05-14T08:39:22.286Z"
       }
     },
-    "%E8%8A%B1%E5%B1%B1%E6%9C%BA%E6%A5%BC%E4%B8%89%E6%A5%BC%E4%BC%A0%E8%BE%93%E6%9C%BA%E6%88%BF1%2FMSAP1600-1": {
-      "type": "remark",
-      "timestamp": "2026-05-14T08:39:22.286Z",
-      "excluded": false,
-      "deviceInfo": "花山机楼三楼传输机房1/MSAP1600-1",
-      "deviceData": {
-        "所属行政区域": "花都",
-        "集团名称": "花山机楼三楼传输机房/MSAP1600-1",
-        "网管中名称": "花山机楼三楼传输机房1/MSAP1600-1",
-        "高值业务数": "0",
-        "局内业务数": "0",
-        "局内光路数": "",
-        "退网评估": "资源系统零业务",
-        "800M基站设备可退（20260506）": "",
-        "0407备注_承载室": ""
-      },
-      "remark": {
-        "content": "已提醒县分上单",
-        "timestamp": "2026-05-14T08:39:22.286Z"
-      }
-    },
     "%E8%8A%B1%E9%83%BD%E4%BA%94%E6%98%9FC%E7%BD%91%E5%9F%BA%E7%AB%99": {
       "type": "remark",
       "timestamp": "2026-05-14T08:39:22.286Z",
@@ -1635,6 +1614,60 @@
         "0407备注_承载室": "待补环后关电退网"
       },
       "remark": null
+    },
+    "6042-%E7%95%AA%E7%A6%BA%E5%8D%97%E6%9D%91%E5%AE%98%E5%A1%98%E8%BF%9C%E7%AB%AF%E6%9C%BA%E6%88%BF1%E6%96%B0%E8%A3%85metro1000": {
+      "type": "monitor",
+      "timestamp": "2026-05-15T02:01:01.486Z",
+      "excluded": false,
+      "deviceInfo": "6042-番禺南村官塘远端机房1新装metro1000",
+      "deviceData": {
+        "所属行政区域": "番禺",
+        "集团名称": "南村官塘村远端机房1/广州华为SDH2.5G798(ASON)-（预录入）",
+        "网管中名称": "6042-番禺南村官塘远端机房1新装metro1000",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": "现场反馈可退网"
+      },
+      "remark": null
+    },
+    "%E5%B9%BF%E5%9C%B0%E8%8A%B1%E5%9B%AD%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-GDHYWC001%2FA01": {
+      "type": "monitor",
+      "timestamp": "2026-05-15T02:01:52.052Z",
+      "excluded": false,
+      "deviceInfo": "广地花园（800M）C网基站-GDHYWC001/A01",
+      "deviceData": {
+        "所属行政区域": "番禺",
+        "集团名称": "广地花园C网基站/155M01",
+        "网管中名称": "广地花园（800M）C网基站-GDHYWC001/A01",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "已拆除，可退网",
+        "0407备注_承载室": ""
+      },
+      "remark": null
+    },
+    "%E6%B2%99%E6%B9%BE%E6%9C%BA%E6%A5%BCPYSWWC001": {
+      "type": "monitor",
+      "timestamp": "2026-05-15T02:07:55.841Z",
+      "excluded": false,
+      "deviceInfo": "沙湾机楼PYSWWC001",
+      "deviceData": {
+        "所属行政区域": "番禺",
+        "集团名称": "沙湾机楼综合机房1/番禺沙湾烽火SDH2.5G001",
+        "网管中名称": "沙湾机楼PYSWWC001",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "已拆除，可退网",
+        "0407备注_承载室": ""
+      },
+      "remark": null
     }
   },
   "statistics": {
@@ -1644,7 +1677,7 @@
     },
     "week": {
       "netCount": 0,
-      "monitorCount": 6
+      "monitorCount": 13
     }
   },
   "quarterTarget": {
@@ -1667,7 +1700,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-14T08:51:25.687Z",
+    "lastSync": "2026-05-15T01:53:39.704Z",
     "version": 6
   }
 }
