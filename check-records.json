@@ -1545,8 +1545,8 @@
   },
   "quarterTarget": {
     "targets": {
-      "天河": 37,
-      "番禺": 15,
+      "天河": 33,
+      "番禺": 12,
       "白云": 33,
       "越秀": 27,
       "海珠": 23,
@@ -1555,7 +1555,7 @@
       "增城": 20,
       "花都": 23,
       "南沙": 0,
-      "从化": 10
+      "从化": 5
     }
   },
   "github": {
@@ -1563,7 +1563,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-15T09:01:55.841Z",
+    "lastSync": "2026-05-18T06:44:44.350Z",
     "version": 6
   }
 }
