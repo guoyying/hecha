@@ -235,8 +235,8 @@
       }
     },
     "3480-%E6%AD%A3%E6%9E%9C%E9%BA%A6%E6%9D%91(800M)-ZGMCC1HWSDH155M001-2.5G001": {
-      "type": "remark",
-      "timestamp": "2026-05-08T10:19:22.294Z",
+      "type": "net",
+      "timestamp": "2026-05-19T02:52:47.245Z",
       "excluded": false,
       "deviceInfo": "3480-正果麦村(800M)-ZGMCC1HWSDH155M001-2.5G001",
       "deviceData": {
@@ -256,8 +256,8 @@
       }
     },
     "3475-%E5%B0%8F%E6%A5%BC%E9%BB%84%E6%9D%91C%E7%BD%91%E5%9F%BA%E7%AB%99(800M)": {
-      "type": "remark",
-      "timestamp": "2026-05-08T10:19:22.294Z",
+      "type": "net",
+      "timestamp": "2026-05-19T02:56:33.017Z",
       "excluded": false,
       "deviceInfo": "3475-小楼黄村C网基站(800M)",
       "deviceData": {
@@ -298,8 +298,8 @@
       }
     },
     "%E5%A2%9E%E5%9F%8E%E4%BB%99%E6%9D%91-ZCXCEWB001": {
-      "type": "remark",
-      "timestamp": "2026-05-08T10:19:22.294Z",
+      "type": "net",
+      "timestamp": "2026-05-19T02:49:45.020Z",
       "excluded": false,
       "deviceInfo": "增城仙村-ZCXCEWB001",
       "deviceData": {
@@ -1729,6 +1729,168 @@
         "0407备注_承载室": ""
       },
       "remark": null
+    },
+    "%E4%B8%AD%E6%96%B0%E6%96%B0-ZCZXXWB01": {
+      "type": "net",
+      "timestamp": "2026-05-19T02:48:55.844Z",
+      "excluded": false,
+      "deviceInfo": "中新新-ZCZXXWB01",
+      "deviceData": {
+        "所属行政区域": "增城",
+        "集团名称": "中新电信传输机房1/增城中新新烽火SDH622M001",
+        "网管中名称": "中新新-ZCZXXWB01",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": "待800M_增城南岗(VIP)电路拆除后可退"
+      },
+      "remark": null
+    },
+    "%E5%A2%9E%E5%9F%8E%E5%8D%97%E5%B2%97%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-ZCZXXWB001-WA3": {
+      "type": "net",
+      "timestamp": "2026-05-19T02:49:18.240Z",
+      "excluded": false,
+      "deviceInfo": "增城南岗（800M）C网基站-ZCZXXWB001-WA3",
+      "deviceData": {
+        "所属行政区域": "增城",
+        "集团名称": "增城南岗C网基站/增城中新烽火SDH622M001/155M3",
+        "网管中名称": "增城南岗（800M）C网基站-ZCZXXWB001-WA3",
+        "高值业务数": "0",
+        "局内业务数": "2",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
+    },
+    "%E6%B0%B8%E5%92%8C%E6%9C%BA%E6%A5%BCZCYHEWB001": {
+      "type": "net",
+      "timestamp": "2026-05-19T02:49:23.560Z",
+      "excluded": false,
+      "deviceInfo": "永和机楼ZCYHEWB001",
+      "deviceData": {
+        "所属行政区域": "增城",
+        "集团名称": "永和机楼传输机房1/增城永和烽火SDH622M001",
+        "网管中名称": "永和机楼ZCYHEWB001",
+        "高值业务数": "0",
+        "局内业务数": "1",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
+    },
+    "%E6%96%B0%E5%A1%982%E6%9C%BA%E6%A5%BCZCXTEWB001": {
+      "type": "net",
+      "timestamp": "2026-05-19T02:49:28.295Z",
+      "excluded": false,
+      "deviceInfo": "新塘2机楼ZCXTEWB001",
+      "deviceData": {
+        "所属行政区域": "增城",
+        "集团名称": "新塘2机楼传输机房/增城新塘2烽火SDH622M001",
+        "网管中名称": "新塘2机楼ZCXTEWB001",
+        "高值业务数": "0",
+        "局内业务数": "1",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
+    },
+    "%E5%B0%8F%E6%A5%BC%E6%AD%A3%E9%9A%86(800M)C%E7%BD%91%E5%9F%BA%E7%AB%99-ZCXLOWB001-WA2": {
+      "type": "net",
+      "timestamp": "2026-05-19T02:49:32.541Z",
+      "excluded": false,
+      "deviceInfo": "小楼正隆(800M)C网基站-ZCXLOWB001-WA2",
+      "deviceData": {
+        "所属行政区域": "增城",
+        "集团名称": "小楼正隆C网基站/增城小楼烽火SDH622M001/155M2",
+        "网管中名称": "小楼正隆(800M)C网基站-ZCXLOWB001-WA2",
+        "高值业务数": "0",
+        "局内业务数": "2",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
+    },
+    "%E5%B0%8F%E6%A5%BC%E6%9C%BA%E6%A5%BCZCXLOWB001": {
+      "type": "net",
+      "timestamp": "2026-05-19T02:49:36.191Z",
+      "excluded": false,
+      "deviceInfo": "小楼机楼ZCXLOWB001",
+      "deviceData": {
+        "所属行政区域": "增城",
+        "集团名称": "小楼机楼综合机房1/增城小楼烽火SDH622M001",
+        "网管中名称": "小楼机楼ZCXLOWB001",
+        "高值业务数": "0",
+        "局内业务数": "2",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
+    },
+    "%E4%BB%99%E6%9D%91%E7%99%BD%E7%9F%B3%E5%B2%AD%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-ZCXCEWB001-WA1": {
+      "type": "net",
+      "timestamp": "2026-05-19T02:49:39.830Z",
+      "excluded": false,
+      "deviceInfo": "仙村白石岭（800M）C网基站-ZCXCEWB001-WA1",
+      "deviceData": {
+        "所属行政区域": "增城",
+        "集团名称": "仙村白石岭C网基站/增城仙村烽火SDH622M001/155M1",
+        "网管中名称": "仙村白石岭（800M）C网基站-ZCXCEWB001-WA1",
+        "高值业务数": "0",
+        "局内业务数": "1",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
+    },
+    "%E7%9F%B3%E6%BB%A9-ZCSTAWB01": {
+      "type": "net",
+      "timestamp": "2026-05-19T02:51:20.541Z",
+      "excluded": false,
+      "deviceInfo": "石滩-ZCSTAWB01",
+      "deviceData": {
+        "所属行政区域": "增城",
+        "集团名称": "石滩机楼传输机房1/增城石滩烽火SDH622M001",
+        "网管中名称": "石滩-ZCSTAWB01",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": "待 石滩工业 电路拆除后可退"
+      },
+      "remark": null
+    },
+    "3477-%E5%A2%9E%E5%9F%8E%E6%AD%A3%E6%9E%9C%E6%B2%B3%E5%8F%A3%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-ZCCW1HC001-HA06L": {
+      "type": "net",
+      "timestamp": "2026-05-19T02:53:38.619Z",
+      "excluded": false,
+      "deviceInfo": "3477-增城正果河口（800M）C网基站-ZCCW1HC001-HA06L",
+      "deviceData": {
+        "所属行政区域": "增城",
+        "集团名称": "增城正果河口C网基站/增城C网汇聚环2华为SDH2.5G001/HA06",
+        "网管中名称": "3477-增城正果河口（800M）C网基站-ZCCW1HC001-HA06L",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
     }
   },
   "statistics": {
@@ -1737,7 +1899,7 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 2,
+      "netCount": 14,
       "monitorCount": 10
     }
   },
@@ -1761,7 +1923,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-18T09:39:04.539Z",
+    "lastSync": "2026-05-19T02:27:30.816Z",
     "version": 6
   }
 }
