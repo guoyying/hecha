@@ -193,8 +193,8 @@
       }
     },
     "%E6%96%B0%E5%B8%82%E6%9C%BA%E6%A5%BC-%E7%99%BD%E4%BA%91HB008": {
-      "type": "remark",
-      "timestamp": "2026-05-08T10:11:33.381Z",
+      "type": "net",
+      "timestamp": "2026-05-20T01:54:18.211Z",
       "excluded": false,
       "deviceInfo": "新市机楼-白云HB008",
       "deviceData": {
@@ -1883,7 +1883,7 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 13,
+      "netCount": 14,
       "monitorCount": 13
     }
   },
@@ -1907,7 +1907,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-20T01:46:16.595Z",
+    "lastSync": "2026-05-20T01:53:27.357Z",
     "version": 6
   }
 }
