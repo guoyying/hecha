@@ -1967,8 +1967,8 @@
       "remark": null
     },
     "2914-%E5%A4%A7%E4%B9%8C%E5%B2%97%E5%9F%BA%E7%AB%99%EF%BC%88800M%EF%BC%89-DWGC1HWSDH2.5G001": {
-      "type": "net",
-      "timestamp": "2026-05-22T06:25:09.961Z",
+      "type": "monitor",
+      "timestamp": "2026-05-22T07:02:33.633Z",
       "excluded": false,
       "deviceInfo": "2914-大乌岗基站（800M）-DWGC1HWSDH2.5G001",
       "deviceData": {
@@ -2021,8 +2021,8 @@
       "remark": null
     },
     "1777-%E6%8D%B7%E8%BF%9B%E4%B8%AD%E8%B7%AF(%E5%B8%82%E6%A1%A5%E4%B8%B9%E5%B1%B1800M)": {
-      "type": "net",
-      "timestamp": "2026-05-22T06:27:33.325Z",
+      "type": "monitor",
+      "timestamp": "2026-05-22T06:56:04.822Z",
       "excluded": false,
       "deviceInfo": "1777-捷进中路(市桥丹山800M)",
       "deviceData": {
@@ -2045,8 +2045,8 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 30,
-      "monitorCount": 17
+      "netCount": 28,
+      "monitorCount": 19
     }
   },
   "quarterTarget": {
@@ -2069,7 +2069,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-21T09:41:17.770Z",
+    "lastSync": "2026-05-22T06:50:28.639Z",
     "version": 6
   }
 }
