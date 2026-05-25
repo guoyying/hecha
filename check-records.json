@@ -1722,6 +1722,60 @@
         "0407备注_承载室": ""
       },
       "remark": null
+    },
+    "%E4%BB%99%E6%9D%91%E7%99%BD%E7%9F%B3%E5%B2%AD%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-ZCXCEWB001-WA1": {
+      "type": "net",
+      "timestamp": "2026-05-25T09:46:25.553Z",
+      "excluded": false,
+      "deviceInfo": "仙村白石岭（800M）C网基站-ZCXCEWB001-WA1",
+      "deviceData": {
+        "所属行政区域": "增城",
+        "集团名称": "仙村白石岭C网基站/增城仙村烽火SDH622M001/155M1",
+        "网管中名称": "仙村白石岭（800M）C网基站-ZCXCEWB001-WA1",
+        "高值业务数": "0",
+        "局内业务数": "1",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
+    },
+    "%E6%96%B0%E5%A1%982%E6%9C%BA%E6%A5%BCZCXTEWB001": {
+      "type": "net",
+      "timestamp": "2026-05-25T09:48:25.443Z",
+      "excluded": false,
+      "deviceInfo": "新塘2机楼ZCXTEWB001",
+      "deviceData": {
+        "所属行政区域": "增城",
+        "集团名称": "新塘2机楼传输机房/增城新塘2烽火SDH622M001",
+        "网管中名称": "新塘2机楼ZCXTEWB001",
+        "高值业务数": "0",
+        "局内业务数": "1",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
+    },
+    "%E5%B0%8F%E6%A5%BC%E6%AD%A3%E9%9A%86(800M)C%E7%BD%91%E5%9F%BA%E7%AB%99-ZCXLOWB001-WA2": {
+      "type": "net",
+      "timestamp": "2026-05-25T09:57:25.908Z",
+      "excluded": false,
+      "deviceInfo": "小楼正隆(800M)C网基站-ZCXLOWB001-WA2",
+      "deviceData": {
+        "所属行政区域": "增城",
+        "集团名称": "小楼正隆C网基站/增城小楼烽火SDH622M001/155M2",
+        "网管中名称": "小楼正隆(800M)C网基站-ZCXLOWB001-WA2",
+        "高值业务数": "0",
+        "局内业务数": "2",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
     }
   },
   "statistics": {
@@ -1754,7 +1808,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-25T03:51:59.344Z",
+    "lastSync": "2026-05-25T03:52:06.113Z",
     "version": 6
   }
 }
