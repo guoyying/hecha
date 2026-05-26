@@ -819,8 +819,8 @@
       }
     },
     "%E6%96%B0%E5%8D%8E%E6%9D%BE%E5%9C%86%E9%87%8CC%E7%BD%91%E5%9F%BA%E7%AB%99": {
-      "type": "net",
-      "timestamp": "2026-05-22T06:27:47.952Z",
+      "type": "monitor",
+      "timestamp": "2026-05-26T08:02:14.918Z",
       "excluded": false,
       "deviceInfo": "新华松圆里C网基站",
       "deviceData": {
@@ -840,8 +840,8 @@
       }
     },
     "%E6%96%B0%E8%8A%B1%E9%83%BD%E8%8A%B1%E5%9F%8E%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-HDHSHWC001-WA01": {
-      "type": "net",
-      "timestamp": "2026-05-22T06:31:47.536Z",
+      "type": "monitor",
+      "timestamp": "2026-05-26T08:02:18.922Z",
       "excluded": false,
       "deviceInfo": "新花都花城（800M）C网基站-HDHSHWC001-WA01",
       "deviceData": {
@@ -861,8 +861,8 @@
       }
     },
     "%E7%8B%AE%E5%B2%AD%E9%82%AE%E6%94%BF%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-HDSLIWC001-WA01": {
-      "type": "net",
-      "timestamp": "2026-05-22T06:31:39.408Z",
+      "type": "monitor",
+      "timestamp": "2026-05-26T08:02:22.045Z",
       "excluded": false,
       "deviceInfo": "狮岭邮政（800M）C网基站-HDSLIWC001-WA01",
       "deviceData": {
@@ -882,8 +882,8 @@
       }
     },
     "%E7%8B%AE%E5%B2%AD%E5%89%8D%E8%BF%9BC%E7%BD%91%E5%9F%BA%E7%AB%99-QJWC001%2FWA01": {
-      "type": "net",
-      "timestamp": "2026-05-22T06:27:55.500Z",
+      "type": "monitor",
+      "timestamp": "2026-05-26T08:02:25.405Z",
       "excluded": false,
       "deviceInfo": "狮岭前进C网基站-QJWC001/WA01",
       "deviceData": {
@@ -902,30 +902,9 @@
         "timestamp": "2026-05-14T08:39:22.286Z"
       }
     },
-    "%E7%8B%AE%E5%B2%AD%E8%81%94%E6%98%9FC%E7%BD%91%E5%9F%BA%E7%AB%99": {
-      "type": "remark",
-      "timestamp": "2026-05-14T08:39:22.286Z",
-      "excluded": false,
-      "deviceInfo": "狮岭联星C网基站",
-      "deviceData": {
-        "所属行政区域": "花都",
-        "集团名称": "狮岭联星C网基站/花都狮岭烽火SDH2.5G001/155M01",
-        "网管中名称": "狮岭联星C网基站",
-        "高值业务数": "0",
-        "局内业务数": "2",
-        "局内光路数": "",
-        "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
-        "0407备注_承载室": ""
-      },
-      "remark": {
-        "content": "已提醒县分上单",
-        "timestamp": "2026-05-14T08:39:22.286Z"
-      }
-    },
     "%E7%8B%AE%E5%B2%AD%E8%81%94%E6%98%9F": {
-      "type": "net",
-      "timestamp": "2026-05-22T06:29:04.185Z",
+      "type": "monitor",
+      "timestamp": "2026-05-26T08:02:42.174Z",
       "excluded": false,
       "deviceInfo": "狮岭联星",
       "deviceData": {
@@ -945,8 +924,8 @@
       }
     },
     "%E8%8A%B1%E5%B1%B1%E7%B4%AB%E8%A5%BFC%E7%BD%91%E5%9F%BA%E7%AB%99": {
-      "type": "net",
-      "timestamp": "2026-05-22T06:28:31.516Z",
+      "type": "monitor",
+      "timestamp": "2026-05-26T08:02:47.366Z",
       "excluded": false,
       "deviceInfo": "花山紫西C网基站",
       "deviceData": {
@@ -966,8 +945,8 @@
       }
     },
     "%E8%8A%B1%E9%83%BD%E4%BA%94%E6%98%9FC%E7%BD%91%E5%9F%BA%E7%AB%99": {
-      "type": "net",
-      "timestamp": "2026-05-22T06:27:38.877Z",
+      "type": "monitor",
+      "timestamp": "2026-05-26T08:02:50.730Z",
       "excluded": false,
       "deviceInfo": "花都五星C网基站",
       "deviceData": {
@@ -987,8 +966,8 @@
       }
     },
     "%E5%B9%BF%E4%B8%9C%E8%B4%B8%E6%98%93%E5%AD%A6%E6%A0%A1C%E7%BD%91%E5%9F%BA%E7%AB%99-HDHSHWC001-WA01": {
-      "type": "net",
-      "timestamp": "2026-05-22T06:27:51.779Z",
+      "type": "monitor",
+      "timestamp": "2026-05-26T08:02:54.045Z",
       "excluded": false,
       "deviceInfo": "广东贸易学校C网基站-HDHSHWC001-WA01",
       "deviceData": {
@@ -1008,8 +987,8 @@
       }
     },
     "%E8%8A%99%E8%93%89%E5%B1%B1%E9%A1%B6%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-HDSLIWC001-WA01": {
-      "type": "net",
-      "timestamp": "2026-05-22T06:28:08.093Z",
+      "type": "monitor",
+      "timestamp": "2026-05-26T08:03:52.556Z",
       "excluded": false,
       "deviceInfo": "芙蓉山顶（800M）C网基站-HDSLIWC001-WA01",
       "deviceData": {
@@ -1029,8 +1008,8 @@
       }
     },
     "%E8%8A%99%E8%93%89%E5%B1%B1%E9%A1%B6": {
-      "type": "net",
-      "timestamp": "2026-05-22T06:28:21.173Z",
+      "type": "monitor",
+      "timestamp": "2026-05-26T08:03:35.808Z",
       "excluded": false,
       "deviceInfo": "芙蓉山顶",
       "deviceData": {
@@ -1050,8 +1029,8 @@
       }
     },
     "%E8%B5%A4%E6%B3%A5%E4%B8%AD%E6%B4%9EC%E7%BD%91%E5%9F%BA%E7%AB%99": {
-      "type": "net",
-      "timestamp": "2026-05-22T06:27:59.368Z",
+      "type": "monitor",
+      "timestamp": "2026-05-26T08:03:38.508Z",
       "excluded": false,
       "deviceInfo": "赤泥中洞C网基站",
       "deviceData": {
@@ -1857,7 +1836,7 @@
     },
     "week": {
       "netCount": 7,
-      "monitorCount": 0
+      "monitorCount": 11
     }
   },
   "quarterTarget": {
@@ -1880,7 +1859,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-25T09:57:32.192Z",
+    "lastSync": "2026-05-26T07:29:43.184Z",
     "version": 6
   }
 }
