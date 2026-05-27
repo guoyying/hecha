@@ -1446,8 +1446,8 @@
       "remark": null
     },
     "3477-%E5%A2%9E%E5%9F%8E%E6%AD%A3%E6%9E%9C%E6%B2%B3%E5%8F%A3%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-ZCCW1HC001-HA06L": {
-      "type": "net",
-      "timestamp": "2026-05-19T02:53:38.619Z",
+      "type": "monitor",
+      "timestamp": "2026-05-27T03:17:55.131Z",
       "excluded": false,
       "deviceInfo": "3477-增城正果河口（800M）C网基站-ZCCW1HC001-HA06L",
       "deviceData": {
@@ -1944,7 +1944,7 @@
     },
     "week": {
       "netCount": 7,
-      "monitorCount": 17
+      "monitorCount": 18
     }
   },
   "quarterTarget": {
