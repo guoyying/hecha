@@ -1464,8 +1464,8 @@
       "remark": null
     },
     "3343-%E6%96%B0%E5%A1%98%E7%94%B5%E4%BF%A1%E5%A4%A7%E6%A5%BC(800M)-CW1HC001-HA10L": {
-      "type": "net",
-      "timestamp": "2026-05-18T09:26:08.247Z",
+      "type": "monitor",
+      "timestamp": "2026-05-27T03:29:24.382Z",
       "excluded": false,
       "deviceInfo": "3343-新塘电信大楼(800M)-CW1HC001-HA10L",
       "deviceData": {
@@ -1482,9 +1482,7 @@
       "remark": {
         "content": "已提醒增城上退网单",
         "timestamp": "2026-05-08T10:19:22.294Z"
-      },
-      "removedAt": "2026-05-19T03:33:23.090Z",
-      "restoredAt": "2026-05-19T03:34:07.265Z"
+      }
     },
     "3500-%E6%B4%BE%E6%BD%AD%E7%94%B5%E4%BF%A1%E5%A4%A7%E6%A5%BC(800M)-PTDXDLC1HWSDH155M001-2.5G001": {
       "type": "net",
@@ -1962,7 +1960,7 @@
     },
     "week": {
       "netCount": 7,
-      "monitorCount": 19
+      "monitorCount": 20
     }
   },
   "quarterTarget": {
@@ -1985,7 +1983,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-27T03:18:02.812Z",
+    "lastSync": "2026-05-27T03:20:33.111Z",
     "version": 6
   }
 }
