@@ -1951,6 +1951,42 @@
         "0407备注_承载室": ""
       },
       "remark": null
+    },
+    "%E6%96%B0%E5%8D%8E%E6%9C%BA%E6%A5%BCHDXHUWC001": {
+      "type": "net",
+      "timestamp": "2026-05-27T03:35:52.516Z",
+      "excluded": false,
+      "deviceInfo": "新华机楼HDXHUWC001",
+      "deviceData": {
+        "所属行政区域": "花都",
+        "集团名称": "新华机楼传输机房/花都新华烽火SDH2.5G001",
+        "网管中名称": "新华机楼HDXHUWC001",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
+    },
+    "%E8%8A%B1%E9%83%BD%E5%B9%BF%E7%94%B5%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-HDXHUWC001-WA01": {
+      "type": "net",
+      "timestamp": "2026-05-27T03:37:10.385Z",
+      "excluded": false,
+      "deviceInfo": "花都广电（800M）C网基站-HDXHUWC001-WA01",
+      "deviceData": {
+        "所属行政区域": "花都",
+        "集团名称": "花都广电C网基站/花都新华烽火SDH2.5G001/155M01",
+        "网管中名称": "花都广电（800M）C网基站-HDXHUWC001-WA01",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
     }
   },
   "statistics": {
@@ -1959,7 +1995,7 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 7,
+      "netCount": 9,
       "monitorCount": 20
     }
   },
@@ -1983,7 +2019,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-27T03:20:33.111Z",
+    "lastSync": "2026-05-27T03:29:34.072Z",
     "version": 6
   }
 }
