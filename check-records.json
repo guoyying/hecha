@@ -1701,8 +1701,8 @@
       "remark": null
     },
     "%E4%BB%99%E6%9D%91%E7%99%BD%E7%9F%B3%E5%B2%AD%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-ZCXCEWB001-WA1": {
-      "type": "net",
-      "timestamp": "2026-05-25T09:46:25.553Z",
+      "type": "monitor",
+      "timestamp": "2026-05-27T10:23:43.321Z",
       "excluded": false,
       "deviceInfo": "仙村白石岭（800M）C网基站-ZCXCEWB001-WA1",
       "deviceData": {
@@ -1710,7 +1710,7 @@
         "集团名称": "仙村白石岭C网基站/增城仙村烽火SDH622M001/155M1",
         "网管中名称": "仙村白石岭（800M）C网基站-ZCXCEWB001-WA1",
         "高值业务数": "0",
-        "局内业务数": "1",
+        "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
         "800M基站设备可退（20260506）": "",
@@ -1995,8 +1995,8 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 9,
-      "monitorCount": 20
+      "netCount": 6,
+      "monitorCount": 21
     }
   },
   "quarterTarget": {
