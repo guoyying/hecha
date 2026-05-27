@@ -1935,6 +1935,24 @@
         "0407备注_承载室": ""
       },
       "remark": null
+    },
+    "3100-%E5%A4%A7%E5%AD%A6%E5%9F%8E%E7%BE%8E%E6%9C%AF%E9%A6%86%EF%BC%88800M%EF%BC%89-ZGMCC1HWSDH155M001-2.5G001": {
+      "type": "monitor",
+      "timestamp": "2026-05-27T03:20:27.094Z",
+      "excluded": false,
+      "deviceInfo": "3100-大学城美术馆（800M）-ZGMCC1HWSDH155M001-2.5G001",
+      "deviceData": {
+        "所属行政区域": "番禺",
+        "集团名称": "大学城美术馆集群基站/大学城美术馆C网汇聚环1华为SDH155M/2.5G001",
+        "网管中名称": "3100-大学城美术馆（800M）-ZGMCC1HWSDH155M001-2.5G001",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "已拆除，可退网",
+        "0407备注_承载室": ""
+      },
+      "remark": null
     }
   },
   "statistics": {
@@ -1944,7 +1962,7 @@
     },
     "week": {
       "netCount": 7,
-      "monitorCount": 18
+      "monitorCount": 19
     }
   },
   "quarterTarget": {
@@ -1967,7 +1985,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-26T09:17:22.395Z",
+    "lastSync": "2026-05-27T03:18:02.812Z",
     "version": 6
   }
 }
