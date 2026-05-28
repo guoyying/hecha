@@ -1987,6 +1987,24 @@
         "0407备注_承载室": ""
       },
       "remark": null
+    },
+    "228-%E8%8D%94%E5%9F%8E1-GZHC012": {
+      "type": "monitor",
+      "timestamp": "2026-05-28T09:23:49.457Z",
+      "excluded": false,
+      "deviceInfo": "228-荔城1-GZHC012",
+      "deviceData": {
+        "所属行政区域": "增城",
+        "集团名称": "荔城1机楼传输机房1/广州华为SDH2.5G012",
+        "网管中名称": "228-荔城1-GZHC012",
+        "高值业务数": "1",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
     }
   },
   "statistics": {
@@ -1996,7 +2014,7 @@
     },
     "week": {
       "netCount": 7,
-      "monitorCount": 22
+      "monitorCount": 23
     }
   },
   "quarterTarget": {
