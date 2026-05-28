@@ -1971,8 +1971,8 @@
       "remark": null
     },
     "%E8%8A%B1%E9%83%BD%E5%B9%BF%E7%94%B5%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-HDXHUWC001-WA01": {
-      "type": "net",
-      "timestamp": "2026-05-27T03:37:10.385Z",
+      "type": "monitor",
+      "timestamp": "2026-05-28T04:50:16.426Z",
       "excluded": false,
       "deviceInfo": "花都广电（800M）C网基站-HDXHUWC001-WA01",
       "deviceData": {
@@ -1995,8 +1995,8 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 6,
-      "monitorCount": 21
+      "netCount": 7,
+      "monitorCount": 22
     }
   },
   "quarterTarget": {
@@ -2019,7 +2019,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-27T10:23:49.607Z",
+    "lastSync": "2026-05-27T10:26:44.761Z",
     "version": 6
   }
 }
