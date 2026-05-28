@@ -1575,8 +1575,8 @@
       "remark": null
     },
     "%E7%9F%B3%E6%BB%A9%E5%B7%A5%E4%B8%9A%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-ZCSTAWB001-WA2": {
-      "type": "net",
-      "timestamp": "2026-05-21T09:36:47.603Z",
+      "type": "monitor",
+      "timestamp": "2026-05-28T09:26:38.467Z",
       "excluded": false,
       "deviceInfo": "石滩工业（800M）C网基站-ZCSTAWB001-WA2",
       "deviceData": {
@@ -1584,7 +1584,7 @@
         "集团名称": "石滩工业C网基站/增城石滩烽火SDH622M001/155M2",
         "网管中名称": "石滩工业（800M）C网基站-ZCSTAWB001-WA2",
         "高值业务数": "0",
-        "局内业务数": "1",
+        "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
         "800M基站设备可退（20260506）": "",
@@ -2014,7 +2014,7 @@
     },
     "week": {
       "netCount": 7,
-      "monitorCount": 23
+      "monitorCount": 24
     }
   },
   "quarterTarget": {
@@ -2037,7 +2037,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-28T04:50:51.420Z",
+    "lastSync": "2026-05-28T09:23:55.883Z",
     "version": 6
   }
 }
