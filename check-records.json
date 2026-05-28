@@ -2005,6 +2005,24 @@
         "0407备注_承载室": ""
       },
       "remark": null
+    },
+    "158-%E5%B9%BF%E4%B8%AD%E5%8C%BB-PYDXCHB002": {
+      "type": "net",
+      "timestamp": "2026-05-28T09:45:03.588Z",
+      "excluded": false,
+      "deviceInfo": "158-广中医-PYDXCHB002",
+      "deviceData": {
+        "所属行政区域": "番禺",
+        "集团名称": "大学城中医药大学远端机房1/番禺大学城华为SDH622M002",
+        "网管中名称": "158-广中医-PYDXCHB002",
+        "高值业务数": "0",
+        "局内业务数": "21",
+        "局内光路数": "",
+        "退网评估": "老旧设备",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
     }
   },
   "statistics": {
@@ -2013,7 +2031,7 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 7,
+      "netCount": 8,
       "monitorCount": 24
     }
   },
@@ -2037,7 +2055,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-28T09:23:55.883Z",
+    "lastSync": "2026-05-28T09:27:33.798Z",
     "version": 6
   }
 }
