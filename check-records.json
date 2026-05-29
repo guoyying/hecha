@@ -355,8 +355,8 @@
       "remark": null
     },
     "%E5%90%8C%E5%92%8C%E6%9C%BA%E6%A5%BC-GZWC023": {
-      "type": "net",
-      "timestamp": "2026-05-29T13:47:52.377Z",
+      "type": "monitor",
+      "timestamp": "2026-05-29T14:00:46.212Z",
       "excluded": false,
       "deviceInfo": "同和机楼-GZWC023",
       "deviceData": {
@@ -2047,8 +2047,8 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 5,
-      "monitorCount": 30
+      "netCount": 4,
+      "monitorCount": 31
     }
   },
   "quarterTarget": {
@@ -2071,7 +2071,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-29T13:44:24.407Z",
+    "lastSync": "2026-05-29T13:47:58.809Z",
     "version": 6
   }
 }
