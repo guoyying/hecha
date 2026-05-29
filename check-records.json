@@ -256,8 +256,8 @@
       }
     },
     "3475-%E5%B0%8F%E6%A5%BC%E9%BB%84%E6%9D%91C%E7%BD%91%E5%9F%BA%E7%AB%99(800M)": {
-      "type": "net",
-      "timestamp": "2026-05-19T02:56:33.017Z",
+      "type": "monitor",
+      "timestamp": "2026-05-29T14:03:53.736Z",
       "excluded": false,
       "deviceInfo": "3475-小楼黄村C网基站(800M)",
       "deviceData": {
@@ -2048,7 +2048,7 @@
     },
     "week": {
       "netCount": 4,
-      "monitorCount": 31
+      "monitorCount": 32
     }
   },
   "quarterTarget": {
@@ -2071,7 +2071,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-29T13:47:58.809Z",
+    "lastSync": "2026-05-29T14:00:55.231Z",
     "version": 6
   }
 }
