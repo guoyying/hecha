@@ -193,8 +193,8 @@
       }
     },
     "%E6%96%B0%E5%B8%82%E6%9C%BA%E6%A5%BC-%E7%99%BD%E4%BA%91HB008": {
-      "type": "net",
-      "timestamp": "2026-05-20T01:54:18.211Z",
+      "type": "monitor",
+      "timestamp": "2026-05-29T13:45:45.791Z",
       "excluded": false,
       "deviceInfo": "新市机楼-白云HB008",
       "deviceData": {
@@ -356,15 +356,15 @@
     },
     "%E5%90%8C%E5%92%8C%E6%9C%BA%E6%A5%BC-GZWC023": {
       "type": "net",
-      "timestamp": "2026-05-08T10:12:37.410Z",
+      "timestamp": "2026-05-29T13:47:52.377Z",
       "excluded": false,
       "deviceInfo": "同和机楼-GZWC023",
       "deviceData": {
         "所属行政区域": "白云",
         "集团名称": "同和机楼2楼传输机房1/广州武邮SDH2.5G023（已下电）",
         "网管中名称": "同和机楼-GZWC023",
-        "高值业务数": "1",
-        "局内业务数": "1",
+        "高值业务数": "0",
+        "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
         "800M基站设备可退（20260506）": "已拆除，可退网",
@@ -373,9 +373,7 @@
       "remark": {
         "content": "已提醒白云上单",
         "timestamp": "2026-05-08T10:11:33.381Z"
-      },
-      "removedAt": "2026-05-09T08:29:19.832Z",
-      "restoredAt": "2026-05-09T08:31:48.839Z"
+      }
     },
     "%E7%AB%B9%E6%96%991-GZHC184": {
       "type": "remark",
@@ -2049,8 +2047,8 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 4,
-      "monitorCount": 29
+      "netCount": 5,
+      "monitorCount": 30
     }
   },
   "quarterTarget": {
@@ -2073,7 +2071,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-05-29T13:37:05.273Z",
+    "lastSync": "2026-05-29T13:44:24.407Z",
     "version": 6
   }
 }
