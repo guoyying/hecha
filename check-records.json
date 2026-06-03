@@ -733,8 +733,8 @@
       }
     },
     "%E8%90%9D%E5%B2%97%E7%81%AB%E6%9D%91%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-GZWC048-WA10": {
-      "type": "remark",
-      "timestamp": "2026-05-14T08:39:22.285Z",
+      "type": "monitor",
+      "timestamp": "2026-06-03T02:29:02.957Z",
       "excluded": false,
       "deviceInfo": "萝岗火村（800M）C网基站-GZWC048-WA10",
       "deviceData": {
@@ -745,7 +745,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "已拆除，可退网",
+        "800M基站设备可退（20260506）": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -1531,8 +1531,8 @@
       }
     },
     "%E6%B4%9B%E6%BA%AA-%E7%95%AA%E7%A6%BAHC004-C1(238)": {
-      "type": "remark",
-      "timestamp": "2026-06-02T01:53:30.345Z",
+      "type": "net",
+      "timestamp": "2026-06-03T02:38:26.546Z",
       "excluded": false,
       "deviceInfo": "洛溪-番禺HC004-C1(238)",
       "deviceData": {
@@ -1573,8 +1573,8 @@
       }
     },
     "%E4%B8%9C%E6%B9%96%E6%B4%B2-%E7%9F%B3%E5%9F%BA%E6%96%B0-%E7%95%AA%E7%A6%BAHD001(370)": {
-      "type": "remark",
-      "timestamp": "2026-06-02T01:53:30.345Z",
+      "type": "net",
+      "timestamp": "2026-06-03T02:40:49.705Z",
       "excluded": false,
       "deviceInfo": "东湖洲-石基新-番禺HD001(370)",
       "deviceData": {
@@ -1594,8 +1594,8 @@
       }
     },
     "%E5%A4%A7%E7%9F%B3%E6%9C%BA%E6%A5%BCPYDSWC001": {
-      "type": "remark",
-      "timestamp": "2026-06-02T01:53:30.345Z",
+      "type": "net",
+      "timestamp": "2026-06-03T02:39:17.213Z",
       "excluded": false,
       "deviceInfo": "大石机楼PYDSWC001",
       "deviceData": {
@@ -1615,8 +1615,8 @@
       }
     },
     "7813-%E8%94%9A%E6%B5%B73%E5%B1%82%E6%A0%B8%E5%BF%83%E6%9C%BA%E6%88%BF-PYHC216-HA19L": {
-      "type": "remark",
-      "timestamp": "2026-06-02T01:53:30.345Z",
+      "type": "net",
+      "timestamp": "2026-06-03T02:32:48.354Z",
       "excluded": false,
       "deviceInfo": "7813-蔚海3层核心机房-PYHC216-HA19L",
       "deviceData": {
@@ -1636,8 +1636,8 @@
       }
     },
     "7098-%E5%B9%BF%E5%B7%9E%E5%86%9C%E5%95%86%E9%93%B6%E8%A1%8C%E7%B9%81%E5%8D%8E%E6%94%AF%E8%A1%8C-GZHC818-HA12L": {
-      "type": "remark",
-      "timestamp": "2026-06-02T01:53:30.345Z",
+      "type": "net",
+      "timestamp": "2026-06-03T02:30:39.976Z",
       "excluded": false,
       "deviceInfo": "7098-广州农商银行繁华支行-GZHC818-HA12L",
       "deviceData": {
@@ -1657,8 +1657,8 @@
       }
     },
     "437-%E5%B8%82%E6%A1%A5%E8%94%A1%E8%BE%B9-PYHC008-HA01": {
-      "type": "remark",
-      "timestamp": "2026-06-02T01:53:30.345Z",
+      "type": "net",
+      "timestamp": "2026-06-03T02:28:08.712Z",
       "excluded": false,
       "deviceInfo": "437-市桥蔡边-PYHC008-HA01",
       "deviceData": {
@@ -1694,6 +1694,42 @@
         "0407备注_承载室": ""
       },
       "remark": null
+    },
+    "3141-%E6%9D%BF%E6%A1%A5%E5%B1%B1%E5%9F%BA%E7%AB%99%EF%BC%88800M)-BQSC1HWSDH2.5G001": {
+      "type": "monitor",
+      "timestamp": "2026-06-03T02:54:55.977Z",
+      "excluded": false,
+      "deviceInfo": "3141-板桥山基站（800M)-BQSC1HWSDH2.5G001",
+      "deviceData": {
+        "所属行政区域": "番禺",
+        "集团名称": "板桥山集群基站/板桥山C网汇聚环1华为SDH2.5G001",
+        "网管中名称": "3141-板桥山基站（800M)-BQSC1HWSDH2.5G001",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
+    },
+    "2991-%E5%A4%A7%E7%9F%B3%E7%94%B5%E4%BF%A1%E5%9F%BA%E7%AB%99%EF%BC%88800M)-DSDIXC1HWSDH2.5G001-HA01L": {
+      "type": "monitor",
+      "timestamp": "2026-06-03T02:58:59.161Z",
+      "excluded": false,
+      "deviceInfo": "2991-大石电信基站（800M)-DSDIXC1HWSDH2.5G001-HA01L",
+      "deviceData": {
+        "所属行政区域": "番禺",
+        "集团名称": "大石电信集群基站/大石电信C网汇聚环1华为SDH2.5G001/155M01",
+        "网管中名称": "2991-大石电信基站（800M)-DSDIXC1HWSDH2.5G001-HA01L",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
     }
   },
   "statistics": {
@@ -1702,8 +1738,8 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 9,
-      "monitorCount": 1
+      "netCount": 15,
+      "monitorCount": 4
     }
   },
   "quarterTarget": {
