@@ -1492,8 +1492,8 @@
       "remark": null
     },
     "%E9%9D%92%E5%B9%B4%E5%B1%B1%E5%BA%84C%E7%BD%91%E5%9F%BA%E7%AB%99-ZWC001%2FA01": {
-      "type": "net",
-      "timestamp": "2026-06-02T01:26:49.124Z",
+      "type": "monitor",
+      "timestamp": "2026-06-03T03:33:10.636Z",
       "excluded": false,
       "deviceInfo": "青年山庄C网基站-ZWC001/A01",
       "deviceData": {
@@ -1738,8 +1738,8 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 15,
-      "monitorCount": 4
+      "netCount": 14,
+      "monitorCount": 5
     }
   },
   "quarterTarget": {
@@ -1762,7 +1762,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-06-02T01:50:52.712Z",
+    "lastSync": "2026-06-03T02:59:08.132Z",
     "version": 6
   }
 }
