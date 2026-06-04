@@ -1531,8 +1531,8 @@
       }
     },
     "%E6%B4%9B%E6%BA%AA-%E7%95%AA%E7%A6%BAHC004-C1(238)": {
-      "type": "net",
-      "timestamp": "2026-06-03T02:38:26.546Z",
+      "type": "monitor",
+      "timestamp": "2026-06-04T07:54:21.177Z",
       "excluded": false,
       "deviceInfo": "洛溪-番禺HC004-C1(238)",
       "deviceData": {
@@ -1774,8 +1774,8 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 8,
-      "monitorCount": 13
+      "netCount": 7,
+      "monitorCount": 14
     }
   },
   "quarterTarget": {
@@ -1798,7 +1798,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-06-03T02:59:08.132Z",
+    "lastSync": "2026-06-04T07:53:09.354Z",
     "version": 6
   }
 }
