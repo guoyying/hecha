@@ -30,8 +30,8 @@
       }
     },
     "%E9%BB%84%E5%9F%942-RCMSAP01": {
-      "type": "net",
-      "timestamp": "2026-04-30T09:05:41.773Z",
+      "type": "monitor",
+      "timestamp": "2026-06-05T03:55:58.818Z",
       "excluded": false,
       "deviceInfo": "黄埔2-RCMSAP01",
       "deviceData": {
@@ -39,11 +39,13 @@
         "集团名称": "黄埔机楼1楼传输机房2/瑞斯康达MSAP01",
         "网管中名称": "黄埔2-RCMSAP01",
         "高值业务数": "0",
-        "局内业务数": "1",
-        "局内光路数": "1",
+        "局内业务数": "0",
+        "局内光路数": "",
         "退网评估": "",
-        "800M基站设备可退（20260414）": ""
-      }
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": "非华为，县分确认能否退网"
+      },
+      "remark": null
     },
     "1111-%E9%BB%84%E9%99%82%E6%8F%BD%E5%85%83%E7%AA%9D(800M)-GZHC332-HA29L": {
       "type": "remark",
@@ -1329,24 +1331,6 @@
       },
       "remark": null
     },
-    "%E6%96%B0%E5%8D%8E%E6%9C%BA%E6%A5%BCHDXHUWC001": {
-      "type": "net",
-      "timestamp": "2026-05-27T03:35:52.516Z",
-      "excluded": false,
-      "deviceInfo": "新华机楼HDXHUWC001",
-      "deviceData": {
-        "所属行政区域": "花都",
-        "集团名称": "新华机楼传输机房/花都新华烽火SDH2.5G001",
-        "网管中名称": "新华机楼HDXHUWC001",
-        "高值业务数": "0",
-        "局内业务数": "0",
-        "局内光路数": "",
-        "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
-        "0407备注_承载室": ""
-      },
-      "remark": null
-    },
     "158-%E5%B9%BF%E4%B8%AD%E5%8C%BB-PYDXCHB002": {
       "type": "net",
       "timestamp": "2026-05-28T09:45:03.588Z",
@@ -1802,6 +1786,24 @@
         "0407备注_承载室": ""
       },
       "remark": null
+    },
+    "%E5%A4%A7%E6%B2%99%E4%B8%9C1-GZHC011": {
+      "type": "monitor",
+      "timestamp": "2026-06-05T03:56:38.432Z",
+      "excluded": false,
+      "deviceInfo": "大沙东1-GZHC011",
+      "deviceData": {
+        "所属行政区域": "黄埔",
+        "集团名称": "大沙东机楼3楼传输机房1/广州华为SDH2.5G011",
+        "网管中名称": "大沙东1-GZHC011",
+        "高值业务数": "0",
+        "局内业务数": "1",
+        "局内光路数": "1",
+        "退网评估": "资源系统零业务",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": "网管无业务，若现场核查无业务可拆光路，退网"
+      },
+      "remark": null
     }
   },
   "statistics": {
@@ -1811,7 +1813,7 @@
     },
     "week": {
       "netCount": 9,
-      "monitorCount": 14
+      "monitorCount": 16
     }
   },
   "quarterTarget": {
@@ -1834,7 +1836,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-06-04T07:53:09.354Z",
+    "lastSync": "2026-06-05T03:54:05.841Z",
     "version": 6
   }
 }
