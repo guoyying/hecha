@@ -336,8 +336,8 @@
       }
     },
     "%E6%B7%98%E9%87%911-GZWC053": {
-      "type": "remark",
-      "timestamp": "2026-05-13T02:32:17.108Z",
+      "type": "net",
+      "timestamp": "2026-06-08T02:11:27.252Z",
       "excluded": false,
       "deviceInfo": "淘金1-GZWC053",
       "deviceData": {
@@ -357,8 +357,8 @@
       }
     },
     "483-%E4%BA%9A%E6%B4%B2%E5%9B%BD%E9%99%85%E5%A4%A7%E9%85%92%E5%BA%97%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC356-HA04L": {
-      "type": "remark",
-      "timestamp": "2026-05-13T02:32:17.109Z",
+      "type": "net",
+      "timestamp": "2026-06-08T02:03:07.409Z",
       "excluded": false,
       "deviceInfo": "483-亚洲国际大酒店（800M）C网基站-GZHC356-HA04L",
       "deviceData": {
@@ -378,8 +378,8 @@
       }
     },
     "482-%E6%A1%82%E5%86%A0C%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC356-HA08L": {
-      "type": "remark",
-      "timestamp": "2026-05-13T02:32:17.109Z",
+      "type": "net",
+      "timestamp": "2026-06-08T02:01:06.688Z",
       "excluded": false,
       "deviceInfo": "482-桂冠C网基站-GZHC356-HA08L",
       "deviceData": {
@@ -1071,8 +1071,8 @@
       }
     },
     "%E8%BE%83%E5%9C%BA%E8%A5%BF2-GZHB331": {
-      "type": "remark",
-      "timestamp": "2026-05-15T09:01:15.721Z",
+      "type": "net",
+      "timestamp": "2026-06-08T02:07:41.048Z",
       "excluded": false,
       "deviceInfo": "较场西2-GZHB331",
       "deviceData": {
@@ -1092,8 +1092,8 @@
       }
     },
     "%E7%99%BE%E6%B1%87%E5%A4%A7%E5%8E%A6-GZHC205-HA02": {
-      "type": "remark",
-      "timestamp": "2026-05-15T09:01:15.721Z",
+      "type": "net",
+      "timestamp": "2026-06-08T02:10:33.841Z",
       "excluded": false,
       "deviceInfo": "百汇大厦-GZHC205-HA02",
       "deviceData": {
@@ -1812,8 +1812,8 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 9,
-      "monitorCount": 16
+      "netCount": 1,
+      "monitorCount": 0
     }
   },
   "quarterTarget": {
