@@ -756,8 +756,8 @@
       }
     },
     "%E4%B8%AD%E6%B5%B7%E5%BA%B7%E5%9F%8E(800M)C%E7%BD%91%E5%9F%BA%E7%AB%99-GZWC036-WA12": {
-      "type": "remark",
-      "timestamp": "2026-05-14T08:39:22.286Z",
+      "type": "net",
+      "timestamp": "2026-06-09T07:42:55.246Z",
       "excluded": false,
       "deviceInfo": "中海康城(800M)C网基站-GZWC036-WA12",
       "deviceData": {
@@ -861,8 +861,8 @@
       }
     },
     "%E5%B9%BF%E5%B7%9E%E6%9C%AC%E7%94%B0%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-GZWC033-WA04": {
-      "type": "remark",
-      "timestamp": "2026-05-14T08:39:22.286Z",
+      "type": "net",
+      "timestamp": "2026-06-09T07:42:52.420Z",
       "excluded": false,
       "deviceInfo": "广州本田（800M）C网基站-GZWC033-WA04",
       "deviceData": {
@@ -903,8 +903,8 @@
       }
     },
     "%E4%B8%9C%E5%9C%83%E9%94%AF%E6%9C%A8%E5%8E%82%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-GZWC034-WA27": {
-      "type": "remark",
-      "timestamp": "2026-05-14T08:39:22.286Z",
+      "type": "net",
+      "timestamp": "2026-06-09T07:42:49.119Z",
       "excluded": false,
       "deviceInfo": "东圃锯木厂（800M）C网基站-GZWC034-WA27",
       "deviceData": {
@@ -1536,8 +1536,8 @@
       }
     },
     "%E5%8C%96%E9%BE%99%E8%8D%89%E5%A0%82%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-HLCTWC001-A01": {
-      "type": "remark",
-      "timestamp": "2026-06-02T01:53:30.345Z",
+      "type": "monitor",
+      "timestamp": "2026-06-09T07:32:46.548Z",
       "excluded": false,
       "deviceInfo": "化龙草堂（800M）C网基站-HLCTWC001-A01",
       "deviceData": {
@@ -1578,8 +1578,8 @@
       }
     },
     "%E5%A4%A7%E7%9F%B3%E6%9C%BA%E6%A5%BCPYDSWC001": {
-      "type": "net",
-      "timestamp": "2026-06-03T02:39:17.213Z",
+      "type": "monitor",
+      "timestamp": "2026-06-09T07:34:58.135Z",
       "excluded": false,
       "deviceInfo": "大石机楼PYDSWC001",
       "deviceData": {
@@ -1620,8 +1620,8 @@
       }
     },
     "7098-%E5%B9%BF%E5%B7%9E%E5%86%9C%E5%95%86%E9%93%B6%E8%A1%8C%E7%B9%81%E5%8D%8E%E6%94%AF%E8%A1%8C-GZHC818-HA12L": {
-      "type": "net",
-      "timestamp": "2026-06-03T02:30:39.976Z",
+      "type": "monitor",
+      "timestamp": "2026-06-09T07:41:22.678Z",
       "excluded": false,
       "deviceInfo": "7098-广州农商银行繁华支行-GZHC818-HA12L",
       "deviceData": {
@@ -1770,8 +1770,8 @@
       "remark": null
     },
     "%E8%9E%AF%E5%A4%B4%E6%B4%B2%E6%B4%9EC%E7%BD%91%E5%9F%BA%E7%AB%99": {
-      "type": "net",
-      "timestamp": "2026-06-05T03:54:00.602Z",
+      "type": "monitor",
+      "timestamp": "2026-06-09T07:21:48.669Z",
       "excluded": false,
       "deviceInfo": "螯头洲洞C网基站",
       "deviceData": {
@@ -1822,6 +1822,81 @@
         "0407备注_承载室": ""
       },
       "remark": null
+    },
+    "%E6%96%B0%E6%A1%A5-%E7%95%AA%E7%A6%BAHD001-C3(231)": {
+      "type": "remark",
+      "timestamp": "2026-06-09T03:37:50.521Z",
+      "excluded": false,
+      "deviceInfo": "新桥-番禺HD001-C3(231)",
+      "deviceData": {
+        "所属行政区域": "番禺",
+        "集团名称": "石基新桥村接入网机房1/番禺华为SDH622M001",
+        "网管中名称": "新桥-番禺HD001-C3(231)",
+        "高值业务数": "1",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": {
+        "content": "网管无业务，可以退",
+        "timestamp": "2026-06-09T03:37:50.521Z"
+      }
+    },
+    "%E5%A4%AA%E5%B9%B3%E5%BD%B1%E7%94%B0C%E7%BD%91%E5%9F%BA%E7%AB%99-TPYTC1HWSDH2.5G001-HA01": {
+      "type": "monitor",
+      "timestamp": "2026-06-09T07:17:53.101Z",
+      "excluded": false,
+      "deviceInfo": "太平影田C网基站-TPYTC1HWSDH2.5G001-HA01",
+      "deviceData": {
+        "所属行政区域": "从化",
+        "集团名称": "太平影田C网基站/太平影田C网汇聚环1华为2.5G001/155M01",
+        "网管中名称": "太平影田C网基站-TPYTC1HWSDH2.5G001-HA01",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
+    },
+    "1045-%E4%B8%8A%E8%A5%BF%E6%9D%91C%E7%BD%91%E5%9F%BA%E7%AB%99-CHDCHC002-HA01": {
+      "type": "monitor",
+      "timestamp": "2026-06-09T07:20:39.153Z",
+      "excluded": false,
+      "deviceInfo": "1045-上西村C网基站-CHDCHC002-HA01",
+      "deviceData": {
+        "所属行政区域": "从化",
+        "集团名称": "上西村C网基站/从化东城华为2.5G002/155M01(131-鳌头)",
+        "网管中名称": "1045-上西村C网基站-CHDCHC002-HA01",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
+    },
+    "%E4%BB%8E%E5%8C%96%E5%B8%82%E6%80%BB%E5%B7%A5%E4%BC%9AC%E7%BD%91%E5%9F%BA%E7%AB%99-QYC1HWSDH2.5G001-HA01L": {
+      "type": "monitor",
+      "timestamp": "2026-06-09T07:38:42.722Z",
+      "excluded": false,
+      "deviceInfo": "从化市总工会C网基站-QYC1HWSDH2.5G001-HA01L",
+      "deviceData": {
+        "所属行政区域": "从化",
+        "集团名称": "从化市总工会搬迁C网基站/青云C网汇聚环1华为SDH2.5G001/155M01链",
+        "网管中名称": "从化市总工会C网基站-QYC1HWSDH2.5G001-HA01L",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
     }
   },
   "statistics": {
@@ -1830,8 +1905,8 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 0,
-      "monitorCount": 1
+      "netCount": 3,
+      "monitorCount": 8
     }
   },
   "quarterTarget": {
@@ -1854,7 +1929,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-06-08T02:14:00.313Z",
+    "lastSync": "2026-06-08T09:32:33.945Z",
     "version": 6
   }
 }
