@@ -51,8 +51,8 @@
       }
     },
     "%E5%8D%97%E8%88%AA%E6%9C%BA%E5%8A%A1C%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC346-HA05L": {
-      "type": "net",
-      "timestamp": "2026-05-20T01:51:25.166Z",
+      "type": "monitor",
+      "timestamp": "2026-06-12T02:33:18.256Z",
       "excluded": false,
       "deviceInfo": "南航机务C网基站-GZHC346-HA05L",
       "deviceData": {
@@ -63,7 +63,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "已拆除，可退网",
+        "800M基站设备可退（20260506）": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -72,8 +72,8 @@
       }
     },
     "%E5%B9%BF%E5%B7%9E%E6%B0%91%E8%88%AA%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2C%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC346-HA04L": {
-      "type": "net",
-      "timestamp": "2026-05-20T01:52:48.067Z",
+      "type": "monitor",
+      "timestamp": "2026-06-12T02:35:06.583Z",
       "excluded": false,
       "deviceInfo": "广州民航职业技术学院C网基站-GZHC346-HA04L",
       "deviceData": {
@@ -84,7 +84,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "已拆除，可退网",
+        "800M基站设备可退（20260506）": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -135,8 +135,8 @@
       }
     },
     "2233-%E9%A3%9E%E6%9C%BA%E7%BB%B4%E4%BF%AE%E5%85%AC%E5%8F%B8%E6%96%B0%E5%8A%9E%E5%85%AC%E5%8C%BA4-5FC%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC346-HA11L": {
-      "type": "net",
-      "timestamp": "2026-05-20T01:51:35.611Z",
+      "type": "monitor",
+      "timestamp": "2026-06-12T02:31:20.653Z",
       "excluded": false,
       "deviceInfo": "2233-飞机维修公司新办公区4-5FC网基站-GZHC346-HA11L",
       "deviceData": {
@@ -147,7 +147,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "已拆除，可退网",
+        "800M基站设备可退（20260506）": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -1846,7 +1846,7 @@
     },
     "week": {
       "netCount": 20,
-      "monitorCount": 11
+      "monitorCount": 14
     }
   },
   "quarterTarget": {
@@ -1869,7 +1869,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-06-10T08:12:15.818Z",
+    "lastSync": "2026-06-12T02:28:43.440Z",
     "version": 6
   }
 }
