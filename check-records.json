@@ -1530,8 +1530,8 @@
       "remark": null
     },
     "%E6%96%B0%E6%A1%A5-%E7%95%AA%E7%A6%BAHD001-C3(231)": {
-      "type": "remark",
-      "timestamp": "2026-06-09T03:37:50.521Z",
+      "type": "net",
+      "timestamp": "2026-06-12T02:48:17.867Z",
       "excluded": false,
       "deviceInfo": "新桥-番禺HD001-C3(231)",
       "deviceData": {
@@ -1837,6 +1837,24 @@
         "0407备注_承载室": ""
       },
       "remark": null
+    },
+    "166-%E5%8D%8E%E5%B7%A5-PYDXCHB001": {
+      "type": "net",
+      "timestamp": "2026-06-12T02:40:01.434Z",
+      "excluded": false,
+      "deviceInfo": "166-华工-PYDXCHB001",
+      "deviceData": {
+        "所属行政区域": "番禺",
+        "集团名称": "大学城华工远端机房1/番禺大学城华为SDH622M001",
+        "网管中名称": "166-华工-PYDXCHB001",
+        "高值业务数": "0",
+        "局内业务数": "7",
+        "局内光路数": "",
+        "退网评估": "老旧设备",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
     }
   },
   "statistics": {
@@ -1845,7 +1863,7 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 20,
+      "netCount": 22,
       "monitorCount": 14
     }
   },
@@ -1869,7 +1887,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-06-12T02:28:43.440Z",
+    "lastSync": "2026-06-12T02:35:15.099Z",
     "version": 6
   }
 }
