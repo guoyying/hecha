@@ -2032,13 +2032,15 @@
                          const typeColor = record.type === 'net' ? 'blue' : 'purple';
                          const typeText = record.type === 'net' ? '网络部门审批' : '网监评估';
                          const time = new Date(record.timestamp).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
+                         const region = record.deviceData && record.deviceData['所属行政区域'] ? record.deviceData['所属行政区域'] : '-';
                          
                          html += `<div class="bg-${typeColor}-50 border border-${typeColor}-200 rounded-lg p-3">
                              <div class="flex items-center justify-between mb-1">
                                  <span class="text-sm font-medium text-${typeColor}-700">${record.deviceInfo}</span>
                                  <span class="text-xs text-${typeColor}-600">${time}</span>
                              </div>
-                             <div class="text-xs text-${typeColor}-600">${typeText}</div>
+                             <div class="text-xs text-${typeColor}-600 mb-1">${typeText}</div>
+                             <div class="text-xs text-${typeColor}-600">所属行政区域：${region}</div>
                          </div>`;
                      });
                      
