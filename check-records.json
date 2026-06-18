@@ -465,8 +465,8 @@
       }
     },
     "1645-%E5%AF%8C%E7%9B%88%E5%9B%BD%E9%99%85%E5%A4%A7%E5%8E%A6(800M)-GZHC362-HA23L": {
-      "type": "net",
-      "timestamp": "2026-06-10T04:40:51.502Z",
+      "type": "monitor",
+      "timestamp": "2026-06-17T10:00:32.685Z",
       "excluded": false,
       "deviceInfo": "1645-富盈国际大厦(800M)-GZHC362-HA23L",
       "deviceData": {
@@ -486,8 +486,8 @@
       }
     },
     "1644-%E4%BA%AC%E7%B2%A4%E6%B0%B4%E4%BA%A7%E5%A4%A7%E5%8E%A6(800M)-GZHC362-HA22L": {
-      "type": "net",
-      "timestamp": "2026-06-10T04:41:10.315Z",
+      "type": "monitor",
+      "timestamp": "2026-06-17T10:01:10.786Z",
       "excluded": false,
       "deviceInfo": "1644-京粤水产大厦(800M)-GZHC362-HA22L",
       "deviceData": {
@@ -780,8 +780,8 @@
       }
     },
     "%E5%A4%A7%E6%B2%99%E4%B8%9CGZWC033": {
-      "type": "remark",
-      "timestamp": "2026-05-14T08:39:22.286Z",
+      "type": "net",
+      "timestamp": "2026-06-17T10:09:36.087Z",
       "excluded": false,
       "deviceInfo": "大沙东GZWC033",
       "deviceData": {
@@ -885,8 +885,8 @@
       }
     },
     "4162-%E5%88%98%E6%9D%91%E8%B7%AF%E5%8F%A3C%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC697-HA36L": {
-      "type": "remark",
-      "timestamp": "2026-05-14T08:39:22.287Z",
+      "type": "net",
+      "timestamp": "2026-06-17T09:40:32.936Z",
       "excluded": false,
       "deviceInfo": "4162-刘村路口C网基站-GZHC697-HA36L",
       "deviceData": {
@@ -1362,8 +1362,8 @@
       "remark": null
     },
     "%E5%AE%A2%E6%9D%91%E6%9C%BA%E6%A5%BCGZWC044": {
-      "type": "net",
-      "timestamp": "2026-06-10T04:36:03.932Z",
+      "type": "monitor",
+      "timestamp": "2026-06-17T09:58:25.258Z",
       "excluded": false,
       "deviceInfo": "客村机楼GZWC044",
       "deviceData": {
@@ -1380,8 +1380,8 @@
       "remark": null
     },
     "%E4%BC%9A%E5%B1%95%E4%B8%AD%E5%BF%835MC%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC363-HA36L": {
-      "type": "net",
-      "timestamp": "2026-06-10T04:38:30.947Z",
+      "type": "monitor",
+      "timestamp": "2026-06-17T10:06:30.241Z",
       "excluded": false,
       "deviceInfo": "会展中心5MC网基站-GZHC363-HA36L",
       "deviceData": {
@@ -1398,8 +1398,8 @@
       "remark": null
     },
     "%E4%BC%9A%E5%B1%95%E4%B8%AD%E5%BF%834MC%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC363-HA35L": {
-      "type": "net",
-      "timestamp": "2026-06-10T04:38:51.522Z",
+      "type": "monitor",
+      "timestamp": "2026-06-17T10:06:27.253Z",
       "excluded": false,
       "deviceInfo": "会展中心4MC网基站-GZHC363-HA35L",
       "deviceData": {
@@ -1416,8 +1416,8 @@
       "remark": null
     },
     "1580-%E4%BC%9A%E5%B1%95%E4%B8%AD%E5%BF%836M%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC363-HA37L": {
-      "type": "net",
-      "timestamp": "2026-06-10T04:39:08.051Z",
+      "type": "monitor",
+      "timestamp": "2026-06-17T10:03:51.372Z",
       "excluded": false,
       "deviceInfo": "1580-会展中心6M（800M）C网基站-GZHC363-HA37L",
       "deviceData": {
@@ -1720,6 +1720,45 @@
         "content": "已联系海珠可退",
         "timestamp": "2026-06-16T07:07:46.036Z"
       }
+    },
+    "%E4%B8%9C%E5%9C%83%E7%9F%B3%E6%BA%AAC%E7%BD%91%E5%9F%BA%E7%AB%99": {
+      "type": "net",
+      "timestamp": "2026-06-17T10:09:54.303Z",
+      "excluded": false,
+      "deviceInfo": "东圃石溪C网基站",
+      "deviceData": {
+        "所属行政区域": "天河",
+        "集团名称": "东圃石溪C网基站/广州武邮SDH2.5G034/155M15",
+        "网管中名称": "东圃石溪C网基站",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
+    },
+    "561-%E7%B2%A4%E6%B5%B7%E5%87%AF%E6%97%8B%E5%A4%A7%E5%8E%A6(800M)-GZHC357-HA18L": {
+      "type": "remark",
+      "timestamp": "2026-06-18T02:21:44.079Z",
+      "excluded": false,
+      "deviceInfo": "561-粤海凯旋大厦(800M)-GZHC357-HA18L",
+      "deviceData": {
+        "所属行政区域": "天河",
+        "集团名称": "粤海凯旋大厦集群基站/广州华为SDH2.5G357/155M18链",
+        "网管中名称": "561-粤海凯旋大厦(800M)-GZHC357-HA18L",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "800M基站设备可退（20260506）": "",
+        "0407备注_承载室": ""
+      },
+      "remark": {
+        "content": "可退，已完成网络审批操作",
+        "timestamp": "2026-06-18T02:21:44.079Z"
+      }
     }
   },
   "statistics": {
@@ -1728,8 +1767,8 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 0,
-      "monitorCount": 0
+      "netCount": 3,
+      "monitorCount": 6
     }
   },
   "quarterTarget": {
