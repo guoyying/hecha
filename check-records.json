@@ -8,7 +8,7 @@
     "局内业务数",
     "局内光路数",
     "退网评估",
-    "800M基站设备可退（20260506）",
+    "备注",
     "0407备注_承载室"
   ],
   "deviceMarks": {
@@ -31,8 +31,8 @@
       "remark": null
     },
     "1111-%E9%BB%84%E9%99%82%E6%8F%BD%E5%85%83%E7%AA%9D(800M)-GZHC332-HA29L": {
-      "type": "remark",
-      "timestamp": "2026-05-08T03:05:21.673Z",
+      "type": "net",
+      "timestamp": "2026-06-18T07:27:18.941Z",
       "excluded": false,
       "deviceInfo": "1111-黄陂揽元窝(800M)-GZHC332-HA29L",
       "deviceData": {
@@ -43,7 +43,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "已拆除，可退网",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -613,8 +613,8 @@
       }
     },
     "%E4%B8%AD%E6%B5%B7%E5%BA%B7%E5%9F%8E(800M)C%E7%BD%91%E5%9F%BA%E7%AB%99-GZWC036-WA12": {
-      "type": "net",
-      "timestamp": "2026-06-09T07:42:55.246Z",
+      "type": "monitor",
+      "timestamp": "2026-06-18T07:11:54.136Z",
       "excluded": false,
       "deviceInfo": "中海康城(800M)C网基站-GZWC036-WA12",
       "deviceData": {
@@ -625,7 +625,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -718,8 +718,8 @@
       }
     },
     "%E5%B9%BF%E5%B7%9E%E6%9C%AC%E7%94%B0%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-GZWC033-WA04": {
-      "type": "net",
-      "timestamp": "2026-06-09T07:42:52.420Z",
+      "type": "monitor",
+      "timestamp": "2026-06-18T07:11:56.972Z",
       "excluded": false,
       "deviceInfo": "广州本田（800M）C网基站-GZWC033-WA04",
       "deviceData": {
@@ -730,7 +730,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -760,8 +760,8 @@
       }
     },
     "%E4%B8%9C%E5%9C%83%E9%94%AF%E6%9C%A8%E5%8E%82%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-GZWC034-WA27": {
-      "type": "net",
-      "timestamp": "2026-06-09T07:42:49.119Z",
+      "type": "monitor",
+      "timestamp": "2026-06-18T07:11:51.291Z",
       "excluded": false,
       "deviceInfo": "东圃锯木厂（800M）C网基站-GZWC034-WA27",
       "deviceData": {
@@ -772,7 +772,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -1702,8 +1702,8 @@
       "remark": null
     },
     "561-%E7%B2%A4%E6%B5%B7%E5%87%AF%E6%97%8B%E5%A4%A7%E5%8E%A6(800M)-GZHC357-HA18L": {
-      "type": "remark",
-      "timestamp": "2026-06-18T02:21:44.079Z",
+      "type": "net",
+      "timestamp": "2026-06-18T07:27:36.022Z",
       "excluded": false,
       "deviceInfo": "561-粤海凯旋大厦(800M)-GZHC357-HA18L",
       "deviceData": {
@@ -1714,7 +1714,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "2025.2.10网管反馈，有800m落地业务，不能退",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -1759,8 +1759,8 @@
       "remark": null
     },
     "1102-%E6%A4%8D%E7%89%A9%E5%9B%AD%E4%B8%9C(800M)C%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC332-HA10L": {
-      "type": "remark",
-      "timestamp": "2026-06-18T02:41:19.938Z",
+      "type": "net",
+      "timestamp": "2026-06-18T07:27:43.287Z",
       "excluded": false,
       "deviceInfo": "1102-植物园东(800M)C网基站-GZHC332-HA10L",
       "deviceData": {
@@ -1771,7 +1771,7 @@
         "局内业务数": "1",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -1809,8 +1809,8 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 4,
-      "monitorCount": 8
+      "netCount": 8,
+      "monitorCount": 11
     }
   },
   "quarterTarget": {
@@ -1833,7 +1833,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-06-18T03:31:18.747Z",
+    "lastSync": "2026-06-18T03:35:43.863Z",
     "version": 6
   }
 }
