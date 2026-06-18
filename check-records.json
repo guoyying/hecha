@@ -320,7 +320,7 @@
     },
     "%E4%B8%83%E6%98%9F%E5%B2%97C%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC363-HA02L": {
       "type": "remark",
-      "timestamp": "2026-05-13T02:57:32.250Z",
+      "timestamp": "2026-06-18T07:51:17.103Z",
       "excluded": false,
       "deviceInfo": "七星岗C网基站-GZHC363-HA02L",
       "deviceData": {
@@ -331,12 +331,12 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": {
-        "content": "已联系海珠上退网单",
-        "timestamp": "2026-05-13T02:57:32.250Z"
+        "content": "已联系海珠上退网单，已做网络部审批操作",
+        "timestamp": "2026-06-18T07:51:17.103Z"
       }
     },
     "%E6%B5%B7%E7%8F%A0%E8%A5%BF%E7%A6%84C%E7%BD%91%E5%9F%BA%E7%AB%99-GZWC044-WA03": {
@@ -1833,7 +1833,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-06-18T03:35:43.863Z",
+    "lastSync": "2026-06-18T07:27:54.739Z",
     "version": 6
   }
 }
