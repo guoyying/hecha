@@ -676,8 +676,8 @@
       }
     },
     "%E9%BB%84%E5%9F%94%E5%A4%8F%E5%9B%AD%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-GZWC039-WA11": {
-      "type": "remark",
-      "timestamp": "2026-05-14T08:39:22.286Z",
+      "type": "net",
+      "timestamp": "2026-06-22T09:19:54.971Z",
       "excluded": false,
       "deviceInfo": "黄埔夏园（800M）C网基站-GZWC039-WA11",
       "deviceData": {
@@ -688,7 +688,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -802,8 +802,8 @@
       }
     },
     "1406-%E8%90%9D%E5%B2%97%E9%A6%99%E9%9B%AA(800M)-GZHC574-HA19L%EF%BC%88%E7%89%A9%E4%B8%9A%E5%8E%9F%E5%9B%A0--%E6%96%AD%E7%94%B5%EF%BC%89": {
-      "type": "remark",
-      "timestamp": "2026-05-14T08:39:22.286Z",
+      "type": "net",
+      "timestamp": "2026-06-22T09:22:07.523Z",
       "excluded": false,
       "deviceInfo": "1406-萝岗香雪(800M)-GZHC574-HA19L（物业原因--断电）",
       "deviceData": {
@@ -814,7 +814,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -823,8 +823,8 @@
       }
     },
     "1401-%E8%90%9D%E5%B3%B0%E9%9A%A7%E9%81%93C%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC574-HA22L": {
-      "type": "remark",
-      "timestamp": "2026-05-14T08:39:22.286Z",
+      "type": "net",
+      "timestamp": "2026-06-22T09:22:37.832Z",
       "excluded": false,
       "deviceInfo": "1401-萝峰隧道C网基站-GZHC574-HA22L",
       "deviceData": {
@@ -835,7 +835,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -1809,8 +1809,8 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 8,
-      "monitorCount": 11
+      "netCount": 1,
+      "monitorCount": 0
     }
   },
   "quarterTarget": {
