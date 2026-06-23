@@ -277,8 +277,8 @@
       }
     },
     "%E4%B8%AD%E5%A4%A7%E4%B9%9D%E6%B4%B2%E5%B9%BF%E5%9C%BA%E8%BD%BB%E7%BA%BA%E5%9F%8EC%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC366-HA10L": {
-      "type": "remark",
-      "timestamp": "2026-05-13T02:57:32.250Z",
+      "type": "net",
+      "timestamp": "2026-06-23T03:54:14.601Z",
       "excluded": false,
       "deviceInfo": "中大九洲广场轻纺城C网基站-GZHC366-HA10L",
       "deviceData": {
@@ -289,7 +289,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -298,8 +298,8 @@
       }
     },
     "%E6%99%93%E6%B8%AF%E8%B7%AF%E4%B8%ADC%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC361%2FHA15L": {
-      "type": "remark",
-      "timestamp": "2026-05-13T02:57:32.250Z",
+      "type": "net",
+      "timestamp": "2026-06-23T03:51:45.604Z",
       "excluded": false,
       "deviceInfo": "晓港路中C网基站-GZHC361/HA15L",
       "deviceData": {
@@ -310,7 +310,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -319,8 +319,8 @@
       }
     },
     "%E4%B8%83%E6%98%9F%E5%B2%97C%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC363-HA02L": {
-      "type": "remark",
-      "timestamp": "2026-06-18T07:51:17.103Z",
+      "type": "net",
+      "timestamp": "2026-06-23T03:52:11.703Z",
       "excluded": false,
       "deviceInfo": "七星岗C网基站-GZHC363-HA02L",
       "deviceData": {
@@ -361,8 +361,8 @@
       }
     },
     "%E6%B5%B7%E7%8F%A0%E7%91%9E%E5%AE%9DC%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC361-HA08L": {
-      "type": "remark",
-      "timestamp": "2026-05-13T02:57:32.250Z",
+      "type": "net",
+      "timestamp": "2026-06-23T03:50:43.813Z",
       "excluded": false,
       "deviceInfo": "海珠瑞宝C网基站-GZHC361-HA08L",
       "deviceData": {
@@ -373,7 +373,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -403,8 +403,8 @@
       }
     },
     "%E4%B8%9C%E9%93%B6%E5%B9%BF%E5%9C%BAC%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC361-HA33L": {
-      "type": "remark",
-      "timestamp": "2026-05-13T02:57:32.250Z",
+      "type": "net",
+      "timestamp": "2026-06-23T03:50:32.103Z",
       "excluded": false,
       "deviceInfo": "东银广场C网基站-GZHC361-HA33L",
       "deviceData": {
@@ -415,7 +415,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -571,8 +571,8 @@
       }
     },
     "1504-%E6%B5%B7%E7%8F%A0%E5%9B%9B%E8%88%AA%E6%90%AC%E8%BF%81%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC361-HA16L": {
-      "type": "remark",
-      "timestamp": "2026-05-13T02:57:32.250Z",
+      "type": "net",
+      "timestamp": "2026-06-23T03:53:49.685Z",
       "excluded": false,
       "deviceInfo": "1504-海珠四航搬迁（800M）C网基站-GZHC361-HA16L",
       "deviceData": {
@@ -583,7 +583,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -592,8 +592,8 @@
       }
     },
     "1503-%E4%B8%AD%E5%A4%A7%E6%A0%A1%E5%9B%AD%E8%A5%BFC%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC361-HA14L": {
-      "type": "remark",
-      "timestamp": "2026-05-13T02:57:32.250Z",
+      "type": "net",
+      "timestamp": "2026-06-23T03:53:00.798Z",
       "excluded": false,
       "deviceInfo": "1503-中大校园西C网基站-GZHC361-HA14L",
       "deviceData": {
@@ -604,7 +604,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -1621,8 +1621,8 @@
       }
     },
     "6619-%E8%99%8E%E5%A8%81%E5%88%B6%E8%A1%A3(%E5%B7%A5%E4%B8%9A%E5%A4%A7%E9%81%93%E5%8C%97)-GZHC762-HA17L": {
-      "type": "remark",
-      "timestamp": "2026-06-16T07:07:46.036Z",
+      "type": "net",
+      "timestamp": "2026-06-23T03:55:38.126Z",
       "excluded": false,
       "deviceInfo": "6619-虎威制衣(工业大道北)-GZHC762-HA17L",
       "deviceData": {
@@ -1633,7 +1633,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -1809,7 +1809,7 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 1,
+      "netCount": 11,
       "monitorCount": 0
     }
   },
@@ -1833,7 +1833,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-06-18T07:27:54.739Z",
+    "lastSync": "2026-06-22T09:26:52.797Z",
     "version": 6
   }
 }
