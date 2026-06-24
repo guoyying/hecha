@@ -1138,8 +1138,8 @@
       "remark": null
     },
     "1639-%E5%A4%8F%E8%8C%85%E9%82%AE%E7%94%B5%E4%BB%93(800M)-ABYXMAO1R01-BYHB012": {
-      "type": "net",
-      "timestamp": "2026-06-12T02:21:18.552Z",
+      "type": "monitor",
+      "timestamp": "2026-06-24T07:07:30.860Z",
       "excluded": false,
       "deviceInfo": "1639-夏茅邮电仓(800M)-ABYXMAO1R01-BYHB012",
       "deviceData": {
@@ -1150,14 +1150,14 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": null
     },
     "%E5%B9%BF%E5%9B%AD%E8%A5%BF%E6%9C%BA%E6%A5%BC-GZWC019": {
-      "type": "net",
-      "timestamp": "2026-06-12T02:21:29.033Z",
+      "type": "monitor",
+      "timestamp": "2026-06-24T07:07:56.669Z",
       "excluded": false,
       "deviceInfo": "广园西机楼-GZWC019",
       "deviceData": {
@@ -1168,14 +1168,14 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": null
     },
     "%E6%96%B0%E5%B8%82%E6%9C%BA%E6%A5%BC-%E7%99%BD%E4%BA%91HB012": {
-      "type": "net",
-      "timestamp": "2026-06-12T02:21:39.517Z",
+      "type": "monitor",
+      "timestamp": "2026-06-24T07:08:34.282Z",
       "excluded": false,
       "deviceInfo": "新市机楼-白云HB012",
       "deviceData": {
@@ -1186,14 +1186,14 @@
         "局内业务数": "1",
         "局内光路数": "1",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": null
     },
     "%E7%9F%B3%E4%BA%951-GZHC045-HA02": {
-      "type": "net",
-      "timestamp": "2026-06-12T02:27:41.426Z",
+      "type": "monitor",
+      "timestamp": "2026-06-24T07:07:08.673Z",
       "excluded": false,
       "deviceInfo": "石井1-GZHC045-HA02",
       "deviceData": {
@@ -1204,14 +1204,14 @@
         "局内业务数": "1",
         "局内光路数": "",
         "退网评估": "老旧设备",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": null
     },
     "%E5%B9%BF%E5%B7%9E%E4%BD%93%E8%82%B2%E9%A6%862C%E7%BD%91%E5%9F%BA%E7%AB%99-GZWC019-WA12": {
-      "type": "net",
-      "timestamp": "2026-06-12T02:27:46.988Z",
+      "type": "monitor",
+      "timestamp": "2026-06-24T07:03:30.377Z",
       "excluded": false,
       "deviceInfo": "广州体育馆2C网基站-GZWC019-WA12",
       "deviceData": {
@@ -1222,14 +1222,14 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": null
     },
     "2072-%E7%99%BD%E4%BA%91%E4%B8%9C%E5%B9%B3%E5%9F%BA%E7%AB%99(800M)-GZHC338-HA31L": {
-      "type": "net",
-      "timestamp": "2026-06-12T02:28:35.409Z",
+      "type": "monitor",
+      "timestamp": "2026-06-24T07:04:58.909Z",
       "excluded": false,
       "deviceInfo": "2072-白云东平基站(800M)-GZHC338-HA31L",
       "deviceData": {
@@ -1240,7 +1240,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": null
@@ -1480,7 +1480,7 @@
     },
     "week": {
       "netCount": 11,
-      "monitorCount": 0
+      "monitorCount": 6
     }
   },
   "quarterTarget": {
@@ -1503,7 +1503,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-06-23T03:58:45.779Z",
+    "lastSync": "2026-06-23T10:23:19.396Z",
     "version": 6
   }
 }
