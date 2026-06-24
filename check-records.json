@@ -763,8 +763,8 @@
       }
     },
     "%E7%99%BE%E6%B1%87%E5%A4%A7%E5%8E%A6-GZHC205-HA02": {
-      "type": "net",
-      "timestamp": "2026-06-08T02:10:33.841Z",
+      "type": "monitor",
+      "timestamp": "2026-06-24T07:10:44.064Z",
       "excluded": false,
       "deviceInfo": "百汇大厦-GZHC205-HA02",
       "deviceData": {
@@ -775,7 +775,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -784,8 +784,8 @@
       }
     },
     "3500-%E6%B4%BE%E6%BD%AD%E7%94%B5%E4%BF%A1%E5%A4%A7%E6%A5%BC(800M)-PTDXDLC1HWSDH155M001-2.5G001": {
-      "type": "net",
-      "timestamp": "2026-05-19T07:44:44.290Z",
+      "type": "monitor",
+      "timestamp": "2026-06-24T07:12:40.232Z",
       "excluded": false,
       "deviceInfo": "3500-派潭电信大楼(800M)-PTDXDLC1HWSDH155M001-2.5G001",
       "deviceData": {
@@ -793,10 +793,10 @@
         "集团名称": "派潭电信大楼集群基站/派潭电信大楼C网汇聚环1华为SDH155M001/2.5G001",
         "网管中名称": "3500-派潭电信大楼(800M)-PTDXDLC1HWSDH155M001-2.5G001",
         "高值业务数": "0",
-        "局内业务数": "5",
+        "局内业务数": "1",
         "局内光路数": "1",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": null
@@ -838,8 +838,8 @@
       "remark": null
     },
     "3404-%E8%80%81%E5%B1%8B%E9%9B%86%E7%BE%A4(800M)-LWC1HWSDH155M001-2.5G001": {
-      "type": "net",
-      "timestamp": "2026-05-26T07:13:40.405Z",
+      "type": "monitor",
+      "timestamp": "2026-06-24T09:23:52.429Z",
       "excluded": false,
       "deviceInfo": "3404-老屋集群(800M)-LWC1HWSDH155M001-2.5G001",
       "deviceData": {
@@ -850,7 +850,7 @@
         "局内业务数": "1",
         "局内光路数": "1",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": null
@@ -1471,6 +1471,24 @@
       },
       "removedAt": "2026-06-18T03:35:24.576Z",
       "restoredAt": "2026-06-18T03:35:26.404Z"
+    },
+    "%E5%B0%8F%E6%A5%BC%E6%9C%BA%E6%A5%BCZCXLOWB001": {
+      "type": "net",
+      "timestamp": "2026-06-24T09:33:16.158Z",
+      "excluded": false,
+      "deviceInfo": "小楼机楼ZCXLOWB001",
+      "deviceData": {
+        "所属行政区域": "增城",
+        "集团名称": "小楼机楼综合机房1/增城小楼烽火SDH622M001",
+        "网管中名称": "小楼机楼ZCXLOWB001",
+        "高值业务数": "0",
+        "局内业务数": "2",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "备注": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
     }
   },
   "statistics": {
@@ -1479,8 +1497,8 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 11,
-      "monitorCount": 6
+      "netCount": 9,
+      "monitorCount": 9
     }
   },
   "quarterTarget": {
@@ -1503,7 +1521,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-06-23T10:23:19.396Z",
+    "lastSync": "2026-06-24T07:08:41.135Z",
     "version": 6
   }
 }
