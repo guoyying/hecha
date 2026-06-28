@@ -196,8 +196,8 @@
       }
     },
     "%E4%B8%AD%E5%A4%A7%E4%B9%9D%E6%B4%B2%E5%B9%BF%E5%9C%BA%E8%BD%BB%E7%BA%BA%E5%9F%8EC%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC366-HA10L": {
-      "type": "net",
-      "timestamp": "2026-06-23T03:54:14.601Z",
+      "type": "monitor",
+      "timestamp": "2026-06-28T01:22:14.276Z",
       "excluded": false,
       "deviceInfo": "中大九洲广场轻纺城C网基站-GZHC366-HA10L",
       "deviceData": {
@@ -217,8 +217,8 @@
       }
     },
     "%E6%99%93%E6%B8%AF%E8%B7%AF%E4%B8%ADC%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC361%2FHA15L": {
-      "type": "net",
-      "timestamp": "2026-06-23T03:51:45.604Z",
+      "type": "monitor",
+      "timestamp": "2026-06-28T01:15:37.706Z",
       "excluded": false,
       "deviceInfo": "晓港路中C网基站-GZHC361/HA15L",
       "deviceData": {
@@ -238,8 +238,8 @@
       }
     },
     "%E4%B8%83%E6%98%9F%E5%B2%97C%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC363-HA02L": {
-      "type": "net",
-      "timestamp": "2026-06-23T03:52:11.703Z",
+      "type": "monitor",
+      "timestamp": "2026-06-28T01:15:18.643Z",
       "excluded": false,
       "deviceInfo": "七星岗C网基站-GZHC363-HA02L",
       "deviceData": {
@@ -280,8 +280,8 @@
       }
     },
     "%E6%B5%B7%E7%8F%A0%E7%91%9E%E5%AE%9DC%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC361-HA08L": {
-      "type": "net",
-      "timestamp": "2026-06-23T03:50:43.813Z",
+      "type": "monitor",
+      "timestamp": "2026-06-28T01:22:01.739Z",
       "excluded": false,
       "deviceInfo": "海珠瑞宝C网基站-GZHC361-HA08L",
       "deviceData": {
@@ -322,8 +322,8 @@
       }
     },
     "%E4%B8%9C%E9%93%B6%E5%B9%BF%E5%9C%BAC%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC361-HA33L": {
-      "type": "net",
-      "timestamp": "2026-06-23T03:50:32.103Z",
+      "type": "monitor",
+      "timestamp": "2026-06-28T01:18:06.075Z",
       "excluded": false,
       "deviceInfo": "东银广场C网基站-GZHC361-HA33L",
       "deviceData": {
@@ -406,8 +406,8 @@
       }
     },
     "1519-%E6%B3%B0%E6%B2%99%E8%B7%AF%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC361-HA04L": {
-      "type": "net",
-      "timestamp": "2026-06-10T04:41:47.167Z",
+      "type": "monitor",
+      "timestamp": "2026-06-28T01:21:58.524Z",
       "excluded": false,
       "deviceInfo": "1519-泰沙路（800M）C网基站-GZHC361-HA04L",
       "deviceData": {
@@ -418,7 +418,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -427,8 +427,8 @@
       }
     },
     "1516-%E6%B5%B7%E7%8F%A0%E5%8C%97%E5%B1%B1%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC361-HA07L": {
-      "type": "net",
-      "timestamp": "2026-06-10T04:42:40.775Z",
+      "type": "monitor",
+      "timestamp": "2026-06-28T01:19:46.455Z",
       "excluded": false,
       "deviceInfo": "1516-海珠北山（800M）C网基站-GZHC361-HA07L",
       "deviceData": {
@@ -439,7 +439,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": {
@@ -448,8 +448,8 @@
       }
     },
     "1504-%E6%B5%B7%E7%8F%A0%E5%9B%9B%E8%88%AA%E6%90%AC%E8%BF%81%EF%BC%88800M%EF%BC%89C%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC361-HA16L": {
-      "type": "net",
-      "timestamp": "2026-06-23T03:53:49.685Z",
+      "type": "monitor",
+      "timestamp": "2026-06-28T01:23:39.901Z",
       "excluded": false,
       "deviceInfo": "1504-海珠四航搬迁（800M）C网基站-GZHC361-HA16L",
       "deviceData": {
@@ -469,8 +469,8 @@
       }
     },
     "1503-%E4%B8%AD%E5%A4%A7%E6%A0%A1%E5%9B%AD%E8%A5%BFC%E7%BD%91%E5%9F%BA%E7%AB%99-GZHC361-HA14L": {
-      "type": "net",
-      "timestamp": "2026-06-23T03:53:00.798Z",
+      "type": "monitor",
+      "timestamp": "2026-06-28T00:59:04.627Z",
       "excluded": false,
       "deviceInfo": "1503-中大校园西C网基站-GZHC361-HA14L",
       "deviceData": {
@@ -931,8 +931,8 @@
       }
     },
     "%E6%96%B0%E6%98%9F%E5%B7%A5%E4%B8%9AC%E7%BD%91%E5%9F%BA%E7%AB%99-GZWC044-WA05": {
-      "type": "net",
-      "timestamp": "2026-06-10T04:35:49.783Z",
+      "type": "monitor",
+      "timestamp": "2026-06-28T01:13:33.381Z",
       "excluded": false,
       "deviceInfo": "新星工业C网基站-GZWC044-WA05",
       "deviceData": {
@@ -943,7 +943,7 @@
         "局内业务数": "0",
         "局内光路数": "",
         "退网评估": "800M基站",
-        "800M基站设备可退（20260506）": "",
+        "备注": "",
         "0407备注_承载室": ""
       },
       "remark": null
@@ -1066,8 +1066,8 @@
       }
     },
     "6619-%E8%99%8E%E5%A8%81%E5%88%B6%E8%A1%A3(%E5%B7%A5%E4%B8%9A%E5%A4%A7%E9%81%93%E5%8C%97)-GZHC762-HA17L": {
-      "type": "net",
-      "timestamp": "2026-06-23T03:55:38.126Z",
+      "type": "monitor",
+      "timestamp": "2026-06-28T01:22:54.993Z",
       "excluded": false,
       "deviceInfo": "6619-虎威制衣(工业大道北)-GZHC762-HA17L",
       "deviceData": {
@@ -1200,8 +1200,8 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 8,
-      "monitorCount": 0
+      "netCount": 3,
+      "monitorCount": 11
     }
   },
   "quarterTarget": {
@@ -1224,7 +1224,7 @@
     "branch": "main",
     "configPath": "config/field-config.json",
     "dataPath": "check-records.json",
-    "lastSync": "2026-06-26T09:57:04.532Z",
+    "lastSync": "2026-06-26T09:59:18.562Z",
     "version": 6
   }
 }
