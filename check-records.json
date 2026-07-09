@@ -13,8 +13,8 @@
   ],
   "deviceMarks": {
     "1111-%E9%BB%84%E9%99%82%E6%8F%BD%E5%85%83%E7%AA%9D(800M)-GZHC332-HA29L": {
-      "type": "net",
-      "timestamp": "2026-06-18T07:27:18.941Z",
+      "type": "monitor",
+      "timestamp": "2026-07-09T01:20:20.785Z",
       "excluded": false,
       "deviceInfo": "1111-黄陂揽元窝(800M)-GZHC332-HA29L",
       "deviceData": {
@@ -901,8 +901,8 @@
       }
     },
     "561-%E7%B2%A4%E6%B5%B7%E5%87%AF%E6%97%8B%E5%A4%A7%E5%8E%A6(800M)-GZHC357-HA18L": {
-      "type": "net",
-      "timestamp": "2026-06-18T07:27:36.022Z",
+      "type": "monitor",
+      "timestamp": "2026-07-09T01:20:16.289Z",
       "excluded": false,
       "deviceInfo": "561-粤海凯旋大厦(800M)-GZHC357-HA18L",
       "deviceData": {
@@ -964,6 +964,42 @@
       },
       "removedAt": "2026-06-18T03:35:24.576Z",
       "restoredAt": "2026-06-18T03:35:26.404Z"
+    },
+    "5662-%E5%B9%BF%E5%B7%9E%E4%BF%9D%E5%8F%8B%E4%BC%81%E4%B8%9A%E7%AE%A1%E7%90%86%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8(%E6%9C%AA%E9%AA%8C%E6%94%B6)": {
+      "type": "net",
+      "timestamp": "2026-07-09T01:07:46.516Z",
+      "excluded": false,
+      "deviceInfo": "5662-广州保友企业管理有限公司(未验收)",
+      "deviceData": {
+        "所属行政区域": "天河",
+        "集团名称": "天河软件园三层IDC机房2/广州华为SDH2.5G759/155M17链",
+        "网管中名称": "5662-广州保友企业管理有限公司(未验收)",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "",
+        "备注": "",
+        "0407备注_承载室": "网管无业务，若现场核查无业务可拆光路，退网"
+      },
+      "remark": null
+    },
+    "%E6%96%B0%E5%88%9B%E4%B8%BE%E5%A4%A7%E5%8E%A6-DSHB027-HA02": {
+      "type": "net",
+      "timestamp": "2026-07-09T01:08:12.786Z",
+      "excluded": false,
+      "deviceInfo": "新创举大厦-DSHB027-HA02",
+      "deviceData": {
+        "所属行政区域": "天河",
+        "集团名称": "新创举大厦接入网机房/东山华为SDH622M027/155M02",
+        "网管中名称": "新创举大厦-DSHB027-HA02",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "",
+        "备注": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
     }
   },
   "statistics": {
@@ -972,8 +1008,8 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 0,
-      "monitorCount": 1
+      "netCount": 2,
+      "monitorCount": 4
     }
   },
   "quarterTarget": {
