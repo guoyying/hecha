@@ -1000,6 +1000,24 @@
         "0407备注_承载室": ""
       },
       "remark": null
+    },
+    "%E5%A4%A9%E9%A6%99%E8%A1%97%E6%9C%BA%E6%A5%BC-%E8%B6%8A%E7%A7%80HA017": {
+      "type": "net",
+      "timestamp": "2026-07-15T06:28:39.429Z",
+      "excluded": false,
+      "deviceInfo": "天香街机楼-越秀HA017",
+      "deviceData": {
+        "所属行政区域": "越秀",
+        "集团名称": "天香街机楼5楼传输机房1/越秀华为SDH155M017",
+        "网管中名称": "天香街机楼-越秀HA017",
+        "高值业务数": "0",
+        "局内业务数": "0",
+        "局内光路数": "",
+        "退网评估": "800M基站",
+        "备注": "",
+        "0407备注_承载室": ""
+      },
+      "remark": null
     }
   },
   "statistics": {
@@ -1008,8 +1026,8 @@
       "monitorCount": 0
     },
     "week": {
-      "netCount": 2,
-      "monitorCount": 4
+      "netCount": 1,
+      "monitorCount": 0
     }
   },
   "quarterTarget": {
